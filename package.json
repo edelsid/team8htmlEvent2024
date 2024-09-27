@@ -6,10 +6,16 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "standart": "standard",
+    "lint": "standard --fix"
   },
   "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "globals": "^15.9.0",
+    "prettier": "3.3.3",
     "sass-embedded": "^1.79.3",
+    "standard": "^17.1.2",
     "vite": "^5.4.1"
   },
   "dependencies": {
