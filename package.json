@@ -13,7 +13,6 @@
     "vite": "^5.4.1"
   },
   "dependencies": {
-    "normalize-scss": "^8.0.0",
     "sass": "^1.79.3"
   }
 }
