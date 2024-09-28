@@ -1,0 +1,207 @@
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  &__left-padding {
+    padding-left: 6rem;
+  }
+  &__white-link {
+    color: $white;
+    text-decoration: none;
+  }
+  &__grey-link {
+    color: $grey;
+    text-decoration: none;
+  }
+  &__black {
+    background: $black;
+    height: 14.5rem;
+    &__wrapper {
+      padding-left: 55.7rem;
+      height: 100%;
+      display: flex;
+      height: 100%;
+    }
+    &__main {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    &__social-icon svg {
+      width: 1rem;
+      height: 1rem;
+      opacity: 0.3;
+      transition: opacity 0.2s linear 0s;
+    }
+    &__social-icon:hover svg {
+      opacity: 1;
+    }
+    &__number {
+      width: 31.3rem;
+      height: 100%;
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      &--wrapper {
+        display: flex;
+        align-items: center;
+        padding-left: 2.3rem;
+        width: 100%;
+      }
+      &--icon {
+        width: 6rem;
+        height: 6rem;
+      }
+      &--text {
+        padding-left: 1.4rem;
+        display: flex;
+        flex-direction: column;
+        color: $white;
+        &__text {
+          color: var(--cdcdcd, #cdcdcd);
+
+          /* Barlow */
+          font-family: Barlow;
+          font-size: 1.4rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 2.4rem; /* 171.429% */
+          text-transform: capitalize;
+          margin: 0;
+        }
+        &__number {
+          color: var(--FFFFFF, #fff);
+          font-family: Jost;
+          font-size: 1.6rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 2.6rem; /* 162.5% */
+          text-transform: capitalize;
+          margin: 0;
+        }
+      }
+    }
+    &__top-wrapper {
+      display: flex;
+      align-items: center;
+    }
+    &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 5.7rem;
+      color: var(--cdcdcd, #cdcdcd);
+      /* Barlow */
+      font-family: Barlow;
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 2.4rem; /* 171.429% */
+      text-transform: capitalize;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      &--social-links {
+        display: flex;
+        gap: 2rem;
+        padding-right: 2.9rem;
+      }
+      &__block {
+        display: flex;
+        align-items: center;
+        &--padding {
+          padding-left: 4.2rem;
+        }
+        &__icon {
+          width: 0.8rem;
+          height: 1.6rem;
+          flex-shrink: 0;
+        }
+        &__text {
+          padding-left: 0.3rem;
+        }
+      }
+    }
+    &__bottom {
+      display: flex;
+      align-items: center;
+      width: 64.2rem;
+      height: 100%;
+      position: relative;
+      &--wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &__navitem {
+        color: $white;
+        font-family: Barlow;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 2.6rem;
+        text-transform: capitalize;
+        text-decoration: none;
+      }
+      &__navitem.active {
+        color: $orange;
+      }
+      &__navitem.active::after {
+        content: ' ';
+        width: 3.9rem;
+        height: 0.4rem;
+        background-color: $orange;
+        position: absolute;
+        bottom: 0rem;
+        left: 6.3rem;
+      }
+    }
+  }
+  &__orange {
+    position: absolute;
+    width: 57.8rem;
+    height: 15.6rem;
+    flex-shrink: 0;
+  }
+  &__orange::after {
+    content: '';
+    position: absolute;
+    top: 13rem;
+    left: 50.35rem;
+    transform: rotate(-20deg);
+    width: 4rem;
+    height: 2rem;
+    background: #b1400c;
+    z-index: -1;
+  }
+  &__logo {
+    display: flex;
+    position: absolute;
+    top: 4rem;
+    left: 9.3rem;
+    &__text {
+      padding-left: 0.3rem;
+    }
+    &__desc {
+      color: #fff;
+      font-family: Barlow;
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 2.4rem; /* 171.429% */
+      text-transform: capitalize;
+      margin: 0;
+      padding-top: 0.6rem;
+    }
+    &__title {
+      color: var(--FFFFFF, #fff);
+      font-family: Jost;
+      font-size: 3.2rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 3.2rem; /* 100% */
+      text-transform: capitalize;
+      margin: 0;
+    }
+  }
+}
