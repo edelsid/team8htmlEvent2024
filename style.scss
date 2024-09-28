@@ -1,5 +1,7 @@
+@import 'styles/common.scss';
 @import 'styles/normalize/normalize';
 @import 'src/latest_service/style.scss';
+@import 'src/howToProcess/howToProcess.scss';
 
 @font-face {
   font-family: Jost;
@@ -11,10 +13,51 @@
   src: url(assets/fonts/Barlow-Regular.ttf);
 }
 
-.helloWorld {
-  background-color: red;
+
+
+
+@font-face {
+  font-family: Jost;
+  src: url(assets/fonts/Jost-VariableFont_wght.ttf);
 }
 
-html{
+html {
   font-size: 10px;
+  color: $black;
 }
+
+.orange-line-sep {
+  width: 1.5rem;
+  height: 0.1rem;
+  background: #fb5b11;
+  margin-right: 1rem;
+}
+
+.block-mini-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &--text {
+    color: $black;
+    font-family: Jost;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.6rem; /* 162.5% */
+    text-transform: capitalize;
+  }
+}
+
+.block-header {
+  color: var(--0E0E0E, #0e0e0e);
+  text-align: center;
+  font-family: Jost;
+  font-size: 5.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 6.2rem; /* 119.231% */
+  text-transform: capitalize;
+}
+
