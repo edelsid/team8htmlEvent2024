@@ -1,4 +1,4 @@
-@import "../../styles/common.scss";
+@import '../../styles/common.scss';
 
 @mixin flex-standard {
   display: flex;
@@ -11,7 +11,7 @@
 }
 
 @mixin font-bold {
-  font-family: "Jost";
+  font-family: 'Jost';
   font-weight: 600;
   font-style: normal;
   text-transform: capitalize;
@@ -33,7 +33,7 @@
 }
 
 @mixin font-text {
-  font-family: "Barlow";
+  font-family: 'Barlow';
   font-weight: 400;
   font-style: normal;
 }
@@ -56,7 +56,7 @@
 .latest {
   @include flex-standard;
   gap: 9rem;
-  margin-top: 29.5rem;
+  // margin-top: 29.5rem;
   height: 42.6rem;
 
   &--block {
@@ -94,7 +94,7 @@
     right: -3rem;
     bottom: 3rem;
   }
-} 
+}
 
 .orange-line-sep {
   color: $orange;
@@ -118,7 +118,7 @@
 .block-button::after {
   display: inline-block;
   height: 1.8rem;
-  content: url("../../assets/png/arrow.png");
+  content: url('../../assets/png/arrow.png');
 }
 
 .list-pictures {

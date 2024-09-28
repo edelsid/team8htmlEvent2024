@@ -2,6 +2,7 @@
 @import 'styles/normalize/normalize';
 @import 'src/latest_service/style.scss';
 @import 'src/howToProcess/howToProcess.scss';
+@import 'src/header/header.scss';
 
 @font-face {
   font-family: Jost;
@@ -13,17 +14,10 @@
   src: url(assets/fonts/Barlow-Regular.ttf);
 }
 
-
-
-
-@font-face {
-  font-family: Jost;
-  src: url(assets/fonts/Jost-VariableFont_wght.ttf);
-}
-
 html {
   font-size: 10px;
   color: $black;
+  scroll-behavior: smooth;
 }
 
 .orange-line-sep {
@@ -60,4 +54,3 @@ html {
   line-height: 6.2rem; /* 119.231% */
   text-transform: capitalize;
 }
-
