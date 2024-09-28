@@ -1,48 +1,5 @@
 @import "../../styles/common.scss";
 
-@mixin flex-standard {
-  display: flex;
-  justify-content: space-between;
-}
-
-@mixin flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-@mixin font-bold {
-  font-family: "Jost";
-  font-weight: 600;
-  font-style: normal;
-  text-transform: capitalize;
-}
-
-@mixin font-header-h2 {
-  font-size: 5.2rem;
-  line-height: 6.2rem;
-}
-
-@mixin font-header-h4 {
-  font-size: 2.4rem;
-  line-height: 3.4rem;
-}
-
-@mixin font-main {
-  font-size: 1.6rem;
-  line-height: 2.6rem;
-}
-
-@mixin font-text {
-  font-family: "Barlow";
-  font-weight: 400;
-  font-style: normal;
-}
-
-@mixin list-noStyle {
-  list-style: none;
-  padding: 0;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -66,17 +23,20 @@
 
 .block {
   &-mini-header {
-    @include font-main;
-    @include font-bold;
-    display: flex;
-    gap: 1rem;
+    &-start {
+      @include font-main;
+      @include font-bold;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
 
     &--text {
       margin: 0;
     }
   }
 
-  &-header {
+  &-header-start {
     @include font-header-h2;
     @include font-bold;
     margin-top: 1.4rem;
