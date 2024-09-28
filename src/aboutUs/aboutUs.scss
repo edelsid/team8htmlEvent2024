@@ -1,0 +1,76 @@
+.about {
+  margin-top: 14.3rem;
+
+  &--block {
+    @include flex-standard;
+    align-items: center;
+    gap: 17rem;
+  }
+}
+
+.block {
+  &-button--wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 2.3rem;
+    gap: 2.4rem;
+  }
+}
+
+.button-about {
+  background-color: $orange;
+  color: $white;
+  border: none;
+}
+
+.text-42 {
+  @include font-bold;
+  font-size: 3.2rem;
+  line-height: 4.2rem;
+}
+
+.about--pictures {
+  margin-top: 6.7rem;
+  height: 33.2rem;
+  gap: 2.4rem;
+}
+
+.about--pictures .picture {
+  @include flex-column;
+  flex-direction: column-reverse;
+  width: calc(100% - 4.8rem);
+  background: $gradient-black-grey;
+  padding: 2rem 3rem;
+  color: white;
+}
+
+.picture-description--list {
+  list-style: none;
+  padding: 0;
+  color: $grey;
+}
+
+.picture-description--characteristic::before {
+  content: "+";
+  margin-right: 0.4rem;
+}
+
+.slider-arrows {
+  @include flex-standard;
+  margin-top: 5rem;
+  margin-bottom: 15rem;
+  margin-inline: auto;
+  width: fit-content;
+  gap: 1rem;
+  transform: scale(2);
+}
+
+.arrow {
+  &-back {
+    transform: rotate(180deg);
+  }
+
+  &-active {
+    color: $orange;
+  }
+}
