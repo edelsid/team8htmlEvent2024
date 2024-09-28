@@ -1,0 +1,157 @@
+@import "../../styles/common.scss";
+
+@mixin flex-standard {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin font-bold {
+  font-family: "Jost";
+  font-weight: 600;
+  font-style: normal;
+  text-transform: capitalize;
+}
+
+@mixin font-header-h2 {
+  font-size: 5.2rem;
+  line-height: 6.2rem;
+}
+
+@mixin font-header-h4 {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+}
+
+@mixin font-main {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+@mixin font-text {
+  font-family: "Barlow";
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin list-noStyle {
+  list-style: none;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// отступы от краев по горизонтали
+
+// .main {
+//   margin-inline: 31.1rem;
+// }
+
+.latest {
+  @include flex-standard;
+  gap: 9rem;
+  margin-top: 29.5rem;
+  height: 42.6rem;
+
+  &--block {
+    position: relative;
+  }
+}
+
+.block {
+  &-mini-header {
+    @include font-main;
+    @include font-bold;
+    display: flex;
+    gap: 1rem;
+
+    &--text {
+      margin: 0;
+    }
+  }
+
+  &-header {
+    @include font-header-h2;
+    @include font-bold;
+    margin-top: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  &-text {
+    @include font-main;
+    @include font-text;
+    margin: 0;
+  }
+
+  &-backgroundImage {
+    position: absolute;
+    right: -3rem;
+    bottom: 3rem;
+  }
+} 
+
+.orange-line-sep {
+  color: $orange;
+  margin: 0;
+}
+
+.button {
+  @include font-main;
+  @include font-bold;
+  @include flex-standard;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 4.1rem;
+  padding: 1.7rem 3.5rem;
+  width: fit-content;
+  background-color: #ffffff00;
+  border: 1px solid $black;
+  cursor: pointer;
+}
+
+.block-button::after {
+  display: inline-block;
+  height: 1.8rem;
+  content: url("../../assets/png/arrow.png");
+}
+
+.list-pictures {
+  @include list-noStyle;
+  @include flex-standard;
+  gap: 2.4rem;
+  height: 41.8rem;
+  margin-top: 0.6rem;
+}
+
+.picture {
+  &-thin {
+    width: 19.6rem;
+    background-color: $grey;
+  }
+
+  &-wide {
+    @include flex-column;
+    color: $white;
+    justify-content: space-between;
+    padding: 2.8rem;
+    width: 30.6rem;
+    background: $gradient-black-grey;
+  }
+
+  &-icon {
+    display: block;
+  }
+
+  &-description--header {
+    @include font-bold;
+    @include font-header-h4;
+    text-decoration: underline;
+    margin-bottom: 1.3rem;
+  }
+}

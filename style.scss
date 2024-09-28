@@ -1,16 +1,30 @@
+@import 'styles/common.scss';
 @import 'styles/normalize/normalize';
-//@import 'src/howToProcess/howToProcess.scss';
+@import 'src/howToProcess/howToProcess.scss';
 
 @font-face {
   font-family: Jost;
   src: url(assets/fonts/Jost-VariableFont_wght.ttf);
 }
 
-$black: #0e0e0e;
+@font-face {
+  font-family: Barlow;
+  src: url(assets/fonts/Barlow-Regular.ttf);
+}
+
+
+
+
+@font-face {
+  font-family: Jost;
+  src: url(assets/fonts/Jost-VariableFont_wght.ttf);
+}
 $sub-heading: 1.6rem;
+$black: #0e0e0e;
 
 html {
   font-size: 10px;
+  color: $black;
 }
 
 .orange-line-sep {
@@ -47,6 +61,7 @@ html {
   line-height: 6.2rem; /* 119.231% */
   text-transform: capitalize;
 }
+
 
 .grey-line {
   width: 1.8rem;

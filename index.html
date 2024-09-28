@@ -2,20 +2,122 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/assets/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta
+      name="msapplication-config"
+      content="/assets/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#000000" />
+
     <link rel="stylesheet" href="style.scss" />
     <link rel="stylesheet" href="src/blog/blog.scss" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
   <body>
-    <article class="howToProcess">
-      <section class="block-mini-header">
+    <main class="main">
+      <article class="latest">
+        <section class="latest--block">
+          <div class="block-wrapper">
+            <div class="block-mini-header block-mini-header--latest">
+              <p class="orange-line-sep">—</p>
+              <p class="block-mini-header--text">Latest Services</p>
+            </div>
+            <h2 class="block-header block-header--latest-header">The Best Services For You.</h2>
+            <p class="block-text">In today's world, we're bombarded with choices. From streaming services to meal kits, it can be overwhelming to find the best option.</p>
+            <button class="button block-button">See All</button>
+          </div>
+          <img class="block-backgroundImage" src="./assets/png/worker.png">
+        </section>
+        <ul class="list list-pictures latest--pictures">
+          <li class="picture-thin"></li>
+          <li class="picture-wide">
+            <div class="picture-icon--wrapper">
+              <img class="picture-icon" src="./assets/png/Icon.png">
+            </div>
+            <div class="picture-description--wrapper">
+              <h4 class="picture-description--header">Building Contraction</h4>
+              <p class="block-text">This involves various stages like planning, design.</p>
+            </div>
+          </li>
+          <li class="picture-thin"></li>
+        </ul>
+      </article>
+    <article class="htp">
+      <section class="block-mini-header block-mini-header--htp">
         <div class="orange-line-sep"></div>
         <div class="block-mini-header--text">How to process</div>
       </section>
-      <section class="block-header">Steps in the Construction Process</section>
+      <section class="block-header block-header--htp-header">
+        Steps in the Construction Process
+      </section>
+      <section class="htp__buttons htp__buttons--padding">
+        <button class="htp__button htp__button--active">
+          <span class="htp__button-text htp__button-text--active">
+            01. Planning and Design
+          </span>
+        </button>
+        <button class="htp__button">
+          <span class="htp__button-text">02. Permitting and Approvals</span>
+        </button>
+        <button class="htp__button">
+          <span class="htp__button-text">03. Foundation Construction</span>
+        </button>
+      </section>
+      <section class="htp__video">
+        <button class="play-button">
+          <img src="assets/svg/play-button.svg" alt="Play video" />
+        </button>
+      </section>
+
+      <dialog class="video-dialog">
+        <button class="close-dialog">Close</button>
+        <iframe
+          id="youtube-video"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/drb-2-B1Rbc?si=euxVq1nXDaZAaLYW"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <!-- <iframe
+          id="youtube-video"
+          width="560"
+          height="315"
+          frameborder="0"
+          allowfullscreen
+        ></iframe> -->
+      </dialog>
     </article>
+<<<<<<< HEAD
 
 
 
@@ -40,5 +142,10 @@
         <div class="up-to-date--picture"></div>
       </section>
     </article>
+=======
+    </main>
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="/src/howToProcess/howToProcess.js"></script>
+>>>>>>> 3a281f4884f4b7dcdfc8b4aab5f0f497e5a23621
   </body>
 </html>
