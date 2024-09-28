@@ -1,6 +1,7 @@
-$color-orange: #FB5B11;
-$color-lightgrey: #D9D9D9;
-$color-black: #0E0E0E;
+$orange: #FB5B11;
+$grey: #D9D9D9;
+$lightgrey: #FFFFFF;
+$black: #0E0E0E;
 
 @mixin flex-standard {
   display: flex;
@@ -12,22 +13,32 @@ $color-black: #0E0E0E;
   flex-direction: column;
 }
 
-@mixin font-header {
-  font-family: "Jost";
-  font-size: 5.2rem;
-  font-weight: 600;
-}
-
 @mixin font-bold {
   font-family: "Jost";
-  font-size: 1.6rem;
   font-weight: 600;
+  font-style: normal;
+  text-transform: capitalize;
 }
 
-@mixin font-mainText {
-  font-family: "Barlow";
+@mixin font-header-h2 {
+  font-size: 5.2rem;
+  line-height: 6.2rem;
+}
+
+@mixin font-header-h4 {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+}
+
+@mixin font-main {
   font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+@mixin font-text {
+  font-family: "Barlow";
   font-weight: 400;
+  font-style: normal;
 }
 
 @mixin list-noStyle {
@@ -35,53 +46,115 @@ $color-black: #0E0E0E;
   padding: 0;
 }
 
-.main {
-  margin-inline: 31.1rem;
+* {
+  box-sizing: border-box;
 }
+
+// отступы от краев по горизонтали
+
+// .main {
+//   margin-inline: 31.1rem;
+// }
 
 .latest {
   @include flex-standard;
-  box-sizing: border-box;
-  gap: 11.2rem;
+  gap: 9rem;
   margin-top: 29.5rem;
   height: 42.6rem;
+
+  &--block {
+    position: relative;
+  }
 }
 
-.latest__textWrapper {
-  @include flex-column;
-}
+.block {
+  &-mini-header {
+    @include font-main;
+    @include font-bold;
+    display: flex;
+    gap: 1rem;
 
-.section__name {
-  @include font-bold;
-  display: flex;
-  gap: 1rem;
-}
+    &--text {
+      margin: 0;
+    }
+  }
 
-.section__name p {
-  margin: 0;
-}
+  &-header {
+    @include font-header-h2;
+    @include font-bold;
+    margin-top: 1.4rem;
+    margin-bottom: 1rem;
+  }
 
-.section__name__dash {
-  color: $color-orange;
-}
+  &-text {
+    @include font-main;
+    @include font-text;
+    margin: 0;
+  }
 
-.section__header {
-  @include font-header;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-}
+  &-backgroundImage {
+    position: absolute;
+    right: -3rem;
+    bottom: 3rem;
+  }
+} 
 
-.section__text {
-  @include font-mainText;
+.orange-line-sep {
+  color: $orange;
   margin: 0;
 }
 
 .button {
+  @include font-main;
   @include font-bold;
-  margin-top: 4.3rem;
+  @include flex-standard;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 4.1rem;
   padding: 1.7rem 3.5rem;
   width: fit-content;
   background-color: #ffffff00;
-  border: 1px solid $color-black;
+  border: 1px solid $black;
   cursor: pointer;
+}
+
+.block-button::after {
+  display: inline-block;
+  height: 1.8rem;
+  content: url("../../assets/arrow.png");
+}
+
+.list-pictures {
+  @include list-noStyle;
+  @include flex-standard;
+  gap: 2.4rem;
+  height: 41.8rem;
+  margin-top: 0.6rem;
+}
+
+.picture {
+  &-thin {
+    width: 19.6rem;
+    background-color: $grey;
+  }
+
+  &-wide {
+    @include flex-column;
+    color: $grey;
+    justify-content: space-between;
+    padding: 2.8rem;
+    width: 30.6rem;
+    background: linear-gradient(0deg, $black, $grey);
+  }
+
+  &-icon {
+    display: block;
+  }
+
+  &-description--header {
+    @include font-bold;
+    @include font-header-h4;
+    text-decoration: underline;
+    margin-bottom: 1.3rem;
+  }
 }
