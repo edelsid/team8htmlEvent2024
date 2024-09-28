@@ -1,0 +1,87 @@
+$color-orange: #FB5B11;
+$color-lightgrey: #D9D9D9;
+$color-black: #0E0E0E;
+
+@mixin flex-standard {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin font-header {
+  font-family: "Jost";
+  font-size: 5.2rem;
+  font-weight: 600;
+}
+
+@mixin font-bold {
+  font-family: "Jost";
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+@mixin font-mainText {
+  font-family: "Barlow";
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+@mixin list-noStyle {
+  list-style: none;
+  padding: 0;
+}
+
+.main {
+  margin-inline: 31.1rem;
+}
+
+.latest {
+  @include flex-standard;
+  box-sizing: border-box;
+  gap: 11.2rem;
+  margin-top: 29.5rem;
+  height: 42.6rem;
+}
+
+.latest__textWrapper {
+  @include flex-column;
+}
+
+.section__name {
+  @include font-bold;
+  display: flex;
+  gap: 1rem;
+}
+
+.section__name p {
+  margin: 0;
+}
+
+.section__name__dash {
+  color: $color-orange;
+}
+
+.section__header {
+  @include font-header;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section__text {
+  @include font-mainText;
+  margin: 0;
+}
+
+.button {
+  @include font-bold;
+  margin-top: 4.3rem;
+  padding: 1.7rem 3.5rem;
+  width: fit-content;
+  background-color: #ffffff00;
+  border: 1px solid $color-black;
+  cursor: pointer;
+}

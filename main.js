@@ -1,1 +1,1 @@
-import './latest_service/latest_service.js';
+import './src/latest_service/latest_service.js';
