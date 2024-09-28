@@ -1,5 +1,5 @@
 @import 'styles/normalize/normalize';
-@import 'src/howToProcess/howToProcess.scss';
+//@import 'src/howToProcess/howToProcess.scss';
 
 @font-face {
   font-family: Jost;
@@ -46,4 +46,20 @@ html {
   font-weight: 600;
   line-height: 6.2rem; /* 119.231% */
   text-transform: capitalize;
+}
+
+.grey-line {
+  width: 1.8rem;
+  height: 0.1rem;
+  background: #0E0E0E;
+  margin-right: 1rem;
+}
+
+.black-circle {
+  border-radius: 50%;
+  background: #0E0E0E;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  width: 6px;
+  height: 6px;
 }

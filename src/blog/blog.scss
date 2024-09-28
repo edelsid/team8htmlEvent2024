@@ -1,2 +1,17 @@
 @import url(../../style.scss);
 
+$heading-medium: 3rem;
+
+h2 {font-size: $heading-medium;}
+
+.up-to-date {
+    display: flex;
+    flex-wrap: nowrap;
+    font-family: Jost;
+
+    &--description {
+        width: 40%;
+
+        &--admin {display: flex; align-items: center;}
+    }
+}
