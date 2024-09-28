@@ -16,6 +16,17 @@
   src: url(assets/fonts/Barlow-Regular.ttf);
 }
 
+
+
+
+@font-face {
+  font-family: Jost;
+  src: url(assets/fonts/Jost-VariableFont_wght.ttf);
+}
+$sub-heading: 1.6rem;
+$black: #0e0e0e;
+$color-orange: #FB5B11;
+
 html {
   font-size: 10px;
   color: $black;
@@ -55,4 +66,20 @@ html {
   font-weight: 600;
   line-height: 6.2rem; /* 119.231% */
   text-transform: capitalize;
+}
+
+.grey-line {
+  width: 3rem;
+  height: 0.1rem;
+  background: #0E0E0E;
+  margin-right: 1rem;
+}
+
+.black-circle {
+  border-radius: 50%;
+  background: #0E0E0E;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  width: 6px;
+  height: 6px;
 }
