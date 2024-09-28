@@ -1,6 +1,20 @@
 @import 'styles/common.scss';
 @import 'styles/normalize/normalize';
+@import 'src/latest_service/style.scss';
 @import 'src/howToProcess/howToProcess.scss';
+
+@font-face {
+  font-family: Jost;
+  src: url(assets/fonts/Jost-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Barlow;
+  src: url(assets/fonts/Barlow-Regular.ttf);
+}
+
+
+
 
 @font-face {
   font-family: Jost;
@@ -46,3 +60,4 @@ html {
   line-height: 6.2rem; /* 119.231% */
   text-transform: capitalize;
 }
+
