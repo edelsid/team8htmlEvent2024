@@ -65,6 +65,30 @@
           <img src="assets/svg/play-button.svg" alt="Play video" />
         </button>
       </section>
+
+      <dialog class="video-dialog">
+        <button class="close-dialog">Close</button>
+        <iframe
+          id="youtube-video"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/drb-2-B1Rbc?si=euxVq1nXDaZAaLYW"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <!-- <iframe
+          id="youtube-video"
+          width="560"
+          height="315"
+          frameborder="0"
+          allowfullscreen
+        ></iframe> -->
+      </dialog>
     </article>
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="/src/howToProcess/howToProcess.js"></script>
   </body>
 </html>
