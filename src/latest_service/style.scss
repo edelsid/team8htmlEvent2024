@@ -1,7 +1,4 @@
-$orange: #FB5B11;
-$grey: #D9D9D9;
-$lightgrey: #FFFFFF;
-$black: #0E0E0E;
+@import "../../styles/common.scss";
 
 @mixin flex-standard {
   display: flex;
@@ -121,7 +118,7 @@ $black: #0E0E0E;
 .block-button::after {
   display: inline-block;
   height: 1.8rem;
-  content: url("../../assets/arrow.png");
+  content: url("../../assets/png/arrow.png");
 }
 
 .list-pictures {
@@ -140,11 +137,11 @@ $black: #0E0E0E;
 
   &-wide {
     @include flex-column;
-    color: $grey;
+    color: $white;
     justify-content: space-between;
     padding: 2.8rem;
     width: 30.6rem;
-    background: linear-gradient(0deg, $black, $grey);
+    background: $gradient-black-grey;
   }
 
   &-icon {
