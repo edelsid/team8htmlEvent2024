@@ -3,6 +3,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  display: flex;
   &__left-padding {
     padding-left: 6rem;
   }
@@ -18,8 +19,8 @@
     background: $black;
     height: 14.5rem;
     &__wrapper {
-      padding-left: 55.7rem;
-      height: 100%;
+      padding-left: 7rem;
+      // height: 100%;
       display: flex;
       height: 100%;
     }
@@ -30,8 +31,8 @@
       flex-direction: column;
     }
     &__social-icon svg {
-      width: 1rem;
-      height: 1rem;
+      width: 1.3rem;
+      height: 1.3rem;
       opacity: 0.3;
       transition: opacity 0.2s linear 0s;
     }
@@ -158,27 +159,51 @@
     }
   }
   &__orange {
-    position: absolute;
-    width: 57.8rem;
+    width: 51rem;
     height: 15.6rem;
+    background-color: $orange;
     flex-shrink: 0;
+    @media (max-width: 1540px) {
+      width: 30rem;
+      height: 15.6rem;
+    }
+  }
+  &__orange::before {
+    content: '';
+    position: absolute;
+
+    background-color: $orange;
+    width: 18.27rem;
+    height: 11rem;
+    top: -0.6rem;
+    left: 41.9rem;
+    transform: rotate(-59deg);
+    @media (max-width: 1540px) {
+      left: 20.84rem;
+    }
   }
   &__orange::after {
     content: '';
     position: absolute;
-    top: 13rem;
-    left: 50.35rem;
+    top: 12.9rem;
+    left: 50.55rem;
     transform: rotate(-20deg);
     width: 4rem;
-    height: 2rem;
+    height: 2.1rem;
     background: #b1400c;
     z-index: -1;
+    @media (max-width: 1540px) {
+      left: 29.6rem;
+    }
   }
   &__logo {
     display: flex;
     position: absolute;
     top: 4rem;
     left: 9.3rem;
+    @media (max-width: 1540px) {
+      left: 3rem;
+    }
     &__text {
       padding-left: 0.3rem;
     }
