@@ -8,32 +8,34 @@
     <title>Vite App</title>
   </head>
   <body>
-    <header></header>
     <main class="main">
-      <section class="latest">
-        <div class="latest__textWrapper">
-          <div class="section__name latest__name">
-            <p class="section__name__dash">—</p>
-            <p class="section__name__text">Latest Services</p>
-          </div>
-          <h2 class="section__header latest__header">The Best Services For You.</h2>
-          <p class="section__text latest__text">In today's world, we're bombarded with choices. From streaming services to meal kits, it can be overwhelming to find the best option.</p>
-          <button class="button section__button latest__button">See All</button>
-        </div>
-        <ul class="list list_pictures latest__pictures">
-          <li class="latest__picture picture_thin"></li>
-          <li class="latest__picture picture_wide">
-            <div class="picture__icon__background">
-              <img class="picture__icon">
+      <article class="latest">
+        <section class="latest--block">
+          <div class="block-wrapper">
+            <div class="block-mini-header block-mini-header--latest">
+              <p class="orange-line-sep">—</p>
+              <p class="block-mini-header--text">Latest Services</p>
             </div>
-            <div class="picture__description__wrapper">
-              <h4 class="picture__description__header">Building Contraction</h4>
-              <p class="section__text picture__description__text">This involves various stages like planning, design.</p>
+            <h2 class="block-header block-header--latest-header">The Best Services For You.</h2>
+            <p class="block-text">In today's world, we're bombarded with choices. From streaming services to meal kits, it can be overwhelming to find the best option.</p>
+            <button class="button block-button">See All</button>
+          </div>
+          <img class="block-backgroundImage" src="./assets/worker.png">
+        </section>
+        <ul class="list list-pictures latest--pictures">
+          <li class="picture-thin"></li>
+          <li class="picture-wide">
+            <div class="picture-icon--wrapper">
+              <img class="picture-icon" src="./assets/Icon.png">
+            </div>
+            <div class="picture-description--wrapper">
+              <h4 class="picture-description--header">Building Contraction</h4>
+              <p class="block-text">This involves various stages like planning, design.</p>
             </div>
           </li>
-          <li class="latest__picture picture_thin"></li>
+          <li class="picture-thin"></li>
         </ul>
-      </section>
+      </article>
     </main>
   </body>
 </html>
