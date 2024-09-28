@@ -11,15 +11,17 @@
 .latest {
   @include flex-standard;
   gap: 9rem;
-  margin-top: 29.5rem;
+  margin-block: 29.5rem 13.5rem;
 
   &--block {
+    width: 37%;
     position: relative;
   }
 
   &--pictures {
     gap: 2.4rem;
     height: 41.8rem;
+    width: 56%;
     margin-top: 0.6rem;
   }
 }
@@ -54,7 +56,7 @@
   &-backgroundImage {
     position: absolute;
     right: -3rem;
-    bottom: 3rem;
+    bottom: 4rem;
   }
 }
 
@@ -90,7 +92,7 @@
 
 .picture {
   &-thin {
-    width: 19.6rem;
+    width: 26%;
     background-color: $grey;
   }
 
@@ -99,7 +101,7 @@
     color: $white;
     justify-content: space-between;
     padding: 2.4rem;
-    width: 30.6rem;
+    width: 41%;
     background: $gradient-black-grey;
   }
 

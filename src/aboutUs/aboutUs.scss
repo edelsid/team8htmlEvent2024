@@ -1,14 +1,14 @@
-.about {
-  margin-top: 14.3rem;
-
-  &--block {
-    @include flex-standard;
-    align-items: center;
-    gap: 17rem;
-  }
+.about--block {
+  @include flex-standard;
+  align-items: center;
+  gap: 17.4rem;
 }
 
 .block {
+  &-wrapper:last-child {
+    padding-right: 8.7em;
+  }
+
   &-button--wrapper {
     display: flex;
     align-items: center;
