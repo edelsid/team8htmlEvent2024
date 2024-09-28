@@ -1,3 +1,4 @@
+@import 'styles/common.scss';
 @import 'styles/normalize/normalize';
 @import 'src/howToProcess/howToProcess.scss';
 
@@ -6,10 +7,9 @@
   src: url(assets/fonts/Jost-VariableFont_wght.ttf);
 }
 
-$black: #0e0e0e;
-
 html {
   font-size: 10px;
+  color: $black;
 }
 
 .orange-line-sep {
