@@ -47,23 +47,22 @@ $gradient-black-grey: linear-gradient(0deg, $black, $grey);
   padding: 0;
 }
 
-@mixin width-change {
-  -webkit-transition: width 0.5s ease-in-out;
-  -moz-transition: width 0.5s ease-in-out;
-  -o-transition: width 0.5s ease-in-out;
-  transition: width 0.5s ease-in-out;
+@mixin animation ($characteristic) {
+  -webkit-transition: $characteristic 0.5s ease-in-out;
+  -moz-transition: $characteristic 0.5s ease-in-out;
+  -o-transition: $characteristic 0.5s ease-in-out;
+  transition: $characteristic 0.5s ease-in-out;
 }
 
-@mixin fade-in {
-  -webkit-transition: opacity 0.5s ease-in-out;
-  -moz-transition: opacity 0.5s ease-in-out;
-  -o-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
+@mixin animation-all {
+  -webkit-transition: all ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-@mixin color-fade-in {
-  -webkit-transition: background-color 0.5s ease-in-out;
-  -moz-transition: background-color 0.5s ease-in-out;
-  -o-transition: background-color 0.5s ease-in-out;
-  transition: background-color 0.5s ease-in-out;
+@mixin background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

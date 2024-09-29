@@ -100,7 +100,7 @@
 
   &-message--wrapper {
     opacity: 0;
-    @include fade-in;
+    @include animation(opacity);
     @include flex-column;
     justify-content: space-between;
     height: 100%;
@@ -113,13 +113,12 @@
   &--pictures .picture {
     width: 26%;
     background-color: $grey;
-    background-position: center;
-    background-size: cover;
-    @include width-change;
+    @include background;
+    @include animation(width);
   }
 
   &--pictures .active {
-    @include width-change;
+    @include animation(width);
     color: $white;
     width: 41%;
   }
