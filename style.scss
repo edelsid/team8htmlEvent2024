@@ -30,6 +30,39 @@ html {
   color: $black;
   scroll-behavior: smooth;
 }
+.main {
+  overflow: hidden;
+}
+.main article {
+  width: 129.6rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.right::before {
+  content: url('assets/svg/Architecture.svg');
+  position: absolute;
+  visibility: hidden;
+  right: -51rem;
+  transition: all 0.35s ease;
+}
+.right.active::before {
+  visibility: visible;
+  right: -31.2rem;
+}
+
+.left::after {
+  content: url('assets/svg/Architecture.svg');
+  position: absolute;
+  visibility: hidden;
+  left: -51.2rem;
+  top: 0;
+  transition: all 0.35s ease;
+}
+.left.active::after {
+  visibility: visible;
+  left: -31.2rem;
+}
 
 .orange-line-sep {
   width: 1.5rem;
