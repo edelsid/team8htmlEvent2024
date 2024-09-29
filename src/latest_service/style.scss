@@ -19,6 +19,9 @@
   }
 
   &--pictures {
+    @include list-noStyle;
+    display: flex;
+    justify-content: end;
     gap: 2.4rem;
     height: 41.8rem;
     width: 56%;
@@ -85,26 +88,7 @@
   }
 }
 
-.list-pictures {
-  @include list-noStyle;
-  @include flex-standard;
-}
-
 .picture {
-  &-thin {
-    width: 26%;
-    background-color: $grey;
-  }
-
-  &-wide {
-    @include flex-column;
-    color: $white;
-    justify-content: space-between;
-    padding: 2.4rem;
-    width: 41%;
-    background: $gradient-black-grey;
-  }
-
   &-icon {
     display: block;
   }
@@ -113,9 +97,47 @@
     @include font-bold;
     margin-bottom: 1.3rem;
   }
+
+  &-message--wrapper {
+    opacity: 0;
+    @include fade-in;
+    @include flex-column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 2.4rem;
+    background: #0000005d;
+  }
 }
 
-.latest--pictures .picture-description--header {
-  @include font-header-h4;
-  text-decoration: underline;
+.latest {
+  &--pictures .picture {
+    width: 26%;
+    background-color: $grey;
+    background-position: center;
+    background-size: cover;
+    @include width-change;
+  }
+
+  &--pictures .active {
+    @include width-change;
+    color: $white;
+    width: 41%;
+  }
+
+  &--pictures .picture-description--header {
+    @include font-header-h4;
+    text-decoration: underline;
+  }
+
+  &-1 {
+    background-image: url(../../assets/img/latest1.jpg);
+  }
+
+  &-2 {
+    background-image: url(../../assets/img/latest2.jpg);
+  }
+
+  &-3 {
+    background-image: url(../../assets/img/latest3.jpg);
+  }
 }

@@ -88,3 +88,13 @@ html {
   gap: 1rem;
   transform: scale(2);
 }
+
+.list-pictures {
+  @include list-noStyle;
+  @include flex-standard;
+}
+
+.button-transp:hover {
+  @include color-fade-in;
+  background-color: $orange;
+}
