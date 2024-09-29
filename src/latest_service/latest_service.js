@@ -12,6 +12,7 @@ export default class Slider_latest {
   }
 
   init() {
+
     this.container.addEventListener("click", (e) => this.chooseSlide(e.target));
   }
 
