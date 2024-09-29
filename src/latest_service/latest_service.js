@@ -41,7 +41,7 @@ export default class Slider_latest {
     <div class="picture-icon--wrapper">
       <img class="picture-icon" src="./assets/png/Icon.png" alt="icon of a tall building">
     </div>
-    <div class="picture-description--wrapper">
+    <div class="picture-header--wrapper">
       <h4 class="picture-description--header">Building Contraction</h4>
       <p class="block-text">
         This involves various stages like planning, design.

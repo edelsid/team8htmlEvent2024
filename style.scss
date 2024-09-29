@@ -95,6 +95,6 @@ html {
 }
 
 .button-transp:hover {
-  @include color-fade-in;
+  @include animation(background-color);
   background-color: $orange;
 }
