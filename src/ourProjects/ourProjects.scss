@@ -33,15 +33,19 @@
   padding: 3rem;
 }
 
+.projects--pictures .picture--wrapper {
+  @include animation(opacity);
+  opacity: 0;
+}
+
 .picture {
-  &-active {
-    position: relative;
-    display: flex;
-    flex-direction: column-reverse;
-    color: $white;
-  }
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  color: $white;
   
   &--marker {
+    cursor: pointer;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -57,10 +61,6 @@
     background-color: $orange;
     color: $white;
     font-size: 1.8rem;
-  }
-
-  &-description--wrapper {
-    color: $white;
   }
 }
 
