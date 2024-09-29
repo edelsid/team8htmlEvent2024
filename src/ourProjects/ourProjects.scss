@@ -11,10 +11,23 @@
   &--pictures {
     @include flex-standard;
     @include list-noStyle;
+    @include background;
     margin-inline: -31.1rem;
     margin-block: 6.7rem 14.2rem;
     height: 44.3rem;
     gap: 2.4rem;
+  }
+
+  &-1 {
+    background-image: url(../../assets/img/projects1.jpg);
+  }
+
+  &-2 {
+    background-image: url(../../assets/img/projects2.jpg);
+  }
+
+  &-3 {
+    background-image: url(../../assets/img/projects3.jpg);
   }
 }
 
