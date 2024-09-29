@@ -17,8 +17,8 @@ h2 {font-size: $heading-medium;}
     font-family: Jost;
 
     &--description {
-        width: 30%;
-        padding: 6rem;
+        width: 40%;
+        padding: 7rem;
         font-size: $text;
 
         &--admin {display: flex; align-items: center;}
@@ -31,20 +31,20 @@ h2 {font-size: $heading-medium;}
     &--picture {
         width: 50%;
         height: 361px;
-        padding: 6rem;
+        padding: 2rem;
 
         img {object-fit: cover; height: 100%;}
         
     }
 }
 
-.description {
+/*.description {
     width: 30%;
     padding: 6rem;
     font-size: $text;
 
     &--admin {display: flex; align-items: center;}
-}
+}*/
 
 .description--admin {display: flex; align-items: center; flex-wrap: nowrap; color: $color-grey-medium;}
 
