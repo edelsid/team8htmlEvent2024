@@ -1,0 +1,100 @@
+@import url(/style.scss);
+@import url(../blog/blog.scss);
+
+$color-grey-light: #ffffff;
+$color-orange: #FB5B11;
+$color-grey: #D8D8D8;
+$color-grey-dark: #0E0E0E;
+$color-grey-medium: #555555;
+$color-grey-medium-light: #b3aeae;
+$text: 1.6rem;
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+.footer {
+    margin-top: 120px;
+    font-family: Jost;
+    background-color: black;
+    background-image: url("/assets/svg/footer_picture.svg");
+    color: $color-grey-light;
+    padding-left: 12rem;
+    padding-bottom: 10rem;
+    color: $color-grey-light;
+    font-size: $text;
+
+    &--content {
+        display: flex;
+
+        &--links {
+            display: flex; 
+            flex-direction: column;
+            margin-left: 10rem;
+
+            a {text-decoration: none; margin-top: 1.6rem; color: $color-grey-medium-light;}
+        }
+    
+    }
+
+    &--text {
+        color: $color-grey-medium-light;
+
+        &--white {color: white; margin-top: 4rem;}
+        &--orange {color: $color-orange;}
+    }
+
+    &--form {
+        padding-top: 2rem;
+        padding-left: 7rem;
+        padding-right: 7rem;
+        padding-bottom: 2rem;
+        position: relative;
+        bottom: 95px;
+        display: flex;
+        flex-wrap:wrap;
+        border: 0ch;
+        background-color: $color-orange;
+        color: white;
+        width: 80%;
+        margin: 0 auto;
+        align-content: center;
+        justify-content: space-between;
+
+        h2 {width: 40%;}
+
+        input {
+        background: none;
+        border-width: 0 0 1px 0;
+        border-bottom: #fff 1px solid;
+        color: #fff;
+        height: 45px;
+        width: 40%;
+        outline: none;
+        margin-top: 3rem;
+        text-decoration-color: #fff;
+        background-image: url("/assets/svg/arrow-footer-1.svg");
+        background-repeat: no-repeat;
+        background-position: right center;
+        }
+
+        input::placeholder {
+            color: rgb(255, 255, 255);
+        }
+
+        
+    }
+}
+
+.copyright {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-grey-medium-light;
+    height: 71px;
+    width: 100%;
+    font-size: $text;
+    font-family: Jost;
+}

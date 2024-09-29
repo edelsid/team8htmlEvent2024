@@ -23,12 +23,51 @@
 }
 $sub-heading: 1.6rem;
 $black: #0e0e0e;
-$color-orange: #fb5b11;
+$color-orange: #FB5B11;
+$heading-medium: 3rem;
+$heading-medium: 3rem;
+$text: 1.6rem;
+$color-grey: #D8D8D8;
+$color-grey-dark: #0E0E0E;
+$color-grey-medium: #555555;
 
 html {
   font-size: 10px;
   color: $black;
   scroll-behavior: smooth;
+}
+.main {
+  overflow: hidden;
+}
+.main article {
+  width: 129.6rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.right::before {
+  content: url('assets/svg/Architecture.svg');
+  position: absolute;
+  visibility: hidden;
+  right: -51rem;
+  transition: all 0.35s ease;
+}
+.right.active::before {
+  visibility: visible;
+  right: -31.2rem;
+}
+
+.left::after {
+  content: url('assets/svg/Architecture.svg');
+  position: absolute;
+  visibility: hidden;
+  left: -51.2rem;
+  top: 0;
+  transition: all 0.35s ease;
+}
+.left.active::after {
+  visibility: visible;
+  left: -31.2rem;
 }
 
 .orange-line-sep {

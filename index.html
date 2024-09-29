@@ -36,6 +36,7 @@
 
     <link rel="stylesheet" href="style.scss" />
     <link rel="stylesheet" href="src/blog/blog.scss" />
+    <link rel="stylesheet" href="src/footer/footer.scss" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
@@ -332,7 +333,7 @@
         </ul>
       </article>
       <!-- Блок "About us" -->
-      <article class="about" id="about">
+      <article class="about right" id="about">
         <section class="about--block">
           <div class="block-wrapper">
             <div class="block-mini-header-start block-mini-header--about">
@@ -418,7 +419,7 @@
       </article>
 
       <!-- Блок "Our company" -->
-      <article class="company">
+      <article class="company left">
         <section class="block-mini-header block-mini-header--company">
           <div class="orange-line-sep"></div>
           <div class="block-mini-header--text">Our Company Status</div>
@@ -496,7 +497,7 @@
         </ul>
       </article>
 
-      <article class="htp">
+      <article class="htp right">
         <section class="block-mini-header block-mini-header--htp">
           <div class="orange-line-sep"></div>
           <div class="block-mini-header--text">How to process</div>
@@ -539,37 +540,34 @@
         </dialog>
       </article>
 
-      <article class="ourBlog howToProcess" id="blog">
+      <article class="ourBlog howToProcess right" id="blog">
         <section class="block-mini-header">
           <div class="orange-line-sep"></div>
           <div class="block-mini-header--text">Our Blog</div>
         </section>
         <section class="block-header">Latest Insights and Updates</section>
 
-        <section class="up-to-date">
-          <div class="description">
-            <div class="description--admin">
-              <div class="grey-line"></div>
-              <p>By Admin</p>
-              <div class="black-circle"></div>
-              <p>Building</p>
-            </div>
-            <h2>Stay up-to-date with the latest happenings.</h2>
-            <p>
-              Stay informed with our regular updates on significant events,
-              regulatory changes, and market trends. We cover a wide range of
-              topics, from new technological.
-            </p>
-            <div class="up-to-date--description--link">
-              <a href="">Read More</a>
-              <img src="assets/svg/orange-arrow.svg" alt="arrow" />
-            </div>
+      <section class="up-to-date">
+        <div class="up-to-date--description">
+          <div class="description--admin">
+            <div class="grey-line"></div>
+            <p>By Admin</p>
+            <div class="black-circle"></div>
+            <p>Building</p>
           </div>
-          <div class="date1"></div>
-          <div class="up-to-date--picture">
-            <img src="assets/img/blog-main.jpg" alt="worker" />
+          <h2>Stay Up-To-Date With The Latest Happenings</h2>
+          <p>Stay informed with our regular updates on significant events, regulatory changes, and market trends. We cover a wide range of topics, from new technological.</p>
+          <div class="up-to-date--description--link">
+            <a href="">Read More</a>
+            <img src="assets/svg/orange-arrow.svg" alt="arrow">
           </div>
-        </section>
+        </div>
+        <div class="date1"></div>
+        <div class="up-to-date--picture">
+          <img src="assets/img/blog-main.jpg" alt="worker">
+        </div>
+      </section>
+
 
         <section class="ourBlog--posts">
           <div class="ourBlog--posts--post">
@@ -625,13 +623,55 @@
           </div>
         </section>
 
-        <div class="ourBlog--more">
-          <button class="ourBlog--more--btn">
-            Read More
-            <img src="assets/svg/Arrow1.svg" alt="" />
-          </button>
+      <div class="ourBlog--more">
+        <button class="ourBlog--more--btn">Read More
+          <img src="assets/svg/Arrow1.svg" alt="">
+        </button>
+      </div>
+
+    </article>
+
+    <footer class="footer">
+      <form action="" class="footer--form">
+        <h2>Sign up for our newsletter to get weekly updates.</h2>
+        <input type="text" placeholder="Enter Your Email">
+      </form>
+      <section class="footer--content">
+        <div class="footer--content--about">
+          <div class="logo"><img src="assets/svg/logo.svg" alt=""></div>
+          <p class="footer--text">Welcome to consaik, a leader in the industry/sector since 2000<br/>
+            With a passion for excellence and a commitment.</p>
+          <p class="footer--text--white"><b>We Are Available</b></p>
+          <p class="footer--text--orange">Mon - Sat : 10:00Am To 07:30Pm</p>
         </div>
-      </article>
+        <div class="footer--content--links">
+          <p class="footer--text--white"><b>Quick links</b></p>
+          <a href="">About Us</a>
+          <a href="">Our Services</a>
+          <a href="">Our Pricing</a>
+          <a href="">Our Team</a>
+          <a href="">Contact Us</a>
+        </div>
+        <div class="footer--content--links">
+          <p class="footer--text--white"><b>Information</b></p>
+          <a href="">Regulatory Compliance</a>
+          <a href="">A sustainable Future</a>
+          <a href="">Architectural Design</a>
+          <a href="">Structural Engineering</a>
+          <a href="">Environmental Impact</a>
+        </div>
+        <div class="footer--content--links">
+          <p class="footer--text--white"><b>Social Media</b></p>
+          <a href="">Facebook</a>
+          <a href="">Instagram</a>
+          <a href="">Twitter</a>
+          <a href="">YouTube</a>
+          <a href="">LinkedIn</a>
+        </div>
+      </section>
+    </footer>
+    <section class="copyright">© 1995-2024 All rights for Conbuild exclusive</section>
+
     </main>
     <script type="module" src="/main.js"></script>
     <script type="module" src="/src/header/header.js"></script>
