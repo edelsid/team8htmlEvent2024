@@ -1,0 +1,76 @@
+@import url(/style.scss);
+
+@font-face {
+    font-family: Jost;
+    src: url(assets/fonts/Jost-VariableFont_wght.ttf);
+}
+
+$color-grey-light: #ffffff;
+$color-orange: #FB5B11;
+$color-grey: #D8D8D8;
+$color-grey-dark: #0E0E0E;
+$color-grey-medium: #555555;
+$color-grey-medium-light: #b3aeae;
+$text: 1.6rem;
+
+.prices {
+    background-image: url("/assets/img/prices-bg.jpg"); 
+    background-repeat: no-repeat;
+    padding: 8rem;
+    font-family: Jost;
+
+    &--btn {
+        width: 200px;
+        height: 50px;
+        border: 1.5px $color-grey-dark solid;
+    }
+
+    &--table {
+        display: flex;
+        justify-content: space-around;
+
+
+        &--price {
+            margin-top: 60px;
+            width: 30%;
+            border: $color-grey-medium-light 1px solid;
+            padding-left: 6rem;
+            padding-top: 2rem;
+            padding-bottom: 5rem;
+            font-family: Jost;
+            font-size: $text;
+            background-color: #ffffff;
+
+            ul {
+                font-family: Jost;
+                font-size: $text;
+                padding-left: 0;
+            }
+
+            li {
+                font-family: Jost;
+                font-size: $text;
+                margin-top: 1.8rem;
+                margin-left: 0ch;
+                
+            }
+
+            button {
+                margin-top: 4rem;
+                font-family: Jost;
+                border-radius: 0cm;
+                background-color: #ffffff;
+                /*display: flex;
+                justify-content: center;
+                align-content: center;*/
+            }
+        }
+    }
+}
+
+.grey-line_long {
+    height: 1px;
+    width: 80%;
+    //margin: 0 auto;
+    background-color: $color-grey;
+}
