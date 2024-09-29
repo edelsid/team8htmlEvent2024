@@ -2,12 +2,6 @@
   box-sizing: border-box;
 }
 
-// отступы от краев по горизонтали
-
-// .main {
-//   margin-inline: 31.1rem;
-// }
-
 .latest {
   @include flex-standard;
   gap: 9rem;
