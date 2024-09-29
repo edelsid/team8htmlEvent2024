@@ -55,14 +55,10 @@
   margin-right: 0.4rem;
 }
 
-.slider-arrows {
-  @include flex-standard;
+.arrows--about {
   margin-top: 5rem;
   margin-bottom: 15rem;
   margin-inline: auto;
-  width: fit-content;
-  gap: 1rem;
-  transform: scale(2);
 }
 
 .arrow {
