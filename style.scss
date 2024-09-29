@@ -24,12 +24,12 @@
 }
 $sub-heading: 1.6rem;
 $black: #0e0e0e;
-$color-orange: #FB5B11;
+$color-orange: #fb5b11;
 $heading-medium: 3rem;
 $heading-medium: 3rem;
 $text: 1.6rem;
-$color-grey: #D8D8D8;
-$color-grey-dark: #0E0E0E;
+$color-grey: #d8d8d8;
+$color-grey-dark: #0e0e0e;
 $color-grey-medium: #555555;
 
 html {
@@ -40,11 +40,21 @@ html {
 .main {
   overflow: hidden;
 }
+
 .main article {
   width: 129.6rem;
   margin: 0 auto;
   position: relative;
 }
+
+.main article.nomargin {
+  margin: 0;
+  width: 100%;
+}
+
+// .main .first {
+//   overflow: visible;
+// }
 
 .main .latest {
   margin-top: 28.3rem;
