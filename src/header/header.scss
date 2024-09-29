@@ -1,9 +1,13 @@
 .header {
+  overflow: hidden;
   width: 100%;
   position: sticky;
   top: 0;
   z-index: 1000;
   display: flex;
+  &__nav {
+    width: 100%;
+  }
   &__left-padding {
     padding-left: 6rem;
   }
@@ -18,17 +22,20 @@
   &__black {
     background: $black;
     height: 14.5rem;
+    width: 100%;
     &__wrapper {
       padding-left: 7rem;
       // height: 100%;
       display: flex;
       height: 100%;
+      width: 100%;
     }
     &__main {
       width: 100%;
       height: 100%;
       display: flex;
       flex-direction: column;
+      flex-shrink: 1;
     }
     &__social-icon svg {
       width: 1.3rem;
@@ -72,7 +79,7 @@
           margin: 0;
         }
         &__number {
-          color: var(--FFFFFF, #fff);
+          color: $white;
           font-family: Jost;
           font-size: 1.6rem;
           font-style: normal;
@@ -127,12 +134,13 @@
       align-items: center;
       width: 64.2rem;
       height: 100%;
-      position: relative;
       &--wrapper {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        list-style: none;
+        padding-left: 0;
       }
       &__navitem {
         color: $white;
@@ -143,18 +151,27 @@
         line-height: 2.6rem;
         text-transform: capitalize;
         text-decoration: none;
+        transition: all;
       }
       &__navitem.active {
         color: $orange;
+        position: relative;
+      }
+      &__navitem::after {
+        content: ' ';
+        height: 0.4rem;
+        background-color: transparent;
+        position: absolute;
+        bottom: 0rem;
+        left: 0;
+        transition: all 0.35s ease;
       }
       &__navitem.active::after {
         content: ' ';
-        width: 3.9rem;
-        height: 0.4rem;
+        width: 100%;
         background-color: $orange;
-        position: absolute;
-        bottom: 0rem;
-        left: 6.3rem;
+        bottom: -3.8rem;
+        left: 0;
       }
     }
   }

@@ -1,0 +1,66 @@
+.projects {
+  &--block {
+    @include flex-standard;
+    align-items: center;
+  }
+
+  &--pictures {
+    @include flex-standard;
+    @include list-noStyle;
+    margin-inline: -31.1rem;
+    margin-block: 6.7rem 14.2rem;
+    height: 44.3rem;
+    gap: 2.4rem;
+  }
+}
+
+.projects--pictures .picture {
+  width: 33%;
+  background-color: $grey;
+  padding: 3rem;
+}
+
+.picture {
+  &-active {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  &--marker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    @include flex-column;
+    align-items: center;
+    justify-content: center;
+    width: 8.2rem;
+    aspect-ratio: 1/1;
+    border: 1.2rem solid #9c9c9c;
+    background-color: $orange;
+    color: $white;
+    font-size: 1.8rem;
+  }
+
+  &-description--wrapper {
+    color: $white;
+  }
+}
+
+.text-with-base, .header-with-base {
+  width: fit-content;
+}
+
+.text-with-base {
+  background-color: $orange;
+  padding: 0.5rem 1.6rem;
+}
+
+.header-with-base {
+  background-color: $black;
+  padding: 1.6rem 2.4rem;
+  margin-block: 2rem 0;
+}
