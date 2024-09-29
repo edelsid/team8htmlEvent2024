@@ -22,6 +22,9 @@
 
 .card {
   @include flex-column;
+  @include animation(background-color);
+  @include animation(color);
+  cursor: pointer;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -38,9 +41,9 @@
     @include font-header-h4;
     margin: 0;
   }
+}
 
-  &-active{
-    background-color: $orange;
-    color: $white;
-  }
+.card:hover {
+  background-color: $orange;
+  color: $white;
 }
