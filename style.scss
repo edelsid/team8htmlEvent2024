@@ -3,6 +3,7 @@
 @import 'src/latest_service/style.scss';
 @import 'src/aboutUs/aboutUs.scss';
 @import 'src/ourCompany/ourCompany.scss';
+@import 'src/ourProjects/ourProjects.scss';
 @import 'src/howToProcess/howToProcess.scss';
 @import 'src/header/header.scss';
 
@@ -82,4 +83,11 @@ html {
   margin-left: 1rem;
   width: 6px;
   height: 6px;
+}
+
+.slider-arrows {
+  @include flex-standard;
+  width: fit-content;
+  gap: 1rem;
+  transform: scale(2);
 }
