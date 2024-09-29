@@ -1,3 +1,7 @@
+#projects {
+  overflow: hidden;
+}
+
 .projects {
   &--block {
     @include flex-standard;
@@ -64,7 +68,8 @@
   }
 }
 
-.text-with-base, .header-with-base {
+.text-with-base,
+.header-with-base {
   width: fit-content;
 }
 
