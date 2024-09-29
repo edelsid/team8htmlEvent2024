@@ -1,3 +1,7 @@
+#projects {
+  overflow: hidden;
+}
+
 .projects {
   &--block {
     @include flex-standard;
@@ -7,10 +11,23 @@
   &--pictures {
     @include flex-standard;
     @include list-noStyle;
+    @include background;
     margin-inline: -31.1rem;
     margin-block: 6.7rem 14.2rem;
     height: 44.3rem;
     gap: 2.4rem;
+  }
+
+  &-1 {
+    background-image: url(../../assets/img/projects1.jpg);
+  }
+
+  &-2 {
+    background-image: url(../../assets/img/projects2.jpg);
+  }
+
+  &-3 {
+    background-image: url(../../assets/img/projects3.jpg);
   }
 }
 
@@ -20,14 +37,19 @@
   padding: 3rem;
 }
 
+.projects--pictures .picture--wrapper {
+  @include animation(opacity);
+  opacity: 0;
+}
+
 .picture {
-  &-active {
-    position: relative;
-    display: flex;
-    flex-direction: column-reverse;
-  }
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  color: $white;
   
   &--marker {
+    cursor: pointer;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -44,13 +66,10 @@
     color: $white;
     font-size: 1.8rem;
   }
-
-  &-description--wrapper {
-    color: $white;
-  }
 }
 
-.text-with-base, .header-with-base {
+.text-with-base,
+.header-with-base {
   width: fit-content;
 }
 
