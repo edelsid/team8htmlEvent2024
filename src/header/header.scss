@@ -1,217 +1,5 @@
-// .header {
-//   &__nav {
-//     width: 100%;
-//   }
-//   &__left-padding {
-//     padding-left: 6rem;
-//   }
-//   &__white-link {
-//     color: $white;
-//     text-decoration: none;
-//   }
-//   &__grey-link {
-//     color: $grey;
-//     text-decoration: none;
-//   }
-//   &__black {
-//     background: $black;
-//     height: 14.5rem;
-//     width: 100%;
-//     &__wrapper {
-//       padding-left: 7rem;
-//       // height: 100%;
-//       display: flex;
-//       height: 100%;
-//       width: 100%;
-//     }
-//     &__main {
-//       width: 100%;
-//       height: 100%;
-//       display: flex;
-//       flex-direction: column;
-//       flex-shrink: 1;
-//     }
-//     &__social-icon svg {
-//       width: 1.3rem;
-//       height: 1.3rem;
-//       opacity: 0.3;
-//       transition: opacity 0.2s linear 0s;
-//     }
-//     &__social-icon:hover svg {
-//       opacity: 1;
-//     }
-//     &__number {
-//       width: 31.3rem;
-//       height: 100%;
-//       border-left: 1px solid rgba(255, 255, 255, 0.1);
-//       display: flex;
-//       &--wrapper {
-//         display: flex;
-//         align-items: center;
-//         padding-left: 2.3rem;
-//         width: 100%;
-//       }
-//       &--icon {
-//         width: 6rem;
-//         height: 6rem;
-//       }
-//       &--text {
-//         padding-left: 1.4rem;
-//         display: flex;
-//         flex-direction: column;
-//         color: $white;
-//         &__text {
-//           color: var(--cdcdcd, #cdcdcd);
-
-//           /* Barlow */
-//           font-family: Barlow;
-//           font-size: 1.4rem;
-//           font-style: normal;
-//           font-weight: 400;
-//           line-height: 2.4rem; /* 171.429% */
-//           text-transform: capitalize;
-//           margin: 0;
-//         }
-//         &__number {
-//           color: $white;
-//           font-family: Jost;
-//           font-size: 1.6rem;
-//           font-style: normal;
-//           font-weight: 600;
-//           line-height: 2.6rem; /* 162.5% */
-//           text-transform: capitalize;
-//           margin: 0;
-//         }
-//       }
-//     }
-//     &__top-wrapper {
-//       display: flex;
-//       align-items: center;
-//     }
-//     &__top {
-//       display: flex;
-//       align-items: center;
-//       justify-content: space-between;
-//       height: 5.7rem;
-//       color: var(--cdcdcd, #cdcdcd);
-//       /* Barlow */
-//       font-family: Barlow;
-//       font-size: 1.4rem;
-//       font-style: normal;
-//       font-weight: 400;
-//       line-height: 2.4rem; /* 171.429% */
-//       text-transform: capitalize;
-//       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-//       &--social-links {
-//         display: flex;
-//         gap: 2rem;
-//         padding-right: 2.9rem;
-//       }
-//       &__block {
-//         display: flex;
-//         align-items: center;
-//         &--padding {
-//           padding-left: 4.2rem;
-//         }
-//         &__icon {
-//           width: 0.8rem;
-//           height: 1.6rem;
-//           flex-shrink: 0;
-//         }
-//         &__text {
-//           padding-left: 0.3rem;
-//         }
-//       }
-//     }
-//     &__bottom {
-//       display: flex;
-//       align-items: center;
-//       width: 64.2rem;
-//       height: 100%;
-//       &--wrapper {
-//         width: 100%;
-//         display: flex;
-//         justify-content: space-between;
-//         align-items: center;
-//         list-style: none;
-//         padding-left: 0;
-//       }
-//       &__navitem {
-//         color: $white;
-//         font-family: Barlow;
-//         font-size: 1.6rem;
-//         font-style: normal;
-//         font-weight: 700;
-//         line-height: 2.6rem;
-//         text-transform: capitalize;
-//         text-decoration: none;
-//         transition: all;
-//       }
-//       &__navitem.active {
-//         color: $orange;
-//         position: relative;
-//       }
-//       &__navitem::after {
-//         content: ' ';
-//         height: 0.4rem;
-//         background-color: transparent;
-//         position: absolute;
-//         bottom: 0rem;
-//         left: 0;
-//         transition: all 0.35s ease;
-//       }
-//       &__navitem.active::after {
-//         content: ' ';
-//         width: 100%;
-//         background-color: $orange;
-//         bottom: -3.8rem;
-//         left: 0;
-//       }
-//     }
-//   }
-//   &__orange {
-//     width: 51rem;
-//     height: 15.6rem;
-//     background-color: $orange;
-//     flex-shrink: 0;
-//     @media (max-width: 1540px) {
-//       width: 30rem;
-//       height: 15.6rem;
-//     }
-//   }
-//   &__orange::before {
-//     content: '';
-//     position: absolute;
-
-//     background-color: $orange;
-//     width: 18.27rem;
-//     height: 11rem;
-//     top: -0.6rem;
-//     left: 41.9rem;
-//     transform: rotate(-59deg);
-//     @media (max-width: 1540px) {
-//       left: 20.84rem;
-//     }
-//   }
-//   &__orange::after {
-//     content: '';
-//     position: absolute;
-//     top: 12.9rem;
-//     left: 50.55rem;
-//     transform: rotate(-20deg);
-//     width: 4rem;
-//     height: 2.1rem;
-//     background: #b1400c;
-//     z-index: -1;
-//     @media (max-width: 1540px) {
-//       left: 29.6rem;
-//     }
-//   }
-// }
-
-// new stuff starts here
-
 .header {
+  font-family: 'Barlow';
   position: absolute;
   top: 0;
   left: 0;
@@ -224,15 +12,15 @@
     max-width: 100%;
 
     &-logo {
-      display: flex;
-      align-items: center;
+      @include flex-center;
       background-color: $orange;
       height: 156px;
       width: 510px;
+      flex-shrink: 0;
     }
 
     &-logo::before, &-logo::after {
-      content: '';
+      content: "";
       position: absolute;
     }
 
@@ -241,13 +29,13 @@
       width: 182px;
       height: 110px;
       top: -6px;
-      left: 412px;
+      left: 418px;
       transform: rotate(-60deg);
     }
-    
+
     &-logo::after {
       top: 129px;
-      left: 500px;
+      left: 505px;
       transform: rotate(-20deg);
       width: 40px;
       height: 21px;
@@ -265,21 +53,33 @@
 
   &__menu {
     margin: 0 65px 0 0;
+    display: flex;
+  }
+
+  &__link {
+    color: $lightgrey;
+    font-size: 1.4rem;
   }
 }
 
 .menu {
-  width: 88%;
-
   &__textual {
-    
+    width: 84%;
+  }
+
+  &__phone {
+    width: 16%;;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    border-left: 1px solid $grey;
   }
 }
 
 .contacts {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 110px;
+  @include flex-standard;
+  padding-inline: 110px 30px;
   border-bottom: 1px solid $grey;
 
   &__descriptions {
@@ -289,23 +89,15 @@
   }
 
   &__socials {
-    display: flex;
-    align-items: center;
+    @include flex-center;
     gap: 20px;
   }
 }
 
 .descriptions {
   &__item {
-    display: flex;
-    align-items: center;
+    @include flex-center;
     gap: 10px;
-  }
-
-  &__link {
-    color: $lightgrey;
-    font-family: 'Barlow';
-    font-size: 1.4rem;
   }
 }
 
@@ -318,4 +110,60 @@
   width: 13px;
   height: 13px;
   opacity: 0.3;
+  @include animation(opacity);
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.navigation {
+  display: flex;
+  padding-left: 110px;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding-block: 35px;
+
+  &__anchors {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+.anchors__link {
+  position: relative;
+  color: $white;
+  
+  &:hover {
+    color: $orange;
+  }
+}
+
+.link-active {
+  color: $orange;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    background-color: $orange;
+    height: 4px;
+    left: 0;
+    bottom: -35px;
+  }
+}
+
+.phone {
+  &__cta {
+    margin-block: 0 5px;
+  }
+
+  &__number {
+    margin: 0;
+    font-family: "Jost";
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: $white;
+  }
 }

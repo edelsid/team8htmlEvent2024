@@ -45,13 +45,13 @@
     <header class="header">
       <div class="header__content">
         <div class="header__content-logo">
-          <div class="logo__wrapper logo-header">
+          <a href="/" class="logo__wrapper logo-header">
             <img src="./assets/svg/mail-logo-white.svg" class="logo__img" alt="logo"/>
             <div class="logo__text">
               <p class="logo__desc">Construction Building</p>
               <h1 class="logo__title">Conbuild</h1>
             </div>
-          </div>
+          </a>
         </div>
         <div class="header__content-main">
           <div class="header__menu">
@@ -70,7 +70,7 @@
                         fill="#FB5B11"/>
                     </svg>
                     <a
-                      class="descriptions__link"
+                      class="header__link"
                       href="https://maps.app.goo.gl/1ggYsMyvK2q2y5rp8">
                       2464 Royal Ln. Mesa, New York
                     </a>
@@ -88,7 +88,7 @@
                       />
                     </svg>
                     <a
-                      class="descriptions__link"
+                      class="header__link"
                       href="mailto:Info @golzergmail.com">
                       info @golzergmail.com
                     </a>
@@ -106,7 +106,7 @@
                       />
                     </svg>
                     <a
-                      class="descriptions__link"
+                      class="header__link"
                       href="https://maps.app.goo.gl/1ggYsMyvK2q2y5rp8"
                       >Mon - Sat 8:00 - 18:20</a>
                   </li>
@@ -178,248 +178,52 @@
                   </li>
                 </ul>
               </div>
-              <div class="navigation"></div>
+              <div class="navigation">
+                <ul class="navigation__anchors">
+                  <li class="anchors__item">
+                    <a class="anchors__link link-active" href="/">Home</a>
+                  </li>
+                  <li class="anchors__item">
+                    <a class="anchors__link" href="/">About</a>
+                  </li>
+                  <li class="anchors__item">
+                    <a class="anchors__link" href="/">Projects</a>
+                  </li>
+                  <li class="anchors__item">
+                    <a class="anchors__link" href="/">Testimonials</a>
+                  </li>
+                  <li class="anchors__item">
+                    <a class="anchors__link" href="/">Team</a>
+                  </li>
+                  <li class="anchors__item">
+                    <a class="anchors__link" href="/">Pricing</a>
+                  </li>
+                  <li class="anchors__item">
+                    <a class="anchors__link" href="/">Blog</a>
+                  </li>
+                  <li class="anchors__item">
+                    <a class="anchors__link" href="/">Contacts</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="menu__phone"></div>
+            <a class="menu__phone" href="tel:(704) 555-0127">
+              <img
+                src="./assets/svg/Call-icon.svg"
+                alt="phone"/>
+              <div class="phone__data">
+                <p class="header__link phone__cta">
+                  Call us any time
+                </p>
+                <p class="phone__number">
+                  (704) 555-0127
+                </p>
+              </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <!-- 
-      <div class="header__black">
-        <div class="header__black__wrapper">
-          <div class="header__black__main">
-            <div class="header__black__top header__left-padding">
-              <div class="header__black__top-wrapper">
-                <div class="header__black__top__block">
-                  <svg
-                    class="header__black__top__block__icon"
-                    width="8"
-                    height="16"
-                    viewBox="0 0 8 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 4C8 1.794 6.206 0 4 0C1.794 0 0 1.794 0 4C0 5.97867 1.444 7.626 3.33333 7.944V15.3333C3.33333 15.7013 3.632 16 4 16C4.368 16 4.66667 15.7013 4.66667 15.3333V7.944C6.556 7.626 8 5.97867 8 4ZM4 6.66667C2.52933 6.66667 1.33333 5.47067 1.33333 4C1.33333 2.52933 2.52933 1.33333 4 1.33333C5.47067 1.33333 6.66667 2.52933 6.66667 4C6.66667 5.47067 5.47067 6.66667 4 6.66667Z"
-                      fill="#FB5B11"
-                    />
-                  </svg>
-                  <div class="header__black__top__block__text">
-                    <a
-                      class="header__grey-link"
-                      href="https://maps.app.goo.gl/1ggYsMyvK2q2y5rp8"
-                      >2464 Royal Ln. Mesa, New York</a
-                    >
-                  </div>
-                </div>
-                <div
-                  class="header__black__top__block header__black__top__block--padding"
-                >
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M9.5 0.5H2.5C1.8372 0.500794 1.20178 0.764441 0.73311 1.23311C0.264441 1.70178 0.000793929 2.3372 0 3L0 9C0.000793929 9.6628 0.264441 10.2982 0.73311 10.7669C1.20178 11.2356 1.8372 11.4992 2.5 11.5H9.5C10.1628 11.4992 10.7982 11.2356 11.2669 10.7669C11.7356 10.2982 11.9992 9.6628 12 9V3C11.9992 2.3372 11.7356 1.70178 11.2669 1.23311C10.7982 0.764441 10.1628 0.500794 9.5 0.5ZM2.5 1.5H9.5C9.79939 1.50059 10.0918 1.59076 10.3395 1.7589C10.5872 1.92705 10.7789 2.16547 10.89 2.4435L7.061 6.273C6.77921 6.55366 6.39771 6.71123 6 6.71123C5.60229 6.71123 5.22079 6.55366 4.939 6.273L1.11 2.4435C1.22107 2.16547 1.41281 1.92705 1.66052 1.7589C1.90824 1.59076 2.20061 1.50059 2.5 1.5ZM9.5 10.5H2.5C2.10218 10.5 1.72064 10.342 1.43934 10.0607C1.15804 9.77936 1 9.39782 1 9V3.75L4.232 6.98C4.70131 7.44813 5.33713 7.71102 6 7.71102C6.66287 7.71102 7.29869 7.44813 7.768 6.98L11 3.75V9C11 9.39782 10.842 9.77936 10.5607 10.0607C10.2794 10.342 9.89782 10.5 9.5 10.5Z"
-                      fill="#FB5B11"
-                    />
-                  </svg>
-                  <a
-                    class="header__grey-link"
-                    href="mailto:Info @golzergmail.com"
-                  >
-                    <span class="header__black__top__block__text"
-                      >Info @golzergmail.com</span
-                    >
-                  </a>
-                </div>
-                <div class="header__black__top__block header__left-padding">
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6 12C2.6915 12 0 9.3085 0 6C0 2.6915 2.6915 0 6 0C9.3085 0 12 2.6915 12 6C12 9.3085 9.3085 12 6 12ZM6 1C3.243 1 1 3.243 1 6C1 8.757 3.243 11 6 11C8.757 11 11 8.757 11 6C11 3.243 8.757 1 6 1ZM8.5 6C8.5 5.7235 8.2765 5.5 8 5.5H6.5V3C6.5 2.7235 6.276 2.5 6 2.5C5.724 2.5 5.5 2.7235 5.5 3V6C5.5 6.2765 5.724 6.5 6 6.5H8C8.2765 6.5 8.5 6.2765 8.5 6Z"
-                      fill="#FB5B11"
-                    />
-                  </svg>
-                  <span class="header__black__top__block__text"
-                    >Mon - Sat 8:00 - 18:20</span
-                  >
-                </div>
-              </div>
-              <div class="header__black__top--social-links">
-                <a
-                  href="https://www.facebook.com/"
-                  target="_blank"
-                  class="header__black__social-icon"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24px"
-                    height="24px"
-                    viewBox="0 0 24 24"
-                    fill="white"
-                  >
-                    <path
-                      d="M17.525,9H14V7c0-1.032,0.084-1.682,1.563-1.682h1.868v-3.18C16.522,2.044,15.608,1.998,14.693,2 C11.98,2,10,3.657,10,6.699V9H7v4l3-0.001V22h4v-9.003l3.066-0.001L17.525,9z"
-                    />
-                  </svg>
-                </a>
-                <a
-                  href="https://www.instagram.com/"
-                  target="_blank"
-                  class="header__black__social-icon"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 50 50"
-                    width="50px"
-                    height="50px"
-                    fill="white"
-                  >
-                    <path
-                      d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"
-                    />
-                  </svg>
-                </a>
-                <a
-                  href="https://www.x.com/"
-                  target="_blank"
-                  class="header__black__social-icon"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 50 50"
-                    width="50px"
-                    height="50px"
-                    fill="white"
-                  >
-                    <path
-                      d="M 5.9199219 6 L 20.582031 27.375 L 6.2304688 44 L 9.4101562 44 L 21.986328 29.421875 L 31.986328 44 L 44 44 L 28.681641 21.669922 L 42.199219 6 L 39.029297 6 L 27.275391 19.617188 L 17.933594 6 L 5.9199219 6 z M 9.7167969 8 L 16.880859 8 L 40.203125 42 L 33.039062 42 L 9.7167969 8 z"
-                    />
-                  </svg>
-                </a>
-                <a
-                  href="https://www.x.com/"
-                  target="_blank"
-                  class="header__black__social-icon"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 32 32"
-                    width="32px"
-                    height="32px"
-                    fill="white"
-                  >
-                    <path
-                      d="M 8.6425781 4 C 7.1835781 4 6 5.181625 6 6.640625 C 6 8.099625 7.182625 9.3085938 8.640625 9.3085938 C 10.098625 9.3085938 11.283203 8.099625 11.283203 6.640625 C 11.283203 5.182625 10.101578 4 8.6425781 4 z M 21.535156 11 C 19.316156 11 18.0465 12.160453 17.4375 13.314453 L 17.373047 13.314453 L 17.373047 11.310547 L 13 11.310547 L 13 26 L 17.556641 26 L 17.556641 18.728516 C 17.556641 16.812516 17.701266 14.960938 20.072266 14.960938 C 22.409266 14.960937 22.443359 17.145609 22.443359 18.849609 L 22.443359 26 L 26.994141 26 L 27 26 L 27 17.931641 C 27 13.983641 26.151156 11 21.535156 11 z M 6.3632812 11.310547 L 6.3632812 26 L 10.923828 26 L 10.923828 11.310547 L 6.3632812 11.310547 z"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div class="header__black__bottom header__left-padding">
-              <nav class="header__nav">
-                <ul class="header__black__bottom--wrapper">
-                  <li>
-                    <a
-                      href="#main"
-                      class="header__black__bottom__navitem active"
-                      >Home</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#about"
-                      class="header__black__bottom__navitem"
-                      data-hover="About"
-                    >
-                      About
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#projects"
-                      class="header__black__bottom__navitem"
-                      data-hover="Projects"
-                      >Projects</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#Testimonials"
-                      class="header__black__bottom__navitem"
-                      data-hover="Testimonials"
-                      >Testimonials</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#team"
-                      class="header__black__bottom__navitem"
-                      data-hover="Team"
-                      >Team</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#pricing"
-                      class="header__black__bottom__navitem"
-                      data-hover="Pricing"
-                      >Pricing</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#blog"
-                      class="header__black__bottom__navitem"
-                      data-hover="Blog"
-                      >Blog</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#contact"
-                      class="header__black__bottom__navitem"
-                      data-hover="Contact"
-                      >Contact</a
-                    >
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-          <div class="header__black__number">
-            <div class="header__black__number--wrapper">
-              <a href="tel:(704) 555-0127">
-                <img
-                  class="header__black__number--icon"
-                  src="./assets/svg/Call-icon.svg"
-                  alt="phone"
-                />
-              </a>
-              <div class="header__black__number--text">
-                <p class="header__black__number--text__text">
-                  Call us any time
-                </p>
-                <a
-                  href="tel:(704) 555-0127"
-                  class="header__black__number--text__number header__white-link"
-                >
-                  (704) 555-0127
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
     </header>
     <main class="main">
       <article class="first nomargin" id="main">
