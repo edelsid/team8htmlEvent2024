@@ -1,5 +1,4 @@
 @import 'styles/common.scss';
-@import 'styles/normalize/normalize';
 @import 'src/latest_service/style.scss';
 @import 'src/aboutUs/aboutUs.scss';
 @import 'src/ourCompany/ourCompany.scss';
@@ -23,22 +22,74 @@
   src: url(assets/fonts/Jost-VariableFont_wght.ttf);
 }
 $sub-heading: 1.6rem;
-$black: #0e0e0e;
-$color-orange: #fb5b11;
 $heading-medium: 3rem;
 $heading-medium: 3rem;
 $text: 1.6rem;
-$color-grey: #d8d8d8;
-$color-grey-dark: #0e0e0e;
-$color-grey-medium: #555555;
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box; 
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
 
 html {
   font-size: 10px;
   color: $black;
   scroll-behavior: smooth;
 }
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .main {
   overflow: hidden;
+}
+
+.container {
+
+}
+
+.logo {
+  &-header {
+    margin-left: 65px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    color: $white;
+  }
+
+  &__text {
+    padding-left: 7px;
+  }
+
+  &__desc {
+    font-family: Barlow;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-block: 0 10px;
+  }
+
+  &__title {
+    font-family: Jost;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 600;
+    margin: 0;
+  }
 }
 
 .main article,
@@ -53,13 +104,7 @@ html {
   width: 100%;
 }
 
-.main article.noover {
-  overflow: visible;
-}
 
-// .main .first {
-//   overflow: visible;
-// }
 
 .main .latest {
   margin-top: 28.3rem;

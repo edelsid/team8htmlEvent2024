@@ -1,5 +1,4 @@
 const observer = new window.IntersectionObserver((entries) => {
-  console.log(entries)
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       document.querySelectorAll('.header__black__bottom__navitem').forEach((link) => {
