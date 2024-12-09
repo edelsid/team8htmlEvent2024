@@ -21,6 +21,7 @@
   font-family: Jost;
   src: url(assets/fonts/Jost-VariableFont_wght.ttf);
 }
+
 $sub-heading: 1.6rem;
 $heading-medium: 3rem;
 $heading-medium: 3rem;
@@ -55,10 +56,26 @@ ul {
 
 .main {
   overflow: hidden;
+  margin-top: -11px;
 }
 
 .container {
+  position: relative;
+  margin-inline: 160px;
+  z-index: 1;
 
+  &-flex {
+    @include flex-standard;
+  }
+}
+
+.title {
+  font-family: "Jost";
+  color: $white;
+}
+
+.subtitle {
+  font-family: "Barlow";
 }
 
 .logo {
@@ -90,6 +107,26 @@ ul {
     font-weight: 600;
     margin: 0;
   }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 25px 38px;
+
+  &__primary {
+    border: none;
+    background-color: $orange;
+    color: $white;
+  }
+}
+
+.btn p {
+  margin: 0;
+  font-family: "Jost";
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .main article,

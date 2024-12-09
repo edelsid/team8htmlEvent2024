@@ -1,18 +1,14 @@
 .header {
   font-family: 'Barlow';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   z-index: 9999;
 
   &__content {
-    position: absolute;
     display: flex;
     max-width: 100%;
 
     &-logo {
-      @include flex-center;
+      display: flex;
+      align-items: center;
       background-color: $orange;
       height: 156px;
       width: 510px;

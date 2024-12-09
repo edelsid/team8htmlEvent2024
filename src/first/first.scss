@@ -79,3 +79,58 @@
     }
   }
 }
+
+//new stuff starts here
+
+.intro {
+  position: relative;
+  background-color: $black;
+  background-image: url(assets/img/ivan-bandura-nnY_e2zCVAc-unsplash-2.webp);
+  
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(14, 14, 14, 0.6) 0%,
+      rgba(14, 14, 14, 1) 100%
+    );
+  }
+
+  &__text {
+    padding-top: 230px;
+  }
+
+  &__image {
+    padding-top: 54px;
+    width: 606px;
+    flex-shrink: 0;
+    margin-bottom: 76px;
+    position: relative;
+    display: flex;
+
+    &-char {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+.title-intro {
+  font-size: 158px;
+  line-height: 138px;
+  margin-block: 0 30px;
+}
+
+.subtitle-intro {
+  font-size: 24px;
+  line-height: 36px;
+  color: lightgrey;
+  margin-block: 0 54px;
+}
