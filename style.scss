@@ -61,11 +61,21 @@ ul {
 
 .container {
   position: relative;
-  margin-inline: 160px;
+  margin: auto;
   z-index: 1;
 
   &-flex {
     @include flex-standard;
+  }
+
+  &-intro {
+    max-width: 1735px;
+    width: 85%;
+  }
+
+  &-standart {
+    max-width: 1415px;
+    width: 75%;
   }
 }
 

@@ -1,13 +1,3 @@
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
 .first {
   margin-top: -1.1rem;
   overflow: visible;
@@ -101,13 +91,20 @@
     );
   }
 
+  &__text, &__image {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
   &__text {
+    width: 56%;
     padding-top: 230px;
   }
 
   &__image {
     padding-top: 54px;
-    width: 606px;
+    width: 38%;
     flex-shrink: 0;
     margin-bottom: 76px;
     position: relative;

@@ -74,3 +74,13 @@ $gradient-black-grey: linear-gradient(0deg, $black, $grey);
   background-position: center;
   background-repeat: no-repeat;
 }
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
