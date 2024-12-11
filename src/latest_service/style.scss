@@ -1,123 +1,57 @@
-.latest {
-  @include flex-standard;
-  gap: 9rem;
-  margin-block: 29.5rem 13.5rem;
+.services {
+  padding-top: 330px;
+  position: relative;
 
-  &--block {
+  &__text {
     width: 37%;
     position: relative;
   }
 
-  &--pictures {
+  &__sliders {
     @include list-noStyle;
     display: flex;
     justify-content: end;
     gap: 2.4rem;
     height: 41.8rem;
     width: 56%;
-    margin-top: 0.6rem;
-  }
-}
-
-.block {
-  &-mini-header {
-    &-start {
-      @include font-main;
-      @include font-bold;
-      display: flex;
-      align-items: center;
-    }
-
-    &--text {
-      margin: 0;
-    }
   }
 
-  &-header-start {
-    @include font-header-h2;
-    @include font-bold;
-    margin-top: 1.4rem;
-    margin-bottom: 1rem;
-  }
-
-  &-text {
-    @include font-main;
-    @include font-text;
-    margin: 0;
-  }
-
-  &-backgroundImage {
-    position: absolute;
-    right: -3rem;
-    bottom: 4rem;
-  }
-}
-
-.button {
-  @include font-main;
-  @include font-bold;
-  @include flex-standard;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.7rem 3.5rem;
-  width: fit-content;
-  background-color: #ffffff00;
-  border: 1px solid $black;
-  cursor: pointer;
-
-  &-latest {
-    margin-top: 4.1rem;
-  }
-
-  &-arrow {
-    transform: rotate(-45deg);
-  }
-
-  &-text {
-    margin: 0
-  }
-}
-
-.picture {
-  &-icon {
-    display: block;
-  }
-
-  &-description--header {
-    @include font-bold;
-    margin-bottom: 1.3rem;
-  }
-
-  &-message--wrapper {
-    opacity: 0;
-    @include animation(opacity);
-    @include flex-column;
-    justify-content: space-between;
-    height: 100%;
-    padding: 2.4rem;
-    background: #0000005d;
-  }
-}
-
-.latest {
-  &--pictures .picture {
+  &__item {
     width: 26%;
     background-color: $grey;
     @include background;
     @include animation(width);
+    cursor: pointer;
   }
 
-  &--pictures .active {
+  &__item .active {
     @include animation(width);
     color: $white;
     width: 41%;
   }
+}
 
-  &--pictures .picture-description--header {
-    @include font-header-h4;
-    text-decoration: underline;
+.decor {
+  &-crane {
+    top: 0;
+    left: 34px;
   }
 
+  &-truck {
+    top: -165px;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
+.backgroundIcon {
+  position: absolute;
+  right: -35px;
+  bottom: -35px;
+}
+
+#services {
   &-1 {
     background-image: url('/assets/img/latest1.webp');
   }
@@ -130,3 +64,72 @@
     background-image: url('/assets/img/latest3.webp');
   }
 }
+
+// .block {
+//   &-mini-header {
+//     &-start {
+//       @include font-main;
+//       @include font-bold;
+//       display: flex;
+//       align-items: center;
+//     }
+
+//     &--text {
+//       margin: 0;
+//     }
+//   }
+
+//   &-header-start {
+//     @include font-header-h2;
+//     @include font-bold;
+//     margin-top: 1.4rem;
+//     margin-bottom: 1rem;
+//   }
+
+//   &-text {
+//     @include font-main;
+//     @include font-text;
+//     margin: 0;
+//   }
+// }
+
+// .picture {
+//   &-icon {
+//     display: block;
+//   }
+
+//   &-description--header {
+//     @include font-bold;
+//     margin-bottom: 1.3rem;
+//   }
+
+//   &-message--wrapper {
+//     opacity: 0;
+//     @include animation(opacity);
+//     @include flex-column;
+//     justify-content: space-between;
+//     height: 100%;
+//     padding: 2.4rem;
+//     background: #0000005d;
+//   }
+// }
+
+// .latest {
+//   &--pictures .picture {
+//     width: 26%;
+//     background-color: $grey;
+//     @include background;
+//     @include animation(width);
+//   }
+
+//   &--pictures .active {
+//     @include animation(width);
+//     color: $white;
+//     width: 41%;
+//   }
+
+//   &--pictures .picture-description--header {
+//     @include font-header-h4;
+//     text-decoration: underline;
+//   }
+// }
