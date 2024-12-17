@@ -1,0 +1,29 @@
+.process{
+  &__text {
+    @include flex-column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  &__switches {
+    @include flex-standard;
+    gap: 25px;
+    margin-bottom: 90px;
+  }
+
+  &__item {
+    width: 33%;
+  }
+
+  &__video {
+    position: relative;
+  }
+}
+
+.video {
+  &__player {
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+  }
+}

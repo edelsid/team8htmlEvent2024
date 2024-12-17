@@ -3,7 +3,7 @@
 @import 'src/aboutUs/aboutUs.scss';
 @import 'src/companyStatus/companyStatus.scss';
 @import 'src/projects/projects.scss';
-@import 'src/howToProcess/howToProcess.scss';
+@import 'src/process/process.scss';
 @import 'src/header/header.scss';
 @import 'src/intro/intro.scss';
 
@@ -219,6 +219,10 @@ p {
 }
 
 .btn {
+  font-family: "Jost";
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -233,6 +237,45 @@ p {
   &-secondary {
     border: 1px solid $black;
     background-color: $transparent;
+  }
+
+  &-switch {
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    border: none;
+    background-color: $transparent;
+
+    &:hover {
+      background-color: $orange;
+      color: $white;
+
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        bottom: -5px;
+        background-color: $orange;
+        transform: rotate(45deg);
+        margin-inline: auto;
+        width: 20px;
+        height: 20px;
+        z-index: -1;
+      }
+    }
+  }
+
+  &-play {
+    @include absolute-filler;
+    width: 120px;
+    aspect-ratio: 1 / 1;
+    background-color: $orange;
+    border-radius: 50%;
+    margin: auto;
+    border: 0;
+    font-size: 38px;
+    color: $white;
   }
 }
 
