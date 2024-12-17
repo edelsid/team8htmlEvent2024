@@ -1,5 +1,5 @@
 @import 'styles/common.scss';
-@import 'src/latest_service/style.scss';
+@import 'src/services/style.scss';
 @import 'src/aboutUs/aboutUs.scss';
 @import 'src/ourCompany/ourCompany.scss';
 @import 'src/ourProjects/ourProjects.scss';
@@ -16,16 +16,6 @@
   font-family: Barlow;
   src: url(assets/fonts/Barlow-Regular.ttf);
 }
-
-@font-face {
-  font-family: Jost;
-  src: url(assets/fonts/Jost-VariableFont_wght.ttf);
-}
-
-$sub-heading: 1.6rem;
-$heading-medium: 3rem;
-$heading-medium: 3rem;
-$text: 1.6rem;
 
 * {
   -webkit-box-sizing: border-box;
@@ -44,6 +34,10 @@ html {
   scroll-behavior: smooth;
 }
 
+button {
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
 }
@@ -52,6 +46,10 @@ ul {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+p {
+  margin-block: 14px;
 }
 
 .main {
@@ -81,6 +79,7 @@ ul {
 
 .title {
   font-family: "Jost";
+  margin: 0;
   
   &-standart {
     font-size: 52px;
@@ -104,12 +103,17 @@ ul {
     text-transform: capitalize;
     display: flex;
     gap: 10px;
-    margin-block: 0 36px;
+    margin-block: 0 22px;
 
     &::before {
       content: "—";
       color: $orange;
     }
+  }
+
+  &-accent {
+    font-size: 32px;
+    line-height: 42px;
   }
 }
 
@@ -119,14 +123,24 @@ ul {
   &-intro {
     font-size: 24px;
     line-height: 36px;
-    color: lightgrey;
+    color: $lightgrey;
     margin-block: 0 54px;
   }
 
   &-standart {
     font-size: 16px;
     line-height: 26px;
-    color: grey;
+    color: $grey;
+  }
+
+  &-list {
+    font-size: 16px;
+    line-height: 26px;
+
+    &::before {
+      content: "+";
+      margin-right: 4px;
+    }
   }
 }
 
@@ -187,6 +201,72 @@ ul {
   }
 }
 
+.arrows {
+  @include flex-standard;
+  width: fit-content;
+  gap: 10px;
+
+  &-about {
+    margin-top: 50px;
+    margin-inline: auto;
+  }
+}
+
+.arrow {
+  cursor: pointer;
+
+  &-back {
+    transform: rotate(180deg);
+  }
+}
+
+.arrow:hover {
+  color: $orange;
+}
+
+.slider {
+  &__content {
+    @include absolute-filler;
+    @include flex-column;
+    justify-content: end;
+    padding: 25px;
+    gap: 25px;
+    color: $white;
+    cursor: pointer;
+    z-index: 1;
+  }
+}
+
+.decorated {
+  position: relative;
+
+  &::before {
+    content: url('assets/svg/Architecture.svg');
+    position: absolute;
+    //visibility: hidden;
+    //right: -510px;
+    //right: -312px;
+    right: -100px;
+    transition: all 0.35s ease;
+  }
+
+  // &.active::before {
+  //   visibility: visible;
+  //   right: -312px;
+  // }
+
+  &::after {
+    content: url('assets/svg/Architecture.svg');
+    position: absolute;
+    //visibility: hidden;
+    //left: -510px;
+    //left: -312px;
+    left: -100px;
+    transition: all 0.35s ease;
+  }
+}
+
+// old stuff
 .btn p {
   margin: 0;
   font-family: "Jost";

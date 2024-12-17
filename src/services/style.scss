@@ -1,0 +1,66 @@
+.services {
+  padding-top: 330px;
+  position: relative;
+
+  &__text {
+    width: 37%;
+    position: relative;
+  }
+
+  &__sliders {
+    @include list-noStyle;
+    display: flex;
+    justify-content: end;
+    gap: 24px;
+    width: 56%;
+  }
+
+  &__item {
+    width: 26%;
+    @include background;
+    @include animation(width);
+    cursor: pointer;
+  }
+
+  &__item .active {
+    @include animation(width);
+    color: $white;
+    width: 41%;
+  }
+}
+
+.decor {
+  pointer-events: none;
+
+  &-crane {
+    top: 0;
+    left: 34px;
+  }
+
+  &-truck {
+    top: -165px;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
+.backgroundIcon {
+  position: absolute;
+  right: -35px;
+  bottom: -35px;
+}
+
+#services {
+  &-1 {
+    background-image: url('/assets/img/latest1.webp');
+  }
+
+  &-2 {
+    background-image: url('/assets/img/latest2.webp');
+  }
+
+  &-3 {
+    background-image: url('/assets/img/latest3.webp');
+  }
+}

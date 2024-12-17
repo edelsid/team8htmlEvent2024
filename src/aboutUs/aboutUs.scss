@@ -1,11 +1,41 @@
 .about {
-  &--block {
-    margin-top: 14.6rem;
+  margin-block: 160px;
+
+  &__text {
     @include flex-standard;
-    align-items: center;
-    gap: 17.4rem;
+    gap: 174px;
   }
 
+  &__additional {
+    @include flex-column;
+    justify-content: space-between;
+  }
+
+  &__sliders {
+    margin-top: 86px;
+    @include flex-standard;
+    gap: 25px;
+  }
+
+  &__item {
+    height: 360px;
+    width: 33%;
+    @include background;
+    position: relative;
+
+    &::after {
+      content: "";
+      @include absolute-filler;
+      background: linear-gradient(
+        180deg,
+        #05000000 0%,
+        #0E0E0E 100%
+      );
+    }
+  }
+}
+
+#about {
   &-1 {
     background-image: url('/assets/img/about1.webp');
   }
@@ -19,81 +49,15 @@
   }
 }
 
-.block {
-  &-wrapper:last-child {
-    padding-right: 8.7em;
-  }
-
-  &-button--wrapper {
-    display: flex;
-    align-items: center;
-    margin-top: 2.3rem;
-    gap: 2.4rem;
-  }
+.subtitle-button {
+  font-family: "Jost";
+  font-size: 32px;
+  line-height: 42px;
+  font-weight: 600;
 }
 
-.button-about {
-  background-color: $orange;
-  color: $white;
-  border: none;
-}
-
-.text-42 {
-  @include font-bold;
-  font-size: 3.2rem;
-  line-height: 4.2rem;
-}
-
-.about--pictures {
-  margin-top: 6.7rem;
-  height: 33.2rem;
-  gap: 2.4rem;
-}
-
-.about--pictures .picture {
-  @include background;
-  width: calc(100% - 4.8rem);
-  color: white;
-}
-
-.picture-description {
-  &--wrapper {
-    @include flex-column;
-    flex-direction: column-reverse;
-    padding: 2rem 3rem;
-    background: #00000073;
-    height: 100%;
-    cursor: pointer;
-  }
-
-  &--list {
-    @include animation(opacity);
-    opacity: 0;
-    list-style: none;
-    padding: 0;
-    color: $grey;
-  }
-}
-
-.picture-description--characteristic::before {
-  content: "+";
-  margin-right: 0.4rem;
-}
-
-.arrows--about {
-  margin-top: 5rem;
-  margin-bottom: 15rem;
-  margin-inline: auto;
-}
-
-.arrow {
-  cursor: pointer;
-
-  &-back {
-    transform: rotate(180deg);
-  }
-}
-
-.arrow:hover {
-  color: $orange;
+.button__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }

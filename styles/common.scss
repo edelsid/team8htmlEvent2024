@@ -7,6 +7,14 @@ $grey: #555555;
 $transparent: #ffffff00;
 $gradient-black-grey: linear-gradient(0deg, $black, $grey);
 
+@mixin absolute-filler {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 @mixin flex-standard {
   display: flex;
   justify-content: space-between;
@@ -71,6 +79,7 @@ $gradient-black-grey: linear-gradient(0deg, $black, $grey);
 }
 
 @mixin background {
+  background-color: $grey;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
