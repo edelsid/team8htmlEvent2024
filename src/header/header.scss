@@ -69,14 +69,14 @@
     justify-content: end;
     align-items: center;
     gap: 10px;
-    border-left: 1px solid $grey;
+    border-left: 1px solid $transparentgrey;
   }
 }
 
 .contacts {
   @include flex-standard;
   padding-inline: 110px 30px;
-  border-bottom: 1px solid $grey;
+  border-bottom: 1px solid $transparentgrey;
 
   &__descriptions {
     display: flex;

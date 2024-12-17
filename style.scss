@@ -243,11 +243,12 @@ p {
     width: 100%;
     justify-content: center;
     position: relative;
-    border: none;
-    background-color: $transparent;
+    border: 1px solid $transparentgrey;
+    background-color: $white;
 
     &:hover {
       background-color: $orange;
+      border: 1px solid $orange;
       color: $white;
 
       &::after {
@@ -256,7 +257,7 @@ p {
         left: 0;
         right: 0;
         bottom: -5px;
-        background-color: $orange;
+        background-color: $orange; 
         transform: rotate(45deg);
         margin-inline: auto;
         width: 20px;
