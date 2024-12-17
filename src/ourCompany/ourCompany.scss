@@ -1,49 +1,29 @@
-.block {
-  &-mini-header--company {
-    padding-bottom: 1.5rem;
-  }
-  
-  &-header--company {
-    margin-block: 0 6.7rem;
-  }
-}
-
-.list-cards {
-  @include list-noStyle;
-  @include flex-standard;
-  margin-block: 0 14.3rem;
-  height: 20.6rem;
-  gap: 2.4rem;
-}
-
-.list-cards .card {
-  width: calc(100% - 7.2rem);
-}
-
-.card {
-  @include flex-column;
-  @include animation(background-color);
-  @include animation(color);
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-
-  &--number {
-    @include font-header-h2;
-    @include font-bold;
-    margin-block: 0 1rem;
+.status {
+  &__headers {
+    @include flex-column;
+    align-items: center;
+    margin-bottom: 86px;
   }
 
-  &--phrase {
-    @include font-bold;
-    @include font-header-h4;
-    margin: 0;
+  &__cards {
+    @include flex-standard;
+    gap: 0;
   }
-}
 
-.card:hover {
-  background-color: $orange;
-  color: $white;
+  &__item {
+    @include animation(background-color);
+    @include animation(color);
+    @include flex-column;
+    background-color: $transparent;
+    padding: 60px;
+    width: 25%;
+    gap: 18px;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $orange;
+      color: $white;
+    }
+  }
 }

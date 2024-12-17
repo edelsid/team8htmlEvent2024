@@ -1,11 +1,11 @@
 @import 'styles/common.scss';
-@import 'src/services/style.scss';
+@import 'src/services/services.scss';
 @import 'src/aboutUs/aboutUs.scss';
 @import 'src/ourCompany/ourCompany.scss';
 @import 'src/ourProjects/ourProjects.scss';
 @import 'src/howToProcess/howToProcess.scss';
 @import 'src/header/header.scss';
-@import 'src/first/first.scss';
+@import 'src/intro/intro.scss';
 
 @font-face {
   font-family: Jost;
@@ -79,6 +79,7 @@ p {
 
 .title {
   font-family: "Jost";
+  font-weight: 600;
   margin: 0;
   
   &-standart {
@@ -96,9 +97,7 @@ p {
 
   &-mini {
     color: $black;
-    font-family: "Jost";
     font-size: 16px;
-    font-weight: 600;
     line-height: 26px; 
     text-transform: capitalize;
     display: flex;
@@ -114,6 +113,12 @@ p {
   &-accent {
     font-size: 32px;
     line-height: 42px;
+  }
+
+  &-card {
+    text-align: center;
+    font-size: 24px;
+    line-height: 34px;
   }
 }
 
@@ -144,8 +149,14 @@ p {
   }
 }
 
-.margin-standart {
-  margin-block: 35px 55px;
+.margin {
+  &-standart {
+    margin-block: 35px 55px;
+  }
+  
+  &-section {
+    margin-bottom: 160px;
+  }
 }
 
 .decor {
@@ -348,7 +359,6 @@ p {
 }
 
 .list-pictures {
-  @include list-noStyle;
   @include flex-standard;
 }
 

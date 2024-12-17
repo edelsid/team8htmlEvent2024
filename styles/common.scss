@@ -59,11 +59,6 @@ $gradient-black-grey: linear-gradient(0deg, $black, $grey);
   font-style: normal;
 }
 
-@mixin list-noStyle {
-  list-style: none;
-  padding: 0;
-}
-
 @mixin animation ($characteristic) {
   -webkit-transition: $characteristic 0.5s ease-in-out;
   -moz-transition: $characteristic 0.5s ease-in-out;

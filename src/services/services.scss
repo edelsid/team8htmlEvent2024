@@ -8,7 +8,6 @@
   }
 
   &__sliders {
-    @include list-noStyle;
     display: flex;
     justify-content: end;
     gap: 24px;

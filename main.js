@@ -1,4 +1,4 @@
-import './src/latest_service/latest_service.js'
+import './src/services/services.js'
 import './src/aboutUs/aboutUs.js'
 import './src/ourProjects/ourProjects.js'
 
