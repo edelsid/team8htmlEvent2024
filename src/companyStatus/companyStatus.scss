@@ -2,7 +2,7 @@
   &__headers {
     @include flex-column;
     align-items: center;
-    margin-bottom: 86px;
+    margin-bottom: $title-margin;
   }
 
   &__cards {

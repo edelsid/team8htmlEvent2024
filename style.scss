@@ -1,8 +1,8 @@
 @import 'styles/common.scss';
 @import 'src/services/services.scss';
 @import 'src/aboutUs/aboutUs.scss';
-@import 'src/ourCompany/ourCompany.scss';
-@import 'src/ourProjects/ourProjects.scss';
+@import 'src/companyStatus/companyStatus.scss';
+@import 'src/projects/projects.scss';
 @import 'src/howToProcess/howToProcess.scss';
 @import 'src/header/header.scss';
 @import 'src/intro/intro.scss';
@@ -146,6 +146,30 @@ p {
       content: "+";
       margin-right: 4px;
     }
+  }
+
+  &-accent {
+    margin: 0;
+    font-family: 'Jost';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.bg {
+  width: fit-content;
+
+  &-title {
+    background-color: $black;
+    padding-block: 18px;
+    padding-inline: 26px;
+  }
+
+  &-subtitle {
+    background-color: $orange;
+    padding-block: 5px;
+    padding-inline: 16px;
   }
 }
 
@@ -349,13 +373,6 @@ p {
   margin-left: 1rem;
   width: 6px;
   height: 6px;
-}
-
-.slider-arrows {
-  @include flex-standard;
-  width: fit-content;
-  gap: 1rem;
-  transform: scale(2);
 }
 
 .list-pictures {

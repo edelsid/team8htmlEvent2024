@@ -234,7 +234,7 @@
             <p class="subtitle subtitle-intro">The construction industry boasts a diverse range of experts,
               each playing a crucial role in bringing a project from vision to
               reality.</p>
-            <button class="btn btn-primary">
+            <button class="btn btn-primary" type="button">
               <p class="btn__text">Explore more</p>
               <svg
                 width="17"
@@ -259,8 +259,9 @@
           </div>
         </div>
       </section>
+
       <!-- Блок "Latest services" -->
-      <section class="services margin-section">
+      <section class="services margin-section" id="services">
         <img 
           class="decor decor-crane"
           src="assets/svg/crane.svg">
@@ -279,7 +280,7 @@
                 services to meal kits, it can be overwhelming to find the best
                 option.
               </p>
-              <button class="btn btn-secondary">
+              <button class="btn btn-secondary" type="button">
                 <p class="button__text">See All</p>
                 <svg
                   width="17"
@@ -308,6 +309,7 @@
           </ul>
         </div>
       </section>
+
       <!-- Блок "About us" -->
       <section class="about decorated margin-section" id="about">
         <div class="container container-standart">
@@ -322,7 +324,7 @@
                 services to meal kits, it can be overwhelming.
               </p>
               <div class="button__wrapper">
-                <button class="btn btn-primary">
+                <button class="btn btn-primary" type="button">
                   <p class="button-text">Read More</p>
                   <svg
                     width="17"
@@ -404,7 +406,7 @@
       </section>
 
       <!-- Блок "Our company status" -->
-      <section class="status margin-section">
+      <section class="status margin-section" id="status">
         <div class="container container-standart">
           <div class="status__headers">
             <p class="title title-mini">Our Company Status</p>
@@ -432,53 +434,57 @@
       </section>
 
       <!-- Блок "Our projects" -->
-      <article class="projects noover nomargin" id="projects">
-        <section
-          class="block__margin block-mini-header-start block-mini-header--projects"
-        >
-          <div class="orange-line-sep"></div>
-          <div class="block-mini-header--text">Our Projects</div>
-        </section>
-        <div class="block__margin projects--block">
-          <h2 class="block-header-start block-header--projects">
-            Trusted & Reliable
-          </h2>
-          <div class="slider-arrows arrows--projects">
-            <svg
-              class="arrow arrow-back"
-              id="back"
-              width="26"
-              height="8"
-              viewBox="0 0 26 8"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 4.5C0.723858 4.5 0.5 4.27614 0.5 4C0.5 3.72386 0.723858 3.5 1 3.5L1 4.5ZM25.3536 3.64645C25.5488 3.84171 25.5488 4.15829 25.3536 4.35355L22.1716 7.53553C21.9763 7.7308 21.6597 7.7308 21.4645 7.53553C21.2692 7.34027 21.2692 7.02369 21.4645 6.82843L24.2929 4L21.4645 1.17157C21.2692 0.976311 21.2692 0.659728 21.4645 0.464466C21.6597 0.269204 21.9763 0.269204 22.1716 0.464466L25.3536 3.64645ZM1 3.5L25 3.5V4.5L1 4.5L1 3.5Z"
-                fill="currentColor"
-              />
-            </svg>
-            <svg
-              class="arrow arrow-forward"
-              id="forward"
-              width="26"
-              height="8"
-              viewBox="0 0 26 8"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 4.5C0.723858 4.5 0.5 4.27614 0.5 4C0.5 3.72386 0.723858 3.5 1 3.5L1 4.5ZM25.3536 3.64645C25.5488 3.84171 25.5488 4.15829 25.3536 4.35355L22.1716 7.53553C21.9763 7.7308 21.6597 7.7308 21.4645 7.53553C21.2692 7.34027 21.2692 7.02369 21.4645 6.82843L24.2929 4L21.4645 1.17157C21.2692 0.976311 21.2692 0.659728 21.4645 0.464466C21.6597 0.269204 21.9763 0.269204 22.1716 0.464466L25.3536 3.64645ZM1 3.5L25 3.5V4.5L1 4.5L1 3.5Z"
-                fill="currentColor"
-              />
-            </svg>
+      <section class="projects margin-section" id="projects">
+        <div class="container container-standart">
+          <div class="projects__text">
+            <div class="projects__headers">
+              <p class="title title-mini">Our Projects</p>
+              <h2 class="title title-standart">Trusted & Reliable</h2>
+            </div>
+            <div class="arrows">
+              <svg
+                class="arrow arrow-back"
+                id="back"
+                width="52"
+                height="16"
+                viewBox="0 0 28 8"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1 4.5C0.723858 4.5 0.5 4.27614 0.5 4C0.5 3.72386 0.723858 3.5 1 3.5L1 4.5ZM25.3536 3.64645C25.5488 3.84171 25.5488 4.15829 25.3536 4.35355L22.1716 7.53553C21.9763 7.7308 21.6597 7.7308 21.4645 7.53553C21.2692 7.34027 21.2692 7.02369 21.4645 6.82843L24.2929 4L21.4645 1.17157C21.2692 0.976311 21.2692 0.659728 21.4645 0.464466C21.6597 0.269204 21.9763 0.269204 22.1716 0.464466L25.3536 3.64645ZM1 3.5L25 3.5V4.5L1 4.5L1 3.5Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <svg
+                class="arrow arrow-forward"
+                id="forward"
+                width="52"
+                height="16"
+                viewBox="0 0 28 8"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1 4.5C0.723858 4.5 0.5 4.27614 0.5 4C0.5 3.72386 0.723858 3.5 1 3.5L1 4.5ZM25.3536 3.64645C25.5488 3.84171 25.5488 4.15829 25.3536 4.35355L22.1716 7.53553C21.9763 7.7308 21.6597 7.7308 21.4645 7.53553C21.2692 7.34027 21.2692 7.02369 21.4645 6.82843L24.2929 4L21.4645 1.17157C21.2692 0.976311 21.2692 0.659728 21.4645 0.464466C21.6597 0.269204 21.9763 0.269204 22.1716 0.464466L25.3536 3.64645ZM1 3.5L25 3.5V4.5L1 4.5L1 3.5Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
           </div>
         </div>
-        <ul class="list list-pictures projects--pictures">
-          <li class="picture projects-1"></li>
-          <li class="picture projects-2"></li>
-          <li class="picture projects-3"></li>
+        <ul class="projects__sliders">
+          <li class="projects__item" id="projects-1"></li>
+          <li class="projects__item" id="projects-2">
+            <div class="slider__content">
+              <p class="subtitle subtitle-accent bg bg-subtitle">Contraction</p>
+              <h3 class="title title-accent bg bg-title">Skyline Tower Renovation</h3>
+              <div class="btn-slider__wrapper">
+                <button class="btn-slider" type="button">+</button>
+              </div>
+            </div>
+          </li>
+          <li class="projects__item" id="projects-3"></li>
         </ul>
-      </article>
+      </section>
 
+      <!-- Блок "Steps in the construction process" -->
       <article class="htp right">
         <section class="block-mini-header block-mini-header--htp">
           <div class="orange-line-sep"></div>
@@ -672,7 +678,7 @@
         </section>
 
         <div class="ourBlog--more">
-          <button class="ourBlog--more--btn">
+          <button class="ourBlog--more--btn" type="button">
             Read More
             <img src="assets/svg/Arrow1.svg" alt="" />
           </button>

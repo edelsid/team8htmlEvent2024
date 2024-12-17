@@ -1,6 +1,6 @@
 import './src/services/services.js'
 import './src/aboutUs/aboutUs.js'
-import './src/ourProjects/ourProjects.js'
+import './src/projects/projects.js'
 
 document.addEventListener('DOMContentLoaded', function () {
   // Определяем настройки для IntersectionObserver

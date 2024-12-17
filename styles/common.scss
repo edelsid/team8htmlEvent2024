@@ -7,6 +7,8 @@ $grey: #555555;
 $transparent: #ffffff00;
 $gradient-black-grey: linear-gradient(0deg, $black, $grey);
 
+$title-margin: 86px;
+
 @mixin absolute-filler {
   position: absolute;
   top: 0;

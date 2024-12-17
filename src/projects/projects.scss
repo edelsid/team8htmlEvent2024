@@ -1,22 +1,24 @@
-#projects {
-  overflow: hidden;
+.projects {
+  &__text {
+    @include flex-standard;
+    align-items: end;
+    margin-bottom: $title-margin;
+  }
+
+  &__sliders {
+    @include flex-standard;
+    gap: 25px;
+  }
+
+  &__item {
+    @include background;
+    position: relative;
+    height: 484px;
+    width: 33%;
+  }
 }
 
-.projects {
-  &--block {
-    @include flex-standard;
-    align-items: center;
-  }
-
-  &--pictures {
-    @include flex-standard;
-    @include background;
-    margin-inline: -31.1rem;
-    margin-block: 6.7rem 14.2rem;
-    height: 44.3rem;
-    gap: 2.4rem;
-  }
-
+#projects {
   &-1 {
     background-image: url('/assets/img/projects1.webp');
   }
@@ -27,6 +29,25 @@
 
   &-3 {
     background-image: url('/assets/img/projects3.webp');
+  }
+}
+
+.btn-slider {
+  background-color: $orange;
+  width: 60px;
+  aspect-ratio: 1 / 1;
+  border: none;
+  padding: 0;
+  font-size: 34px;
+  color: $white;
+
+  &__wrapper {
+    @include absolute-filler;
+    @include flex-center;
+    margin: auto;
+    background-color: #0d0d0d4d;
+    width: 82px;
+    aspect-ratio: 1 / 1;
   }
 }
 
