@@ -14,7 +14,7 @@
     @include animation(background-color);
     @include animation(color);
     @include flex-column;
-    background-color: $transparent;
+    background-color: transparent;
     padding: 60px;
     width: 25%;
     gap: 18px;

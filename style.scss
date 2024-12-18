@@ -2,6 +2,7 @@
 @import 'src/services/services.scss';
 @import 'src/aboutUs/aboutUs.scss';
 @import 'src/companyStatus/companyStatus.scss';
+@import 'src/testimonials/testimonials.scss';
 @import 'src/projects/projects.scss';
 @import 'src/process/process.scss';
 @import 'src/header/header.scss';
@@ -236,7 +237,7 @@ p {
 
   &-secondary {
     border: 1px solid $black;
-    background-color: $transparent;
+    background-color: transparent;
   }
 
   &-switch {
