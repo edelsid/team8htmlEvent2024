@@ -4,6 +4,7 @@
 @import 'src/companyStatus/companyStatus.scss';
 @import 'src/testimonials/testimonials.scss';
 @import 'src/projects/projects.scss';
+@import 'src/team/team.scss';
 @import 'src/process/process.scss';
 @import 'src/header/header.scss';
 @import 'src/intro/intro.scss';
@@ -176,7 +177,7 @@ p {
 
 .margin {
   &-standart {
-    margin-block: 35px 55px;
+    margin-block: 10px 55px;
   }
   
   &-section {
@@ -338,6 +339,7 @@ p {
   &::after {
     content: url('assets/svg/Architecture.svg');
     position: absolute;
+    transform: scaleX(-1);
     //visibility: hidden;
     //left: -510px;
     //left: -312px;

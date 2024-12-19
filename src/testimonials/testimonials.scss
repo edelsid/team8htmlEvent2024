@@ -14,8 +14,7 @@
     border-left: 1px solid $grey;
     height: calc(100% - 60px);
     padding-block: 5px;
-    padding-left: 70px;
-    width: 17%;
+    padding-left: 110px;
     @include flex-column;
     align-items: center;
     gap: 10px;
@@ -61,7 +60,7 @@
   font-size: 32px;
   line-height: 42px;
   text-transform: capitalize;
-  margin-block: 0 30px;
+  margin-block: 0 50px;
 
   &__bubble {
     padding-top: 60px;
