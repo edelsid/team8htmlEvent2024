@@ -37,7 +37,6 @@
     <link rel="stylesheet" href="style.scss" />
     <link rel="stylesheet" href="src/blog/blog.scss" />
     <link rel="stylesheet" href="src/footer/footer.scss" />
-    <link rel="stylesheet" href="src/prices/prices.scss" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conbuild</title>
   </head>
@@ -605,60 +604,103 @@
       </section>
 
       <!-- Блок "Our Price Table" -->
-      <article class="prices">
-        <section class="block-mini-header">
-          <div class="orange-line-sep"></div>
-          <div class="block-mini-header--text">Our Price Table</div>
-        </section>
-        <section class="block-header">Solutions For Price Table</section>
-        <section class="prices--table">
-          <div class="prices--table--price">
-            <h1>$19.99</h1>
-            <div class="grey-line_long"></div>
-            <ul>
-              <li>24/7 Free Hotline Service</li>
-              <li>Chat Support</li>
-              <li>5 Months After Delivery Support</li>
-              <li>Support with 8 Engineers</li>
-              <li>Team Management</li>
-              <li>Free Digital Marketing & Analysis</li>
-            </ul>
-            <button class="prices--btn">Start Free Trial</button>
+      <section class="prices margin-section" id="prices">
+        <div class="container container-standart">
+          <div class="prices__text">
+            <h2 class="title title-mini">Our Price Table</h2>
+            <p class="title title-standart">
+              Solutions For Price Table
+            </p>
           </div>
-
-          <div class="prices--table--price">
-            <h1>$29.99</h1>
-            <div class="grey-line_long"></div>
-            <ul>
-              <li>24/7 Free Hotline Service</li>
-              <li>Chat Support</li>
-              <li>5 Months After Delivery Support</li>
-              <li>Support with 8 Engineers</li>
-              <li>Team Management</li>
-              <li>Free Digital Marketing & Analysis</li>
-            </ul>
-            <button class="prices--btn">Start Free Trial</button>
-          </div>
-
-          <div class="prices--table--price">
-            <h1>$39.99</h1>
-            <div class="grey-line_long"></div>
-            <ul>
-              <li>24/7 Free Hotline Service</li>
-              <li>Chat Support</li>
-              <li>5 Months After Delivery Support</li>
-              <li>Support with 8 Engineers</li>
-              <li>Team Management</li>
-              <li>Free Digital Marketing & Analysis</li>
-            </ul>
-            <button class="prices--btn">Start Free Trial</button>
-          </div>
-          
-        </section>
-
-        
-
-      </article>
+          <ul class="prices__table">
+            <li class="prices__item">
+              <div class="prices__header">
+                <h3 class="price">$19.99</h3>
+                <p>/M</p>
+              </div>
+              <p class="prices__tier">Basic</p>
+              <ul class="prices__deal">
+                <li>24/7 Free Hotline Service</li>
+                <li>Chat Support</li>
+                <li>5 Months After Delivery Support</li>
+                <li>Support with 8 Engineers</li>
+                <li class="inactive">Team Management</li>
+                <li class="inactive">Free Digital Marketing & Analysis</li>
+              </ul>
+              <button class="btn btn-secondary btn-thin">
+                Start Free Trial
+                <svg
+                  width="17"
+                  height="18"
+                  viewBox="0 0 17 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0.247423 16.3415C-0.116259 16.7571 -0.0741412 17.3889 0.341495 17.7526C0.757132 18.1163 1.38889 18.0741 1.75258 17.6585L0.247423 16.3415ZM15.9978 0.933481C15.961 0.38242 15.4845 -0.0345222 14.9335 0.00221496L5.95341 0.600887C5.40235 0.637624 4.98541 1.11413 5.02215 1.66519C5.05889 2.21625 5.53539 2.63319 6.08645 2.59646L14.0687 2.0643L14.6009 10.0466C14.6376 10.5976 15.1141 11.0146 15.6652 10.9779C16.2163 10.9411 16.6332 10.4646 16.5965 9.91355L15.9978 0.933481ZM1.75258 17.6585L15.7526 1.65851L14.2474 0.341496L0.247423 16.3415L1.75258 17.6585Z"
+                    fill="black"/>
+                </svg>
+              </button>
+            </li>
+            <li class="prices__item active">
+              <button class="btn btn-special">Special</button>
+              <div class="prices__header">
+                <h3 class="price">$29.99</h3>
+                <p>/M</p>
+              </div>
+              <p class="prices__tier">Standard</p>
+              <ul class="prices__deal">
+                <li>24/7 Free Hotline Service</li>
+                <li>Chat Support</li>
+                <li>5 Months After Delivery Support</li>
+                <li>Support with 8 Engineers</li>
+                <li>Team Management</li>
+                <li>Free Digital Marketing & Analysis</li>
+              </ul>
+              <button class="btn btn-primary btn-thin ">
+                Start Free Trial
+                <svg
+                  width="17"
+                  height="18"
+                  viewBox="0 0 17 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0.247423 16.3415C-0.116259 16.7571 -0.0741412 17.3889 0.341495 17.7526C0.757132 18.1163 1.38889 18.0741 1.75258 17.6585L0.247423 16.3415ZM15.9978 0.933481C15.961 0.38242 15.4845 -0.0345222 14.9335 0.00221496L5.95341 0.600887C5.40235 0.637624 4.98541 1.11413 5.02215 1.66519C5.05889 2.21625 5.53539 2.63319 6.08645 2.59646L14.0687 2.0643L14.6009 10.0466C14.6376 10.5976 15.1141 11.0146 15.6652 10.9779C16.2163 10.9411 16.6332 10.4646 16.5965 9.91355L15.9978 0.933481ZM1.75258 17.6585L15.7526 1.65851L14.2474 0.341496L0.247423 16.3415L1.75258 17.6585Z"
+                    fill="white"/>
+                </svg>
+              </button>
+            </li>
+            <li class="prices__item">
+              <div class="prices__header">
+                <h3 class="price">$39.99</h3>
+                <p>/M</p>
+              </div>
+              <p class="prices__tier">Premium</p>
+              <ul class="prices__deal">
+                <li>24/7 Free Hotline Service</li>
+                <li>Chat Support</li>
+                <li>5 Months After Delivery Support</li>
+                <li>Support with 8 Engineers</li>
+                <li>Team Management</li>
+                <li class="inactive">Free Digital Marketing & Analysis</li>
+              </ul>
+              <button class="btn btn-secondary btn-thin">
+                Start Free Trial
+                <svg
+                  width="17"
+                  height="18"
+                  viewBox="0 0 17 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0.247423 16.3415C-0.116259 16.7571 -0.0741412 17.3889 0.341495 17.7526C0.757132 18.1163 1.38889 18.0741 1.75258 17.6585L0.247423 16.3415ZM15.9978 0.933481C15.961 0.38242 15.4845 -0.0345222 14.9335 0.00221496L5.95341 0.600887C5.40235 0.637624 4.98541 1.11413 5.02215 1.66519C5.05889 2.21625 5.53539 2.63319 6.08645 2.59646L14.0687 2.0643L14.6009 10.0466C14.6376 10.5976 15.1141 11.0146 15.6652 10.9779C16.2163 10.9411 16.6332 10.4646 16.5965 9.91355L15.9978 0.933481ZM1.75258 17.6585L15.7526 1.65851L14.2474 0.341496L0.247423 16.3415L1.75258 17.6585Z"
+                    fill="black"/>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
 
 
 
