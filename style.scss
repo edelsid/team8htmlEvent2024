@@ -8,7 +8,7 @@
 @import 'src/process/process.scss';
 @import 'src/prices/prices.scss';
 @import 'src/header/header.scss';
-@import 'src/intro/intro.scss';
+@import 'src/banner/banner.scss';
 
 @font-face {
   font-family: Jost;
@@ -37,12 +37,9 @@ html {
   scroll-behavior: smooth;
 }
 
-button {
-  cursor: pointer;
-}
-
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 ul {
@@ -69,7 +66,7 @@ p {
     @include flex-standard;
   }
 
-  &-intro {
+  &-banner {
     max-width: 1735px;
     width: 85%;
   }
@@ -91,7 +88,7 @@ p {
     margin: 0;
   }
 
-  &-intro {
+  &-banner {
     color: $white;
     font-size: 158px;
     line-height: 138px;
@@ -128,7 +125,7 @@ p {
 .subtitle {
   font-family: "Barlow";
 
-  &-intro {
+  &-banner {
     font-size: 24px;
     line-height: 36px;
     color: $lightgrey;
@@ -226,6 +223,7 @@ p {
   font-size: 16px;
   line-height: 26px;
   font-weight: 600;
+  width: fit-content;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -284,20 +282,6 @@ p {
 
   &-thin {
     padding: 17px 35px;
-  }
-
-  &-special {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px 25px;
-    border-radius: 100px;
-    font-size: 16px;
-    line-height: 26px;
-    font-weight: 400;
-    border: none;
-    color: $white;
-    background-color: #39CA6E;
   }
 }
 
