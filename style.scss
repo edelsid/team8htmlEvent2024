@@ -9,6 +9,8 @@
 @import 'src/prices/prices.scss';
 @import 'src/header/header.scss';
 @import 'src/banner/banner.scss';
+@import 'src/blog/blog.scss';
+@import 'src/footer/footer.scss';
 
 @font-face {
   font-family: Jost;
@@ -46,6 +48,20 @@ ul {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+h3, h4 {
+  font-family: "Jost";
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 42px;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 34px;
 }
 
 p {
@@ -181,6 +197,16 @@ p {
   &-section {
     margin-bottom: 160px;
   }
+
+  &-wide {
+    margin-bottom: 385px;
+  }
+}
+
+.headers-centered {
+  @include flex-column;
+  align-items: center;
+  margin-inline: auto;
 }
 
 .decor {
@@ -283,6 +309,23 @@ p {
   &-thin {
     padding: 17px 35px;
   }
+
+  &-primary::after, &-secondary::after, &-thin::after {
+    content: "\2197";
+    font-size: 26px;
+  }
+
+  &-link {
+    padding: 0;
+
+    &::after {
+      content: "\27F6";
+    }
+  }
+}
+
+.link-accent {
+  color: $orange;
 }
 
 .arrows {

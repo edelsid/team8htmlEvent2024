@@ -1,7 +1,5 @@
 .process{
-  &__text {
-    @include flex-column;
-    align-items: center;
+  &__headers {
     margin-bottom: 50px;
   }
 

@@ -2,10 +2,7 @@
   background-image: url("/assets/svg/image 15.svg");
   background-repeat: no-repeat;
 
-  &__text {
-    @include flex-column;
-    align-items: center;
-    margin: auto;
+  &__headers {
     margin-bottom: 78px;
   }
 
@@ -42,7 +39,6 @@
   &__header {
     display: flex;
     align-items: end;
-    font-family: "Jost";
     font-weight: 600;
     gap: 10px;
 
@@ -51,6 +47,7 @@
     }
 
     &>p {
+      font-family: "Jost";
       font-size: 16px;
       line-height: 26px;
       color: $grey;
@@ -87,11 +84,6 @@
 
 .inactive {
   color: $grey;
-}
-
-.price {
-  font-size: 32px;
-  line-height: 42px;
 }
 
 .label {

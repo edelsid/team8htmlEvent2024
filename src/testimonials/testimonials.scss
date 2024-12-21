@@ -1,5 +1,5 @@
 .testimonials {
-  &__text {
+  &__headers {
     width: 51%;
   }
 
@@ -28,8 +28,8 @@
       border-top: 1px solid $grey;
       border-right: 1px solid $grey;
       width: 40px;
-	    height: 40px;
-	    transform: skew(-45deg);
+      height: 40px;
+      transform: skew(-45deg);
     }
   }
 }

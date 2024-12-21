@@ -3,12 +3,12 @@
     gap: 70px;
   }
 
-  &__text {
+  &__headers {
     width: 37%;
   }
 
   &__photo {
-    background-color: $grey;
+    background-color: $lightgrey;
     object-fit: cover;
     height: 480px;
     width: 32%;

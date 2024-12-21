@@ -1,195 +1,127 @@
-@import url(../../style.scss);
+.blog {
+  &__headers {
+    margin-bottom: 78px;
+  }
 
-$heading-medium: 3rem;
-$heading-medium: 3rem;
-$text: 1.6rem;
-$color-orange: #FB5B11;
-$color-grey: #D8D8D8;
-$color-grey-dark: #0E0E0E;
-$color-grey-medium: #555555;
+  &__body {
+    @include flex-column;
+    gap: 30px;
+    margin-bottom: 42px;
+  }
 
-h2 {font-size: $heading-medium;}
+  &__highlight {
+    @include flex-standard;
+  }
 
+  &__news {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
 
-.up-to-date {
-    display: flex;
-    flex-wrap: nowrap;
-    font-family: Jost;
+  &__btn {
+    margin-inline: auto;
+  }
+}
 
-    &--description {
-        width: 40%;
-        padding: 7rem;
-        font-size: $text;
+.highlight {
+  &__text {
+    width: 35%;
 
-        &--admin {display: flex; align-items: center;}
-        &--link {display: flex; align-items: center; flex-wrap: nowrap; text-decoration: none; color: $color-orange;
-        a {text-decoration: none; margin-right: 1rem; color: $color-orange}
-        
-        }
+    & > p {
+      width: 91%;
     }
 
-    &--picture {
-        width: 50%;
-        height: 361px;
-        padding: 2rem;
-
-        img {object-fit: cover; height: 100%;}
-        
+    & > .tags {
+      margin-bottom: 20px;
     }
-}
+  }
 
-/*.description {
-    width: 30%;
-    padding: 6rem;
-    font-size: $text;
-
-    &--admin {display: flex; align-items: center;}
-}*/
-
-.description--admin {display: flex; align-items: center; flex-wrap: nowrap; color: $color-grey-medium;}
-
-.ourBlog {
-    padding-top: 60px;
-    font-family: Jost;
-    font-size: $text;
-
-    &--posts {
-        display: flex;
-        justify-content: space-evenly;
-
-        .post-img {
-            width: 100%;
-            height: 300px;
-
-            img {height: 100%; width: 100%; object-fit: cover;}
-        }
-
-        &--post {
-            width: 25%;
-            border: $color-grey 1px solid;
-            padding: 2rem;
-            gap: 2rem;
-
-            &--link {display: flex; align-items: center; flex-wrap: nowrap; text-decoration: none;
-                a {text-decoration: none; margin-right: 1rem; color: $color-grey-dark;}
-                a:hover {color: $color-orange;}
-            }
-            &--link:hover {color: $color-orange;}
-        }
-
-        &--post:hover {box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; border: none;}
-    }
-
-    &--more {display: flex; justify-content: center; margin-top: 4rem;
-        &--btn {
-            background-color: $color-orange;
-            color: white;
-            font-family: Jost;
-            border: none;
-            width: 174px;
-            height: 60px;
-            font-size: $text;
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-    }
-}
-
-.ourBlog--posts--post--link:hover {
-    a, .arrow-1 {color: $color-orange;}
-}
-
-.date {
-    position: absolute; 
-    width: 70px; 
-    height: 70px; 
-    //top: -300px; 
-    //left: 1.5rem; 
-    background-image: url("/assets/svg/BG1.svg"); 
-    background-repeat: no-repeat;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    padding-left: 1rem;
-
-    img {object-fit: cover; width: 100%; height: 100%;}
-}
-
-.date1 {
-    position: relative; 
-    width: 130px; 
-    height: 130px; 
-    top: 100px; 
-    right: -100px;
-    background-image: url("/assets/svg/BG2.svg"); 
-    background-repeat: no-repeat;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    padding-left: 1rem;
-
-    img {object-fit: cover; width: 100%; height: 100%;}
-}
-
-
-.arrow-1 {
-    cursor: pointer;
+  &__img-wrapper {
     position: relative;
-    width: 50px;
-    height: 0px;
-    margin: 0px;
-    
+    width: 49%;
+  }
+
+  &__img {
+    height: 361px;
+    width: 100%;
+    background-color: $lightgrey;
+  }
+
+  &__date {
+    position: absolute;
+    user-select: none;
+    top: 10px;
+    left: -72px;
+
+    & > p {
+      font-size: 26px;
+      line-height: 32px;
+    } 
+  }
 }
-.arrow-1 div {
+
+.date__label {
+  @include absolute-filler;
+  @include flex-center;
+  top: -10px;
+  text-align: center;
+  color: $white;
+}
+
+.tags {
+  display: flex;
+  font-family: "Barlow";
+  font-size: 16px;
+  line-height: 26px;
+  color: $grey;
+  gap: 16px;
+  cursor: pointer;
+
+  &__author, &__topic {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__author::before {
+    content: "\2015";
+  }
+
+  &__topic::before {
+    content: "\2022";
+  }
+}
+
+.news-card {
+  @include flex-column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px;
+  border: 1px solid $lightgrey;
+
+  &__img-wrapper {
     position: relative;
-    //top: 20px;
-    width: 24px;
-    height: 1.5px;
-    background-color: $color-grey-dark;
-    //box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
-    left:0;
-    display: block;
-}
-.arrow-1 div::after {
-    content: '';
+  }
+
+  &__date {
     position: absolute;
-    width: 8px;
-    height: 1px;
-    top: -2.5px;
-    right: -1px;
-    background-color: $color-grey-dark;
-    transform: rotate(45deg);
-}
-.arrow-1 div::before {
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: 1px;
-    top: 2.5px;
-    right: -1px;
-    background-color: $color-grey-dark;
-    //box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
-    transform: rotate(-45deg);
-}
-.arrow-1:hover {
-    animation: arrow-1 1s linear infinite;
-    div, div::before, div::after {background-color: $color-orange;}
-}
-@keyframes arrow-1 {
-    0% {
-        left:0;
+    user-select: none;
+    bottom: 24px;
+    right: 10px;
+
+    & > img {
+      width: 73px;
     }
-    50% {
-        left:10px;
+
+    & > p {
+      font-size: 16px;
+      line-height: 24px;
     }
-    100% {
-        left:0;
-    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 300px;
+    background-color: $lightgrey;
+  }
 }
