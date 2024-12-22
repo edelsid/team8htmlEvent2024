@@ -1,3 +1,5 @@
+@use '../abstract/index.scss' as *;
+
 .team {
   & > .container-flex {
     gap: 70px;

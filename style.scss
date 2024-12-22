@@ -1,17 +1,5 @@
-@import 'styles/common.scss';
-@import 'src/services/services.scss';
-@import 'src/aboutUs/aboutUs.scss';
-@import 'src/companyStatus/companyStatus.scss';
-@import 'src/testimonials/testimonials.scss';
-@import 'src/projects/projects.scss';
-@import 'src/team/team.scss';
-@import 'src/process/process.scss';
-@import 'src/prices/prices.scss';
-@import 'src/header/header.scss';
-@import 'src/banner/banner.scss';
-@import 'src/blog/blog.scss';
-@import 'src/map/map.scss';
-@import 'src/footer/footer.scss';
+@use './src/scss/abstract/' as *;
+@use './src/scss/layout/' as layout;
 
 @font-face {
   font-family: Jost;
