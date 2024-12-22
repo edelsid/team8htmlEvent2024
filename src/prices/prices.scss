@@ -13,6 +13,8 @@
 
   &__item {
     position: relative;
+    @include flex-column;
+    justify-content: space-between;
     padding: 48px;
     border: 1px solid $lightgrey;
     background-color: $white;

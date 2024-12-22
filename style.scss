@@ -42,17 +42,12 @@ html {
 
 a {
   text-decoration: none;
-  cursor: pointer;
 }
 
 ul {
   padding: 0;
   margin: 0;
   list-style: none;
-}
-
-h3, h4 {
-  font-family: "Jost";
 }
 
 h3 {
@@ -65,8 +60,9 @@ h4 {
   line-height: 34px;
 }
 
-p {
-  margin-block: 14px;
+h5 {
+  font-size: 16px;
+  line-height: 26px;
 }
 
 .main {
@@ -97,6 +93,7 @@ p {
 .title {
   font-family: "Jost";
   font-weight: 600;
+  text-transform: capitalize;
   margin: 0;
   
   &-standart {
@@ -215,10 +212,6 @@ p {
 }
 
 .logo {
-  &-header {
-    margin-left: 65px;
-  }
-
   &__wrapper {
     display: flex;
     align-items: center;
@@ -231,14 +224,14 @@ p {
 
   &__desc {
     font-family: Barlow;
-    font-size: 1.4rem;
+    font-size: 14px;
     font-weight: 400;
     margin-block: 0 10px;
   }
 
   &__title {
     font-family: Jost;
-    font-size: 3.2rem;
+    font-size: 32px;
     font-style: normal;
     font-weight: 600;
     margin: 0;
@@ -255,6 +248,7 @@ p {
   align-items: center;
   gap: 12px;
   padding: 25px 38px;
+  cursor: pointer;
 
   &-primary {
     border: none;

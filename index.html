@@ -46,7 +46,7 @@
             <img src="./assets/svg/mail-logo-white.svg" class="logo__img" alt="logo"/>
             <div class="logo__text">
               <p class="logo__desc">Construction Building</p>
-              <h1 class="logo__title">Conbuild</h1>
+              <p class="logo__title">Conbuild</p>
             </div>
           </a>
         </div>
@@ -565,7 +565,7 @@
           <ul class="prices__table">
             <li class="prices__item">
               <header class="prices__header">
-                <h3 class="price">$19.99</h3>
+                <h3 class="title">$19.99</h3>
                 <p>/M</p>
               </header>
               <p class="prices__tier">Basic</p>
@@ -582,7 +582,7 @@
             <li class="prices__item active">
               <div class="label">Special</div>
               <header class="prices__header">
-                <h3 class="price">$29.99</h3>
+                <h3 class="title">$29.99</h3>
                 <p>/M</p>
               </header>
               <p class="prices__tier">Standard</p>
@@ -598,7 +598,7 @@
             </li>
             <li class="prices__item">
               <header class="prices__header">
-                <h3 class="price">$39.99</h3>
+                <h3 class="title">$39.99</h3>
                 <p>/M</p>
               </header>
               <p class="prices__tier">Premium</p>
@@ -707,52 +707,100 @@
       </section>
 
       <footer class="footer">
-        <form action="" class="footer--form">
-          <h2>Sign up for our newsletter to get weekly updates.</h2>
-          <input type="text" placeholder="Enter Your Email" />
-        </form>
-        <section class="footer--content">
-          <div class="footer--content--about">
-            <div class="logo"><img src="assets/svg/logo.svg" alt="" /></div>
-            <p class="footer--text">
-              Welcome to consaik, a leader in the industry/sector since 2000<br />
-              With a passion for excellence and a commitment.
-            </p>
-            <p class="footer--text--white"><b>We Are Available</b></p>
-            <p class="footer--text--orange">Mon - Sat : 10:00Am To 07:30Pm</p>
+        <div class="container container-standart footer__container">
+          <form action="" class="footer__subscription">
+            <h3 class="title subscription__title">Sign up for our newsletter to get weekly updates.</h3>
+            <span class="subscription__input">
+              <input type="email" placeholder="Enter Your Email"/>
+            </span>
+          </form>
+          <div class="footer__body">
+            <div class="footer__site-overview">
+              <a href="/" class="logo__wrapper">
+                <img src="./assets/svg/mail-logo-white.svg" class="logo__img" alt="logo"/>
+                <div class="logo__text logo-footer">
+                  <p class="logo__desc">Construction Building</p>
+                  <p class="logo__title">Conbuild</p>
+                </div>
+              </a>
+              <p class="subtitle-footer">
+                Welcome to consaik, a leader in the industry/sector since 2000<br />
+                With a passion for excellence and a commitment.
+              </p>
+              <div class="availability">
+                <h5 class="title">We Are Available</h5>
+                <p class="subtitle availability__dates">Mon - Sat : 10:00Am To 07:30Pm</p>
+              </div>
+            </div>
+            <div class="footer__links">
+              <h5 class="title footer__title">Quick Links</h5>
+              <ul class="footer__list subtitle-footer">
+                <li>
+                  <a href="">About Us</a>
+                </li>
+                <li>
+                  <a href="">Our Services</a>
+                </li>
+                <li>
+                  <a href="">Our Pricing</a>
+                </li>
+                <li>
+                  <a href="">Our Team</a>
+                </li>
+                <li>
+                  <a href="">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__info">
+              <h5 class="title footer__title">Information</h5>
+              <ul class="footer__list subtitle-footer">
+                <li>
+                  <a href="">Regulatory Compliance</a>
+                </li>
+                <li>
+                  <a href="">A sustainable Future</a>
+                </li>
+                <li>
+                  <a href="">Architectural Design</a>
+                </li>
+                <li>
+                  <a href="">Structural Engineering</a>
+                </li>
+                <li>
+                  <a href="">Environmental Impact</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__socials">
+              <h5 class="title footer__title">Social Media</h5>
+              <ul class="footer__list subtitle-footer">
+                <li>
+                  <a href="">Facebook</a>
+                </li>
+                <li>
+                  <a href="">Instagram</a>
+                </li>
+                <li>
+                  <a href="">Twitter</a>
+                </li>
+                <li>
+                  <a href="">YouTube</a>
+                </li>
+                <li>
+                  <a href="">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="footer--content--links">
-            <p class="footer--text--white"><b>Quick links</b></p>
-            <a href="">About Us</a>
-            <a href="">Our Services</a>
-            <a href="">Our Pricing</a>
-            <a href="">Our Team</a>
-            <a href="">Contact Us</a>
-          </div>
-          <div class="footer--content--links">
-            <p class="footer--text--white"><b>Information</b></p>
-            <a href="">Regulatory Compliance</a>
-            <a href="">A sustainable Future</a>
-            <a href="">Architectural Design</a>
-            <a href="">Structural Engineering</a>
-            <a href="">Environmental Impact</a>
-          </div>
-          <div class="footer--content--links">
-            <p class="footer--text--white"><b>Social Media</b></p>
-            <a href="">Facebook</a>
-            <a href="">Instagram</a>
-            <a href="">Twitter</a>
-            <a href="">YouTube</a>
-            <a href="">LinkedIn</a>
-          </div>
-        </section>
+        </div>
+        <div class="copyright">
+          <p>
+            © 1995-2024 All rights for <span>Conbuild</span> exclusive
+          </p>
+        </div>
       </footer>
-      <section class="copyright">
-        © 1995-2024 All rights for Conbuild exclusive
-      </section>
     </main>
     <script type="module" src="/main.js"></script>
-    <script type="module" src="/src/header/header.js"></script>
-    <script type="module" src="/src/process/process.js"></script>
   </body>
 </html>

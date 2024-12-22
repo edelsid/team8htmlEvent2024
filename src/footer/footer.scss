@@ -1,88 +1,142 @@
-html {
-    font-size: 10px;
-    scroll-behavior: smooth;
-}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 .footer {
-    font-family: Jost;
-    background-color: black;
-    background-image: url("/assets/svg/footer_picture.svg");
-    color: $lightgrey;
-    padding-left: 12rem;
-    padding-bottom: 10rem;
-    color: $lightgrey;
+  position: relative;
+  background-color: $black;
+  background-image: url("assets/svg/footer_picture.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  
+  &__container {
+    padding-block: 238px 145px;
+  }
+
+  &__subscription {
+    position: absolute;
+    @include flex-standard;
+    align-items: center;
+    background-color: $orange;
+    padding: 56px 108px;
+    color: $white;
+    width: 100%;
+    // посчитать в зависимости от высоты
+    top: -92px;
+    overflow: hidden;
+  }
+
+  &__body {
+    @include flex-standard;
+    color: $white;
+  }
+
+  &__list {
+    margin-top: 24px;
+    @include flex-column;
+    gap: 24px;
+
+    & a {
+      color: $white;
+
+    }
+  }
+}
+
+.subscription {
+  &__title {
+    width: 34%;
+  }
+
+  &__input {
+    width: 32%;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "Newsletter";
+      position: absolute;
+      left: -135%;
+      margin-block: auto;
+      opacity: 0.1;
+      font-family: "Jost";
+      font-size: 96px;
+      line-height: 106px;
+      font-weight: 600;
+    }
+
+    &::after {
+      content: "\2197";
+      position: absolute;
+      font-size: 18px;
+      line-height: 1;
+      padding: 8px 12px;
+      color: $orange;
+      background-color: $white;
+      right: 0;
+      top: 0;
+      cursor: pointer;
+    }
+
+    & input {
+      border: none;
+      border-bottom: 1px solid $white;
+      background-color: transparent;
+      font-family: "Barlow";
+      font-size: 14px;
+      line-height: 24px;
+      padding: 0;
+      width: 100%;
+      color: $white;
+      height: 45px;
+
+      &::placeholder {
+        color: $white;
+        opacity: 0.6;
+      }
+  
+      &:focus {
+        border: 0;
+        outline: 0;
+        border-bottom: 1px solid $white;
+      }
+    }
+  }
+}
+
+.logo-footer .logo__desc {
+  opacity: 0.7;
+}
+
+.subtitle-footer {
+  font-family: "Barlow";
+  font-size: 16px;
+  line-height: 26px;
+  color: $white;
+  opacity: 0.7;
+}
+
+.availability {
+  margin-top: 50px;
+
+  &__dates {
+    font-family: "Barlow";
     font-size: 16px;
-
-    &--content {
-        display: flex;
-
-        &--links {
-            display: flex; 
-            flex-direction: column;
-            margin-left: 10rem;
-
-            a {text-decoration: none; margin-top: 1.6rem; color: $grey;}
-        }
-    
-    }
-
-    &--text {
-        color: $grey;
-
-        &--white {color: white; margin-top: 4rem;}
-        &--orange {color: $orange;}
-    }
-
-    &--form {
-        padding-top: 2rem;
-        padding-left: 7rem;
-        padding-right: 7rem;
-        padding-bottom: 2rem;
-        position: relative;
-        bottom: 95px;
-        display: flex;
-        flex-wrap:wrap;
-        border: 0ch;
-        background-color: $orange;
-        color: white;
-        width: 80%;
-        margin: 0 auto;
-        align-content: center;
-        justify-content: space-between;
-
-        h2 {width: 40%;}
-
-        input {
-        background: none;
-        border-width: 0 0 1px 0;
-        border-bottom: #fff 1px solid;
-        color: #fff;
-        height: 45px;
-        width: 40%;
-        outline: none;
-        margin-top: 3rem;
-        text-decoration-color: #fff;
-        background-image: url("/assets/svg/arrow-footer-1.svg");
-        background-repeat: no-repeat;
-        background-position: right center;
-        }
-
-        input::placeholder {
-            color: rgb(255, 255, 255);
-        }
-
-        
-    }
+    line-height: 26px;
+    margin-top: 5px;
+    color: $orange;
+  }
 }
 
 .copyright {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $grey;
-    height: 71px;
-    width: 100%;
-    font-size: 16px;
-    font-family: Jost;
+  font-family: "DM Sans";
+  height: 70px;
+  color: #B7B7B7;
+  font-size: 16px;
+  line-height: 26px;
+  background-color: $black;
+  text-align: center;
+
+  & span {
+    color: $white;
+  }
 }
