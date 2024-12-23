@@ -76,5 +76,5 @@ export default class Services {
 }
 
 const root = document.querySelector(".services__sliders");
-const slider = new Services(root);
-slider.init();
+const services = new Services(root);
+services.init();

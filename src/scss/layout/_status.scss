@@ -8,7 +8,8 @@
   }
 
   &__cards {
-    @include flex-standard;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 0;
   }
 
@@ -18,7 +19,6 @@
     @include flex-column;
     background-color: transparent;
     padding: 60px;
-    width: 25%;
     gap: 18px;
     align-items: center;
     cursor: pointer;

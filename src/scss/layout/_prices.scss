@@ -9,7 +9,8 @@
   }
 
   &__table {
-    @include flex-standard;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
   }
 
@@ -20,7 +21,6 @@
     padding: 48px;
     border: 1px solid $lightgrey;
     background-color: $white;
-    width: 33%;
 
     &.active::before {
       border-top: 50px solid $orange;
