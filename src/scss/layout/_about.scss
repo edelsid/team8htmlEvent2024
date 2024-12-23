@@ -22,6 +22,7 @@
     width: 33%;
     @include background;
     position: relative;
+    @include animation-all(0.3s);
 
     &::after {
       content: "";
@@ -32,20 +33,6 @@
         #0E0E0E 100%
       );
     }
-  }
-}
-
-#about {
-  &-1 {
-    background-image: url('/assets/img/about1.webp');
-  }
-
-  &-2 {
-    background-image: url('/assets/img/about2.webp');
-  }
-
-  &-3 {
-    background-image: url('/assets/img/about3.webp');
   }
 }
 

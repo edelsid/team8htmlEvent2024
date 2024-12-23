@@ -1,4 +1,4 @@
-// import Cards_about from "./about";
+import About from "./about";
 import Services from "./services";
 
-export { Services };
+export { Services, About };

@@ -1,75 +1,119 @@
-export default class Cards_about {
+import checkDOM from "./checkDom";
+
+export default class About {
   constructor(container) {
     this.bindToDOM(container);
+    this.sliders = [{
+      id: 1,
+      url: "/assets/img/about1.webp",
+      title: "Our vision",
+    }, 
+    {
+      id: 2,
+      url: "/assets/img/about2.webp",
+      title: "Core Values",
+    }, 
+    {
+      id: 3,
+      url: "/assets/img/about3.webp",
+      title: "Community Engagement",
+    }, 
+    {
+      id: 4,
+      url: "/assets/img/about4.webp",
+      title: "Our Reach",
+    }, 
+    {
+      id: 5,
+      url: "/assets/img/about5.webp",
+      title: "Commitment to Quality",
+    }];
+    this.activeSliders = [];
     this.active = 1;
   }
 
   bindToDOM(container) {
-    if (!(container instanceof HTMLElement)) {
-      throw new Error("container is not HTMLElement");
-    }
-    this.container = container;
-    this.slides = Array.from(this.container.querySelectorAll(".picture"));
-    this.arrows = this.container.querySelectorAll(".arrow");
+    checkDOM(container);
+    this.sliderArea = container.querySelector(".about__sliders");
+    this.arrows = container.querySelectorAll(".arrow");
   }
 
   init() {
-    console.log('hi')
+    this.bindSliders();
     this.arrows.forEach((arrow) => {
       arrow.addEventListener("click", (e) => this.changeSlide(e.currentTarget));
     });
-    this.chooseSlide(this.slides[this.active].firstElementChild);
+    this.activeSliders = this.sliderArea.getElementsByTagName('li');
   }
 
-  chooseSlide(target) {
-    this.closeAll();
-    target.classList.add("active");
-    const childEl = this.addFormation();
-    target.insertAdjacentElement('afterbegin', childEl);
-    setTimeout(() => {
-      childEl.style.opacity = "1";
-    }, 300);
+  bindSliders() {
+    for (let i = 0; i < 3; i += 1) {
+      const starterSlider = this.sliderFormation(this.sliders[i]);
+      this.sliderArea.appendChild(starterSlider);
+    };
   }
 
   changeSlide(target) {
-    if(target.id === "forward") {
-      this.active+=1;
-      if (this.active > this.slides.length-1) this.active = 0;
-    } else {
-      this.active-=1;
-      if (this.active < 0) this.active = this.slides.length-1;
-    }
-    this.chooseSlide(this.slides[this.active].firstElementChild);
+    if (!target.id) return;
+    if (target.id === "forward") {
+      this.forward();
+      return;
+    };
+    this.back();
   }
 
-  closeAll() {
-    this.slides.forEach((slide) => {
-      slide.firstElementChild.classList.remove("active");
-      const forDeletion = slide.querySelector(".block-text");
-      if (forDeletion) {
-        slide.firstElementChild.removeChild(forDeletion);
-      }
-    });
+  forward() {
+    this.active += 1;
+    if (this.active > this.sliders.length - 1) {
+      this.active = 0;
+    };
+    const newSlider = this.sliderFormation(this.sliders[this.active + 1] ||
+      this.sliders[0]);
+    this.sliderArea.removeChild(this.activeSliders[0]);
+    this.sliderArea.appendChild(newSlider);
   }
 
-  addFormation() {
+  back() {
+    this.active -= 1;
+    if (this.active < 0) {
+      this.active = this.sliders.length - 1;
+    };
+    const newSlider = this.sliderFormation(this.sliders[this.active - 1] ||
+      this.sliders[this.sliders.length - 1]);
+    this.sliderArea.removeChild(this.activeSliders[this.activeSliders.length - 1]);
+    this.sliderArea.insertBefore(newSlider, this.sliderArea.firstElementChild);
+  }
+
+  sliderFormation(obj) {
+    const newSlider = document.createElement("li");
+    newSlider.classList = "about__item";
+    newSlider.id = `about-${obj.id}`;
+    newSlider.style.backgroundImage = `url(${obj.url})`;
+    newSlider.innerHTML = `
+    <div class="slider__content">
+      <h3 class="title title-accent">${obj.title}</h3>
+    </div>
+    `;
+    return newSlider;
+  }
+
+  listFormation() {
     const newMsg = document.createElement("ul");
-    newMsg.className = "";
+    newMsg.className = "slider__list";
     newMsg.innerHTML = `
-    <li class="">
+    <li class="subtitle subtitle-list">
       Integrity and ethics
     </li>
-    <li class="">
+    <li class="subtitle subtitle-list">
       Commitment to quality
     </li>
-    <li class="">
+    <li class="subtitle subtitle-list">
       Innovation and creativity
     </li>`;
-
     return newMsg;
   }
 }
 
 const root = document.querySelector(".about");
-// const slider = new Cards_about(root);
-// slider.init();
+const about = new About(root);
+about.init();

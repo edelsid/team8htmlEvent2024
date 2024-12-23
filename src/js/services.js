@@ -1,3 +1,5 @@
+import checkDOM from "./checkDom";
+
 export default class Services {
   constructor(container) {
     this.bindToDOM(container);
@@ -6,9 +8,7 @@ export default class Services {
   }
 
   bindToDOM(container) {
-    if (!(container instanceof HTMLElement)) {
-      throw new Error("container is not HTMLElement");
-    }
+    checkDOM(container);
     this.container = container;
     this.slides = Array.from(this.container.querySelectorAll(".services__item"));
   }

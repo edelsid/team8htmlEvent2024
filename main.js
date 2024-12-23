@@ -1,4 +1,4 @@
-import { Services } from "./src/js/index";
+import { Services, About } from "./src/js/index";
 
 // document.addEventListener('DOMContentLoaded', function () {
 //   // Определяем настройки для IntersectionObserver
