@@ -22,12 +22,12 @@
     @include background;
     @include animation(width);
     cursor: pointer;
-  }
 
-  &__item .active {
-    @include animation(width);
-    color: $white;
-    width: 41%;
+    &.active {
+      @include animation(width);
+      color: $white;
+      width: 41%;
+    }
   }
 }
 
@@ -64,5 +64,29 @@
 
   &-3 {
     background-image: url('/assets/img/latest3.webp');
+  }
+}
+
+.service {
+  &__wrapper {
+    @include animation-all;
+    @include flex-column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 25px;
+    background: linear-gradient(
+      180deg,
+      #05000000 0%,
+      #0E0E0E 100%
+    );
+    opacity: 0;
+
+    & p {
+      color: $white;
+    }
+
+    & h4 {
+      text-decoration: underline;
+    }
   }
 }

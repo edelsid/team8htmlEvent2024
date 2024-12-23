@@ -1,23 +1,23 @@
 export default class Cards_projects {
   constructor(container) {
-    this.bindToDOM(container);
+    //this.bindToDOM(container);
     this.active = 1;
   }
 
   bindToDOM(container) {
-    if (!(container instanceof HTMLElement)) {
-      throw new Error("container is not HTMLElement");
-    }
-    this.container = container;
-    this.slides = Array.from(this.container.querySelectorAll(".picture"));
-    this.arrows = this.container.querySelectorAll(".arrow");
+    // if (!(container instanceof HTMLElement)) {
+    //   throw new Error("container is not HTMLElement");
+    // }
+    // this.container = container;
+    // this.slides = Array.from(this.container.querySelectorAll(".picture"));
+    // this.arrows = this.container.querySelectorAll(".arrow");
   }
 
   init() {
-    this.arrows.forEach((arrow) => {
-      arrow.addEventListener("click", (e) => this.changeSlide(e.currentTarget));
-    });
-    this.chooseSlide(this.slides[this.active]);
+    // this.arrows.forEach((arrow) => {
+    //   arrow.addEventListener("click", (e) => this.changeSlide(e.currentTarget));
+    // });
+    // this.chooseSlide(this.slides[this.active]);
   }
 
   chooseSlide(target) {

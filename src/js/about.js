@@ -14,6 +14,7 @@ export default class Cards_about {
   }
 
   init() {
+    console.log('hi')
     this.arrows.forEach((arrow) => {
       arrow.addEventListener("click", (e) => this.changeSlide(e.currentTarget));
     });
@@ -53,15 +54,15 @@ export default class Cards_about {
 
   addFormation() {
     const newMsg = document.createElement("ul");
-    newMsg.className = "list picture-description--list block-text";
+    newMsg.className = "";
     newMsg.innerHTML = `
-    <li class="picture-description--characteristic">
+    <li class="">
       Integrity and ethics
     </li>
-    <li class="picture-description--characteristic">
+    <li class="">
       Commitment to quality
     </li>
-    <li class="picture-description--characteristic">
+    <li class="">
       Innovation and creativity
     </li>`;
 
@@ -70,5 +71,5 @@ export default class Cards_about {
 }
 
 const root = document.querySelector(".about");
-const slider = new Cards_about(root);
-slider.init();
+// const slider = new Cards_about(root);
+// slider.init();
