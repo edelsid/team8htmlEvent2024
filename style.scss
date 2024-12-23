@@ -227,6 +227,7 @@ h5 {
 }
 
 .btn {
+  @include animation-all(0.3s);
   font-family: "Jost";
   font-size: 16px;
   line-height: 26px;
@@ -239,14 +240,23 @@ h5 {
   cursor: pointer;
 
   &-primary {
-    border: none;
+    border: 1px solid $orange;
     background-color: $orange;
     color: $white;
+
+    &:hover {
+      background-color: $black;
+      border: 1px solid $white;
+    }
   }
 
   &-secondary {
     border: 1px solid $black;
     background-color: transparent;
+
+    &:hover {
+      background-color: $orange;
+    }
   }
 
   &-switch {

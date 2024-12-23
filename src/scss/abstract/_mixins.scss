@@ -59,11 +59,11 @@
   transition: $characteristic 0.5s ease-in-out;
 }
 
-@mixin animation-all {
+@mixin animation-all($time) {
   -webkit-transition: all ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -moz-transition: all $time ease-in-out;
+  -o-transition: all $time ease-in-out;
+  transition: all $time ease-in-out;
 }
 
 @mixin background {
