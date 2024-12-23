@@ -314,24 +314,29 @@ h5 {
 .arrows {
   @include flex-standard;
   width: fit-content;
-  gap: 10px;
+  gap: 28px;
 
   &-about {
-    margin-top: 50px;
+    margin-top: 54px;
     margin-inline: auto;
+  }
+
+  &-projects {
+    margin-bottom: 20px;
   }
 }
 
 .arrow {
+  line-height: 0;
   cursor: pointer;
+  border: none;
+  font-size: 40px;
+  padding: 0;
+  background-color: transparent;
 
-  &-back {
-    transform: rotate(180deg);
+  &:hover {
+    color: $orange;
   }
-}
-
-.arrow:hover {
-  color: $orange;
 }
 
 .slider {
