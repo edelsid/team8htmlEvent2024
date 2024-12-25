@@ -1,6 +1,9 @@
 @use '../abstract/index.scss' as *;
 
 .projects {
+  position: relative;
+  overflow: hidden;
+  
   &__text {
     @include flex-standard;
     align-items: end;
@@ -8,7 +11,13 @@
   }
 
   &__sliders {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
     @include flex-standard;
+    @include animation(left, 0.5s);
+    flex-wrap: nowrap;
     gap: 25px;
   }
 
@@ -16,21 +25,12 @@
     @include background;
     position: relative;
     height: 484px;
-    width: 33%;
-  }
-}
+    min-width: 33%;
 
-#projects {
-  &-1 {
-    background-image: url('/assets/img/projects1.webp');
-  }
-
-  &-2 {
-    background-image: url('/assets/img/projects2.webp');
-  }
-
-  &-3 {
-    background-image: url('/assets/img/projects3.webp');
+    & .slider__content {
+      opacity: 0;
+      @include animation(opacity, 0.3s);
+    }
   }
 }
 

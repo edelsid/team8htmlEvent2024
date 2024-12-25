@@ -1,61 +1,84 @@
-export default class Cards_projects {
+import checkDOM from "./checkDom";
+import data from "../assets/projectsSliders.json" with { type: "json" };
+
+export default class Projects {
   constructor(container) {
-    //this.bindToDOM(container);
-    this.active = 1;
+  this.bindToDOM(container);
+  this.active = 1;
   }
 
   bindToDOM(container) {
-    // if (!(container instanceof HTMLElement)) {
-    //   throw new Error("container is not HTMLElement");
-    // }
-    // this.container = container;
-    // this.slides = Array.from(this.container.querySelectorAll(".picture"));
-    // this.arrows = this.container.querySelectorAll(".arrow");
+    checkDOM(container);
+    this.sliderArea = container.querySelector(".projects__sliders");
+    this.arrows = container.querySelectorAll(".arrow");
   }
 
   init() {
-    // this.arrows.forEach((arrow) => {
-    //   arrow.addEventListener("click", (e) => this.changeSlide(e.currentTarget));
-    // });
-    // this.chooseSlide(this.slides[this.active]);
+    this.arrows.forEach((arrow) => {
+      arrow.addEventListener("click", (e) => this.changeSlide(e.currentTarget));
+    });
+    this.bindSliders();
   }
 
-  chooseSlide(target) {
-    this.closeAll();
-    const childEl = this.addFormation();
-    target.appendChild(childEl);
+  bindSliders() {
+    for (let i = 0; i < data.length; i += 1) {
+      const newSlider = this.createSlider(data[i]);
+      this.sliderArea.appendChild(newSlider);
+    };
+    this.setContent();
+    this.width = this.sliderArea.children[0].getBoundingClientRect().width;
+  }
+
+  createSlider(data) {
+    const newSlider = document.createElement("li");
+    newSlider.className = "projects__item";
+    newSlider.style.backgroundImage = `url(${data.url})`;
+    return newSlider;
+  }
+
+  setContent() {
+    const childEl = this.addContent();
+    this.sliderArea.children[this.active].appendChild(childEl);
     setTimeout(() => {
-      childEl.style.opacity = "1";
+      childEl.style.opacity = 1;
     }, 300);
   }
 
   changeSlide(target) {
-    if(target.id === "forward") {
-      this.active+=1;
-      if (this.active > this.slides.length-1) this.active = 0;
-    } else {
-      this.active-=1;
-      if (this.active < 0) this.active = this.slides.length-1;
-    }
-    this.chooseSlide(this.slides[this.active]);
+    if (!target.id) return;
+    this.sliderArea.children[this.active].innerHTML = "";
+    const position = getComputedStyle(this.sliderArea).left;
+    if (target.id === "forward") {
+      this.forward(position);
+      return;
+    };
+    this.back(position);
   }
 
-  closeAll() {
-    this.slides.forEach((slide) => {
-      slide.innerHTML = "";
-    });
+  forward(position) {
+    const newSlider = this.sliderArea.children[this.active - 1].cloneNode();
+    this.active += 1;
+    this.sliderArea.appendChild(newSlider);
+    this.sliderArea.style.left = `calc((${position} - ${this.width}px) - 25px)`;
+    this.setContent();
   }
 
-  addFormation() {
+  back(position) {
+    if (this.active !== 1) {
+      this.active -= 1;
+      this.sliderArea.style.left = `calc((${position} + ${this.width}px) + 25px)`;
+    };
+    this.setContent();
+  }
+
+  addContent() {
     const newMsg = document.createElement('div');
-    newMsg.className = 'picture--wrapper';
+    newMsg.className = "slider__content";
     newMsg.innerHTML = `
-    <div class="picture--marker">+</div>
-    <div class="header--wrapper">
-      <p class="block-text text-with-base">Contraction</p>
-      <h2 class="picture-description--header header-with-base">
-        Skyline Tower Renovation
-      </h2>
+    <p class="subtitle subtitle-accent bg bg-subtitle">Contraction</p>
+    <h3 class="title title-accent bg bg-title">Skyline Tower Renovation</h3>
+    <div class="btn-slider__wrapper">
+      <a class="btn-slider">+</a>
     </div>`;
 
     return newMsg;
@@ -63,5 +86,5 @@ export default class Cards_projects {
 }
 
 const root = document.querySelector(".projects");
-const slider = new Cards_projects(root);
-slider.init();
+const projects = new Projects(root);
+projects.init();
