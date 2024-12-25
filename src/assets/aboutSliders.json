@@ -1,0 +1,50 @@
+[{
+  "id": 1,
+  "url": "/assets/img/about1.webp",
+  "title": "Our vision",
+  "characteristics": [
+    "Integrity and ethics", 
+    "Commitment to quality", 
+    "Innovation and creativity"
+  ]
+}, 
+{
+  "id": 2,
+  "url": "/assets/img/about2.webp",
+  "title": "Core Values",
+  "characteristics": [
+    "Responsibility", 
+    "Communication", 
+    "Attention to detail"
+  ]
+}, 
+{
+  "id": 3,
+  "url": "/assets/img/about3.webp",
+  "title": "Community Engagement",
+  "characteristics": [
+    "Personal contact partners",
+    "Community events", 
+    "24 hour support",
+    "Conference participation"
+  ]
+}, 
+{
+  "id": 4,
+  "url": "/assets/img/about4.webp",
+  "title": "Our Reach",
+  "characteristics": [
+    "Offices in 10 countries", 
+    "Partners across the globe"
+  ]
+}, 
+{
+  "id": 5,
+  "url": "/assets/img/about5.webp",
+  "title": "Commitment to Quality",
+  "characteristics": [
+    "Only the best materials", 
+    "Experienced workers",
+    "Cultivated reputation"
+  ]
+}]
