@@ -61,7 +61,7 @@
 }
 
 .projects--pictures .picture--wrapper {
-  @include animation(opacity);
+  @include animation(opacity, 0.5s);
   opacity: 0;
 }
 

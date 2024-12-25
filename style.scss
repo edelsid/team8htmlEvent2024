@@ -469,8 +469,3 @@ h5 {
 .list-pictures {
   @include flex-standard;
 }
-
-.button-transp:hover {
-  @include animation(background-color);
-  background-color: $orange;
-}

@@ -20,11 +20,11 @@
   &__item {
     width: 26%;
     @include background;
-    @include animation(width);
+    @include animation(width, 0.5s);
     cursor: pointer;
 
     &.active {
-      @include animation(width);
+      @include animation(width, 0.5s);
       color: $white;
       width: 41%;
     }

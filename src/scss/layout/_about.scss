@@ -22,7 +22,6 @@
     width: 33%;
     @include background;
     position: relative;
-    @include animation-all(0.3s);
 
     &::after {
       content: "";
@@ -32,6 +31,11 @@
         #05000000 0%,
         #0E0E0E 100%
       );
+    }
+
+    &.active .slider__content {
+      opacity: 0;
+      @include animation(opacity, 0.3s);
     }
   }
 }

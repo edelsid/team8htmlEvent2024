@@ -112,7 +112,7 @@
   width: 13px;
   height: 13px;
   opacity: 0.3;
-  @include animation(opacity);
+  @include animation(opacity, 0.5s);
 
   &:hover {
     opacity: 1;

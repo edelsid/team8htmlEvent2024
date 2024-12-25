@@ -52,15 +52,15 @@
   font-style: normal;
 }
 
-@mixin animation ($characteristic) {
-  -webkit-transition: $characteristic 0.5s ease-in-out;
-  -moz-transition: $characteristic 0.5s ease-in-out;
-  -o-transition: $characteristic 0.5s ease-in-out;
-  transition: $characteristic 0.5s ease-in-out;
+@mixin animation ($characteristic, $time) {
+  -webkit-transition: $characteristic $time ease-in-out;
+  -moz-transition: $characteristic $time ease-in-out;
+  -o-transition: $characteristic $time ease-in-out;
+  transition: $characteristic $time ease-in-out;
 }
 
 @mixin animation-all($time) {
-  -webkit-transition: all ease-in-out;
+  -webkit-transition: all $time ease-in-out;
   -moz-transition: all $time ease-in-out;
   -o-transition: all $time ease-in-out;
   transition: all $time ease-in-out;

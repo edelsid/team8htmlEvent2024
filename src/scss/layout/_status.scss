@@ -14,8 +14,8 @@
   }
 
   &__item {
-    @include animation(background-color);
-    @include animation(color);
+    @include animation(background-color, 0.5s);
+    @include animation(color, 0.5s);
     @include flex-column;
     background-color: transparent;
     padding: 60px;
