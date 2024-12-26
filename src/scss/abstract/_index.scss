@@ -1,7 +1,6 @@
 @forward 'colors';
 @forward 'mixins';
-
-$title-margin: 86px;
+@forward 'variables';
 
 @keyframes fadeInAnimation {
   0% {

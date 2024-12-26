@@ -45,9 +45,11 @@
   }
 
   &__img {
+    object-fit: cover;
     height: 361px;
     width: 100%;
     background-color: $lightgrey;
+    cursor: pointer;
   }
 
   &__date {
@@ -100,6 +102,11 @@
   gap: 20px;
   padding: 30px;
   border: 1px solid $lightgrey;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: $shadow;
+  }
 
   &__img-wrapper {
     position: relative;
@@ -125,5 +132,6 @@
     width: 100%;
     height: 300px;
     background-color: $lightgrey;
+    object-fit: cover;
   }
 }

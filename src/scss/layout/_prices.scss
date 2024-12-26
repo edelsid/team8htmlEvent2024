@@ -21,9 +21,14 @@
     padding: 48px;
     border: 1px solid $lightgrey;
     background-color: $white;
+    cursor: pointer;
 
     &.active::before {
       border-top: 50px solid $orange;
+    }
+
+    &:hover {
+      box-shadow: $shadow;
     }
 
     &::before {
