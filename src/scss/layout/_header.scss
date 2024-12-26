@@ -140,12 +140,8 @@
   &:hover {
     color: $orange;
   }
-}
 
-.link-active {
-  color: $orange;
-
-  &::after {
+  &:hover::after {
     position: absolute;
     content: "";
     width: 100%;
