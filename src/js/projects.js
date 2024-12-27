@@ -5,6 +5,8 @@ export default class Projects {
   constructor(container) {
   this.bindToDOM(container);
   this.active = 1;
+  this.count = 0;
+  this.msgCount = 1;
   }
 
   bindToDOM(container) {
@@ -25,8 +27,8 @@ export default class Projects {
       const newSlider = this.createSlider(data[i]);
       this.sliderArea.appendChild(newSlider);
     };
-    this.setContent();
     this.width = this.sliderArea.children[0].getBoundingClientRect().width;
+    this.setContent(data[this.msgCount]);
   }
 
   createSlider(data) {
@@ -36,8 +38,8 @@ export default class Projects {
     return newSlider;
   }
 
-  setContent() {
-    const childEl = this.addContent();
+  setContent(data) {
+    const childEl = this.addContent(data);
     this.sliderArea.children[this.active].appendChild(childEl);
     setTimeout(() => {
       childEl.style.opacity = 1;
@@ -56,27 +58,42 @@ export default class Projects {
   }
 
   forward(position) {
-    const newSlider = this.sliderArea.children[this.active - 1].cloneNode();
+    if (this.active > this.sliderArea.children.length - 3) {
+      const newSlider = this.sliderArea.children[this.count].cloneNode();
+      this.sliderArea.appendChild(newSlider);
+      this.count += 1;
+    }
     this.active += 1;
-    this.sliderArea.appendChild(newSlider);
+    this.msgCount +=1;
+    if (this.msgCount > data.length - 1) {
+      this.msgCount = 0;
+    }
     this.sliderArea.style.left = `calc((${position} - ${this.width}px) - 25px)`;
-    this.setContent();
+    this.setContent(data[this.msgCount]);
   }
 
   back(position) {
     if (this.active !== 1) {
       this.active -= 1;
+      this.msgCount -= 1;
+      if (this.msgCount < 0) {
+        this.msgCount = data.length - 1;
+      }
       this.sliderArea.style.left = `calc((${position} + ${this.width}px) + 25px)`;
+      if (this.active < this.sliderArea.children.length - 5) {
+        this.sliderArea.removeChild(this.sliderArea.lastElementChild);
+        this.count -= 1;
+      }
     };
-    this.setContent();
+    this.setContent(data[this.msgCount]);
   }
 
-  addContent() {
+  addContent(data) {
     const newMsg = document.createElement('div');
     newMsg.className = "slider__content";
     newMsg.innerHTML = `
-    <p class="subtitle subtitle-accent bg bg-subtitle">Contraction</p>
-    <h3 class="title title-accent bg bg-title">Skyline Tower Renovation</h3>
+    <p class="subtitle subtitle-accent bg bg-subtitle">${data.subtitle}</p>
+    <h3 class="title title-accent bg bg-title">${data.title}</h3>
     <div class="btn-slider__wrapper">
       <a class="btn-slider">+</a>
     </div>`;
