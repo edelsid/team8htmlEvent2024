@@ -36,3 +36,28 @@
     @include animation-all(0.5s);
   }
 }
+
+.modal {
+  &[open] {
+    width: 60%;
+    border: 0;
+    padding: 30px;
+    @include flex-column;
+    gap: 20px;
+  }
+
+  &__video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    user-select: none;
+  }
+
+  &__close {
+    margin: auto;
+    background-color: transparent;
+
+    &:hover {
+      background-color: $orange;
+    }
+  }
+}

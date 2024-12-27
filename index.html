@@ -373,8 +373,16 @@
             <button class="btn-play">&#11208;</button>          
           </div>
           <dialog class="modal">
-            <button class="btn modal__close">x</button>
-            <iframe class="modal__video"></iframe>
+            <iframe 
+              class="modal__video" 
+              src="" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+            <button class="btn btn-thin modal__close">Close</button>
           </dialog>
         </div>
       </section>

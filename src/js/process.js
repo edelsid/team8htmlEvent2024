@@ -13,11 +13,14 @@ export default class Process {
     this.modal = this.container.querySelector(".modal");
     this.previewScreen = this.container.querySelector(".video__player");
     this.tabArea = this.container.querySelector(".process__tabs");
+    this.video = this.container.querySelector(".modal__video");
   }
 
   init() {
     const playBtn = this.container.querySelector(".btn-play");
-    playBtn.addEventListener("click", (e) => this.openModal(e));
+    playBtn.addEventListener("click", (e) => this.openModal());
+    const closeBtn = this.container.querySelector(".modal__close");
+    closeBtn.addEventListener("click", (e) => this.closeModal());
     data.forEach((item) => {
       const newTab = this.setTab(item);
       const btn = newTab.firstElementChild;
@@ -47,14 +50,17 @@ export default class Process {
     };
     target.classList.add("active");
     this.previewScreen.src = data[target.id - 1].img;
+    this.active = target.id;
   }
 
   openModal() {
+    this.video.src = data[this.active - 1].url;
     this.modal.showModal();
   }
 
   closeModal() {
     this.modal.close();
+    this.video.src = "";
   }
 }
 

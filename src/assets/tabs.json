@@ -1,18 +1,18 @@
 [{
   "id": 1,
-  "url": "https://youtu.be/tqpPBBNspTE?si=Gtvmwb6iaGraxGXB",
+  "url": "https://www.youtube.com/embed/tqpPBBNspTE?si=eMgsYpOKE_ISgfCR",
   "title": "Planning and Design",
   "img": "https://img.youtube.com/vi/tqpPBBNspTE/maxresdefault.jpg"
 }, 
 {
   "id": 2,
-  "url": "https://youtu.be/TUvpL_Hx0is?si=mVZwyGEFf_Ppmbi6",
+  "url": "https://www.youtube.com/embed/TUvpL_Hx0is?si=mVZwyGEFf_Ppmbi6",
   "title": "Permitting and Approvals",
   "img": "https://img.youtube.com/vi/TUvpL_Hx0is/maxresdefault.jpg"
 }, 
 {
   "id": 3,
-  "url": "https://youtu.be/CbWY5jZynuM?si=5qxfIIGY9rx0wal_",
+  "url": "https://www.youtube.com/embed/CbWY5jZynuM?si=5qxfIIGY9rx0wal_",
   "title": "Foundation Construction",
   "img": "https://img.youtube.com/vi/CbWY5jZynuM/maxresdefault.jpg"
 }]
