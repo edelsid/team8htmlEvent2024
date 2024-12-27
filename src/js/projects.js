@@ -12,11 +12,11 @@ export default class Projects {
   bindToDOM(container) {
     checkDOM(container);
     this.sliderArea = container.querySelector(".projects__sliders");
-    this.arrows = container.querySelectorAll(".arrow");
   }
 
-  init() {
-    this.arrows.forEach((arrow) => {
+  init(container) {
+    const arrows = container.querySelectorAll(".arrow");
+    arrows.forEach((arrow) => {
       arrow.addEventListener("click", (e) => this.changeSlide(e.currentTarget));
     });
     this.bindSliders();
@@ -104,4 +104,4 @@ export default class Projects {
 
 const root = document.querySelector(".projects");
 const projects = new Projects(root);
-projects.init();
+projects.init(root);

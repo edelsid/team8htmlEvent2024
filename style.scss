@@ -265,12 +265,13 @@ button {
 
   &-switch {
     width: 100%;
+    height: 100%;
     justify-content: center;
     position: relative;
     border: 1px solid $transparentgrey;
     background-color: $white;
 
-    &:hover {
+    &:hover, &.active {
       background-color: $orange;
       border: 1px solid $orange;
       color: $white;
@@ -301,6 +302,7 @@ button {
     border: 0;
     font-size: 38px;
     color: $white;
+    z-index: 2;
   }
 
   &-thin {
