@@ -1,4 +1,4 @@
-import { Services, About, Projects } from "./src/js/index";
+import { Services, About, Projects, Team } from "./src/js/index";
 
 // document.addEventListener('DOMContentLoaded', function () {
 //   // Определяем настройки для IntersectionObserver

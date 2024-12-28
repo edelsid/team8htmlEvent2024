@@ -12,27 +12,32 @@
   &__photo {
     background-color: $standart-light;
     object-fit: cover;
-    height: 480px;
     width: 32%;
+    height: 480px;
     cursor: pointer;
   }
 
   &__names {
     @include flex-column;
     justify-content: space-between;
+    width: 31%;
   }
 }
 
 .names {
   &__item {
     @include flex-column;
+    @include animation-all(0.5s);
     align-items: end;
     font-size: 24px;
     line-height: 34px;
     cursor: pointer;
+    text-align: end;
+    user-select: none;
 
     &.active {
       & > p:is(.names__name) {
+        @include animation-all(0.5s);
         color: $accent;
         font-size: 32px;
         line-height: 42px;
