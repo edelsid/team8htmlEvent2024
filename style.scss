@@ -112,7 +112,7 @@ button {
 
     &::before {
       content: "—";
-      color: $orange;
+      color: $accent;
     }
   }
 
@@ -134,14 +134,14 @@ button {
   &-banner {
     font-size: 24px;
     line-height: 36px;
-    color: $lightgrey;
+    color: $standart-light;
     margin-block: 0 54px;
   }
 
   &-standart {
     font-size: 16px;
     line-height: 26px;
-    color: $grey;
+    color: $standart;
   }
 
   &-list {
@@ -173,7 +173,7 @@ button {
   }
 
   &-subtitle {
-    background-color: $orange;
+    background-color: $accent;
     padding-block: 5px;
     padding-inline: 16px;
   }
@@ -244,8 +244,8 @@ button {
   cursor: pointer;
 
   &-primary {
-    border: 1px solid $orange;
-    background-color: $orange;
+    border: 1px solid $accent;
+    background-color: $accent;
     color: $white;
 
     &:hover {
@@ -259,7 +259,7 @@ button {
     background-color: transparent;
 
     &:hover {
-      background-color: $orange;
+      background-color: $accent;
     }
   }
 
@@ -268,12 +268,12 @@ button {
     height: 100%;
     justify-content: center;
     position: relative;
-    border: 1px solid $transparentgrey;
+    border: 1px solid $standart-transp;
     background-color: $white;
 
     &:hover, &.active {
-      background-color: $orange;
-      border: 1px solid $orange;
+      background-color: $accent;
+      border: 1px solid $accent;
       color: $white;
 
       &::after {
@@ -282,7 +282,7 @@ button {
         left: 0;
         right: 0;
         bottom: -5px;
-        background-color: $orange; 
+        background-color: $accent; 
         transform: rotate(45deg);
         margin-inline: auto;
         width: 20px;
@@ -296,7 +296,7 @@ button {
     @include absolute-filler;
     width: 120px;
     aspect-ratio: 1 / 1;
-    background-color: $orange;
+    background-color: $accent;
     border-radius: 50%;
     margin: auto;
     border: 0;
@@ -324,7 +324,7 @@ button {
 }
 
 .link-accent {
-  color: $orange;
+  color: $accent;
 }
 
 .arrows {
@@ -351,7 +351,7 @@ button {
   background-color: transparent;
 
   &:hover {
-    color: $orange;
+    color: $accent;
   }
 }
 

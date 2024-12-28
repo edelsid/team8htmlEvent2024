@@ -19,12 +19,12 @@
     @include flex-column;
     justify-content: space-between;
     padding: 48px;
-    border: 1px solid $lightgrey;
+    border: 1px solid $standart-light;
     background-color: $white;
     cursor: pointer;
 
     &.active::before {
-      border-top: 50px solid $orange;
+      border-top: 50px solid $accent;
     }
 
     &:hover {
@@ -59,7 +59,7 @@
       font-family: "Jost";
       font-size: 16px;
       line-height: 26px;
-      color: $grey;
+      color: $standart;
     }
   }
 
@@ -72,13 +72,13 @@
     gap: 20px;
     padding-bottom: 30px;
     margin-block: 20px 30px;
-    border-bottom: 1px solid $lightgrey;
+    border-bottom: 1px solid $standart-light;
 
     &::before {
       content: "\2730";
       font-size: 28px;
       font-weight: 600;
-      color: $orange;
+      color: $accent;
     }
   }
 
@@ -92,7 +92,7 @@
 }
 
 .inactive {
-  color: $grey;
+  color: $standart;
 }
 
 .label {

@@ -11,7 +11,7 @@
     &-logo {
       display: flex;
       align-items: center;
-      background-color: $orange;
+      background-color: $accent;
       height: 156px;
       width: 510px;
       flex-shrink: 0;
@@ -23,7 +23,7 @@
     }
 
     &-logo::before {
-      background-color: $orange;
+      background-color: $accent;
       width: 182px;
       height: 110px;
       top: -6px;
@@ -55,7 +55,7 @@
   }
 
   &__link {
-    color: $lightgrey;
+    color: $standart-light;
     font-size: 1.4rem;
   }
 }
@@ -75,14 +75,14 @@
     justify-content: end;
     align-items: center;
     gap: 10px;
-    border-left: 1px solid $transparentgrey;
+    border-left: 1px solid $standart-transp;
   }
 }
 
 .contacts {
   @include flex-standard;
   padding-inline: 110px 30px;
-  border-bottom: 1px solid $transparentgrey;
+  border-bottom: 1px solid $standart-transp;
 
   &__descriptions {
     display: flex;
@@ -138,14 +138,14 @@
   color: $white;
   
   &:hover {
-    color: $orange;
+    color: $accent;
   }
 
   &:hover::after {
     position: absolute;
     content: "";
     width: 100%;
-    background-color: $orange;
+    background-color: $accent;
     height: 4px;
     left: 0;
     bottom: -35px;

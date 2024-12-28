@@ -8,12 +8,12 @@
   &__content {
     @include flex-standard;
     gap: 170px;
-    border-bottom: 1px solid $lightgrey;
+    border-bottom: 1px solid $standart-light;
   }
 
   &__people {
     position: relative;
-    border-left: 1px solid $grey;
+    border-left: 1px solid $standart;
     height: calc(100% - 60px);
     padding-block: 5px;
     padding-left: 110px;
@@ -27,8 +27,8 @@
       top: 50%;
       left: -20px;
       background-color: $white;
-      border-top: 1px solid $grey;
-      border-right: 1px solid $grey;
+      border-top: 1px solid $standart;
+      border-right: 1px solid $standart;
       width: 40px;
       height: 40px;
       transform: skew(-45deg);
@@ -40,13 +40,13 @@
   &__item {
     width: 70px;
     aspect-ratio: 1 / 1;
-    background-color: $lightgrey;
+    background-color: $standart-light;
     border-radius: 50%;
     cursor: pointer;
 
     &.active {
       width: 110px;
-      border: 2px solid $orange;
+      border: 2px solid $accent;
     }
   }
 
@@ -59,7 +59,7 @@
 
 .quote {
   font-family: "Jost";
-  color: $grey;
+  color: $standart;
   font-size: 32px;
   line-height: 42px;
   text-transform: capitalize;
@@ -95,6 +95,6 @@
     font-family: "Barlow";
     font-size: 24px;
     line-height: 32px;
-    color: $grey;
+    color: $standart;
   }
 }

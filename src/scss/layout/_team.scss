@@ -10,7 +10,7 @@
   }
 
   &__photo {
-    background-color: $lightgrey;
+    background-color: $standart-light;
     object-fit: cover;
     height: 480px;
     width: 32%;
@@ -33,7 +33,7 @@
 
     &.active {
       & > p:is(.names__name) {
-        color: $orange;
+        color: $accent;
         font-size: 32px;
         line-height: 42px;
         text-decoration: underline;
@@ -52,6 +52,6 @@
 
   &__role {
     font-family: "Barlow";
-    color: $grey;
+    color: $standart;
   }
 }
