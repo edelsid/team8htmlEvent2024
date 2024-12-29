@@ -1,4 +1,5 @@
-import checkDOM from "./checkDom";
+import checkDOM from "./utils/checkDom";
+import setActive from "./utils/setActive";
 import data from "../assets/tabs.json" with { type: "json" };
 
 export default class Process {
@@ -40,17 +41,19 @@ export default class Process {
     newTab.className = "process__item";
     newTab.innerHTML = `
     <button class="btn btn-switch" type="button" id="${data.id}">
-      0${data.id} ${data.title}
+      0${data.id}. ${data.title}
     </button>`;
     return newTab;
   }
 
   changeTab(target) {
-    for (let i = 0; i < this.tabArea.children.length; i += 1) {
-      const child = this.tabArea.children[i].firstElementChild;
-      child.classList.remove("active");
-    };
-    target.classList.add("active");
+    if (Number(this.active) === Number(target.id)) return;
+    // for (let i = 0; i < this.tabArea.children.length; i += 1) {
+    //   const child = this.tabArea.children[i].firstElementChild;
+    //   child.classList.remove("active");
+    // };
+    // target.classList.add("active");
+    setActive(this.tabArea.children, target, true);
     this.previewScreen.src = data[target.id - 1].img;
     this.active = target.id;
   }

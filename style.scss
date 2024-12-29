@@ -314,6 +314,10 @@ button {
 
 .link-accent {
   color: $accent;
+
+  &:hover {
+    color: $black;
+  }
 }
 
 .arrows {

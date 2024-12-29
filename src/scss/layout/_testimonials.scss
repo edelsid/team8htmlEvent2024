@@ -26,7 +26,8 @@
     &::before {
       content: "";
       position: absolute;
-      top: 50%;
+      top: var(--position);
+      @include animation(top, 0.5s);
       left: -20px;
       background-color: $white;
       border-top: 1px solid $standart;
@@ -45,10 +46,13 @@
     background-color: $standart-light;
     border-radius: 50%;
     cursor: pointer;
+    user-select: none;
+    @include animation-all(0.5s);
 
     &.active {
       width: 110px;
       border: 2px solid $accent;
+      @include animation-all(0.5s);
     }
   }
 

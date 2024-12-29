@@ -1,4 +1,4 @@
-import checkDOM from "./checkDom";
+import checkDOM from "./utils/checkDom";
 import data from "../assets/projectsSliders.json" with { type: "json" };
 
 export default class Projects {

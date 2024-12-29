@@ -1,9 +1,9 @@
-import checkDOM from "./checkDom";
+import checkDOM from "./utils/checkDom";
 
 export default class Services {
   constructor(container) {
     this.bindToDOM(container);
-    this.currentSlide = 0;
+    this.active = 0;
     this.count = null;
   }
 
@@ -20,7 +20,7 @@ export default class Services {
   }
 
   chooseSlide(target) {
-    this.currentSlide = this.slides.indexOf(target);
+    this.active = this.slides.indexOf(target);
     if (target.classList.contains("active") ||
     target.closest(".active")) return;
     this.closeAll();
@@ -44,16 +44,16 @@ export default class Services {
     clearInterval(this.count);
     setTimeout(() => {
       this.setCount();
-    }, 5000);
+    }, 3000);
   }
 
   setCount() {
     this.count = setInterval(() => {
-      this.currentSlide += 1;
-      if (this.currentSlide > this.slides.length - 1) {
-        this.currentSlide = 0;
+      this.active += 1;
+      if (this.active > this.slides.length - 1) {
+        this.active = 0;
       };
-      this.chooseSlide(this.slides[this.currentSlide]);
+      this.chooseSlide(this.slides[this.active]);
     }, 3000);
   }
 
@@ -77,4 +77,4 @@ export default class Services {
 
 const root = document.querySelector(".services__sliders");
 const services = new Services(root);
-//services.init();
+services.init();

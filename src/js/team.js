@@ -1,9 +1,11 @@
-import checkDOM from "./checkDom";
+import checkDOM from "./utils/checkDom";
+import setActive from "./utils/setActive";
 import data from "../assets/team.json" with { type: "json" };
 
 export default class Team {
   constructor(container) {
     this.bindToDOM(container);
+    this.active = 1;
   }
 
   bindToDOM(container) {
@@ -19,8 +21,9 @@ export default class Team {
         newTab.classList.add("active");
       };
       this.nameArea.appendChild(newTab);
+      newTab.addEventListener("click", (e) => this.changeTab(e.target));
     });
-    this.nameArea.addEventListener("click", (e) => this.changeTab(e.target));
+    this.photo.src = data[0].img;
   }
 
   setName(data) {
@@ -34,12 +37,11 @@ export default class Team {
   }
 
   changeTab(target) {
-    for (let i = 0; i < this.nameArea.children.length; i += 1) {
-      this.nameArea.children[i].classList.remove("active");
-    };
     const parent = target.parentElement;
-    parent.classList.add("active");
+    if (Number(this.active) === Number(parent.id)) return;
+    setActive(this.nameArea.children, parent, false);
     this.photo.src = data[parent.id - 1].img;
+    this.active = parent.id;
   }
 }
 
