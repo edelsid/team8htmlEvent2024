@@ -21,6 +21,7 @@ export default class Process {
     playBtn.addEventListener("click", (e) => this.openModal());
     const closeBtn = this.container.querySelector(".modal__close");
     closeBtn.addEventListener("click", (e) => this.closeModal());
+
     data.forEach((item) => {
       const newTab = this.setTab(item);
       const btn = newTab.firstElementChild;
@@ -30,6 +31,7 @@ export default class Process {
       }
       this.tabArea.appendChild(newTab);
     });
+    
     this.tabArea.addEventListener("click", (e) => this.changeTab(e.target));
   }
 

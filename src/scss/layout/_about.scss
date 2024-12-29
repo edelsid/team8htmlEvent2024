@@ -1,6 +1,8 @@
 @use '../abstract/index.scss' as *;
 
 .about {
+  margin-bottom: $margin-section;
+
   &__text {
     @include flex-standard;
     margin-bottom: $title-margin;

@@ -3,6 +3,7 @@
 .projects {
   position: relative;
   overflow: hidden;
+  margin-bottom: $margin-section;
   
   &__text {
     @include flex-standard;

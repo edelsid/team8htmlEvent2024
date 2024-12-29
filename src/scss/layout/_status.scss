@@ -1,6 +1,8 @@
 @use '../abstract/index.scss' as *;
 
 .status {
+  margin-bottom: $margin-section;
+
   &__headers {
     @include flex-column;
     align-items: center;

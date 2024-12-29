@@ -1,6 +1,8 @@
 @use '../abstract/index.scss' as *;
 
 .testimonials {
+  margin-bottom: $margin-section;
+
   &__headers {
     width: 51%;
   }

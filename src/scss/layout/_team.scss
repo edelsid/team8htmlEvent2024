@@ -1,6 +1,8 @@
 @use '../abstract/index.scss' as *;
 
 .team {
+  margin-bottom: $margin-thin;
+
   & > .container-flex {
     gap: 70px;
   }

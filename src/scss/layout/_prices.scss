@@ -1,8 +1,11 @@
 @use '../abstract/index.scss' as *;
 
 .prices {
+  background-color: #F8F8F8;
   background-image: url("/assets/svg/image 15.svg");
   background-repeat: no-repeat;
+  padding-block: 146px 262px;
+  margin-bottom: $margin-thin;
 
   &__headers {
     margin-bottom: 78px;

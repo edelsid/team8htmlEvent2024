@@ -179,18 +179,8 @@ button {
   }
 }
 
-.margin {
-  &-standart {
-    margin-block: 10px 55px;
-  }
-  
-  &-section {
-    margin-bottom: 160px;
-  }
-
-  &-wide {
-    margin-bottom: 385px;
-  }
+.margin-standart {
+  margin-block: 10px 55px;
 }
 
 .headers-centered {
