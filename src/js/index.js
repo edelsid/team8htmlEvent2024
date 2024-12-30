@@ -5,4 +5,4 @@ import Process from "./process";
 import Testimonials from "./testimonials";
 import Team from "./team";
 
-export { Services, About, Projects, Process, Team,Testimonials };
+export { Services, About, Projects, Process, Team, Testimonials };

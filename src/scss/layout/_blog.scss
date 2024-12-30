@@ -137,3 +137,11 @@
     object-fit: cover;
   }
 }
+
+.link-accent {
+  color: $accent;
+
+  &:hover {
+    color: $black;
+  }
+}

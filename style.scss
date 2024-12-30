@@ -312,27 +312,10 @@ button {
   }
 }
 
-.link-accent {
-  color: $accent;
-
-  &:hover {
-    color: $black;
-  }
-}
-
 .arrows {
   @include flex-standard;
   width: fit-content;
   gap: 28px;
-
-  &-about {
-    margin-top: 54px;
-    margin-inline: auto;
-  }
-
-  &-projects {
-    margin-bottom: 20px;
-  }
 }
 
 .arrow {
@@ -359,72 +342,30 @@ button {
   z-index: 1;
 }
 
+.decorated, .decorated-right, .decorated-left, .decorated-about {
+  position: relative;
+}
+
 .decorated {
-  position: relative;
-
-  &::before {
+  &::before, &-right::after, &::after, &-left::before {
     content: url('assets/svg/Architecture.svg');
     position: absolute;
-    //visibility: hidden;
-    //right: -510px;
-    //right: -312px;
+  }
+
+  &::before, &-right::after {
     right: -100px;
-    transition: all 0.35s ease;
   }
 
-  // &.active::before {
-  //   visibility: visible;
-  //   right: -312px;
-  // }
+  &-about::after {
+    top: 92%;
+  }
 
-  &::after {
-    content: url('assets/svg/Architecture.svg');
-    position: absolute;
+  &::after, &-left::before {
     transform: scaleX(-1);
-    //visibility: hidden;
-    //left: -510px;
-    //left: -312px;
     left: -100px;
-    transition: all 0.35s ease;
   }
-}
 
-// old stuff
-.btn p {
-  margin: 0;
-  font-family: "Jost";
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.main article,
-.block__margin {
-  width: 129.6rem;
-  margin: 0 auto;
-  position: relative;
-}
-
-.right::before {
-  content: url('assets/svg/Architecture.svg');
-  position: absolute;
-  visibility: hidden;
-  right: -51rem;
-  transition: all 0.35s ease;
-}
-.right.active::before {
-  visibility: visible;
-  right: -31.2rem;
-}
-
-.left::after {
-  content: url('assets/svg/Architecture.svg');
-  position: absolute;
-  visibility: hidden;
-  left: -51.2rem;
-  top: 0;
-  transition: all 0.35s ease;
-}
-.left.active::after {
-  visibility: visible;
-  left: -31.2rem;
+  &-left::before {
+    top: 46%;
+  }
 }
