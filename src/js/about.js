@@ -4,40 +4,54 @@ import data from "../assets/aboutSliders.json" with { type: "json" };
 export default class About {
   constructor(container) {
     this.bindToDOM(container);
-    this.sliderFields = container.querySelectorAll(".about__item");
+    this.sliders = container.querySelectorAll(".about__item");
     this.contents = [];
     this.active = 1;
   }
 
   bindToDOM(container) {
     checkDOM(container);
-    this.arrows = container.querySelectorAll(".arrow");
+    const arrows = container.querySelectorAll(".arrow");
+    arrows.forEach((arrow) => {
+      arrow.addEventListener("click", (e) => this.changeSlide(e.currentTarget));
+    });
   }
 
   init() {
-    this.arrows.forEach((arrow) => {
-      arrow.addEventListener("click", (e) => this.changeSlide(e.currentTarget));
-    });
-    for (let i = 0; i < this.sliderFields.length; i += 1) {
+    for (let i = 0; i < this.sliders.length; i += 1) {
       this.contents.push(data[i]);
     };
     this.bindSliders();
   }
 
   bindSliders() {
-    for (let i = 0; i < this.sliderFields.length; i += 1) {
+    for (let i = 0; i < this.sliders.length; i += 1) {
       const starterSlider = this.sliderFormation(this.contents[i]);
-      this.sliderFields[i].style.backgroundImage = `url(${this.contents[i].url})`;
-      this.sliderFields[i].innerHTML = "";
-      if (this.contents[i] === data[this.active]) {
-        const characteristics = this.listFormation(this.contents[i]);
-        starterSlider.appendChild(characteristics);
-        setTimeout(() => {
-          starterSlider.style.opacity = 1;
-        }, 300);
-      };
-      this.sliderFields[i].appendChild(starterSlider);
+      const slider = this.sliders[i];
+      slider.style.backgroundImage = `url(${this.contents[i].url})`;
+      slider.innerHTML = "";
+      slider.appendChild(starterSlider);
+      slider.addEventListener("mouseenter", () => this.onHover(slider.id, starterSlider));
+      slider.addEventListener("mouseleave", () => this.onLeave(starterSlider));
     };
+  }
+
+  onHover(id, target) {
+    const list = this.listFormation(this.contents[id - 1]);
+    target.appendChild(list);
+    setTimeout(() => {
+      list.style.opacity = 1;
+    }, 300);
+  }
+
+  onLeave(target) {
+    const list = target.lastElementChild;
+    setTimeout(() => {
+      list.style.opacity = 0;
+      setTimeout(() => {
+        list.remove();
+      }, 300);
+    }, 300);
   }
 
   changeSlide(target) {
