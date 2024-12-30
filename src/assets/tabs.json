@@ -2,17 +2,20 @@
   "id": 1,
   "url": "https://www.youtube.com/embed/tqpPBBNspTE?si=eMgsYpOKE_ISgfCR",
   "title": "Planning and Design",
-  "img": "https://img.youtube.com/vi/tqpPBBNspTE/maxresdefault.jpg"
+  "img": "https://img.youtube.com/vi/tqpPBBNspTE/maxresdefault.jpg",
+  "alt": "video thumbnail: a person working with a laptop"
 }, 
 {
   "id": 2,
   "url": "https://www.youtube.com/embed/TUvpL_Hx0is?si=mVZwyGEFf_Ppmbi6",
   "title": "Permitting and Approvals",
-  "img": "https://img.youtube.com/vi/TUvpL_Hx0is/maxresdefault.jpg"
+  "img": "https://img.youtube.com/vi/TUvpL_Hx0is/maxresdefault.jpg",
+  "alt": "video thumbnail: a group of colleagues sitting around the table and talking"
 }, 
 {
   "id": 3,
   "url": "https://www.youtube.com/embed/CbWY5jZynuM?si=5qxfIIGY9rx0wal_",
   "title": "Foundation Construction",
-  "img": "https://img.youtube.com/vi/CbWY5jZynuM/maxresdefault.jpg"
+  "img": "https://img.youtube.com/vi/CbWY5jZynuM/maxresdefault.jpg",
+  "alt": "video thumbnail: a district in a small town viewed from above"
 }]

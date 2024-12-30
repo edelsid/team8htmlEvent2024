@@ -28,7 +28,7 @@ export default class Process {
       const btn = newTab.firstElementChild;
       if (Number(btn.id) === this.active) {
         btn.classList.add("active");
-        this.previewScreen.src = data[this.active - 1].img;
+        this.setImg(this.previewScreen, data[this.active - 1]);
       }
       this.tabArea.appendChild(newTab);
     });
@@ -48,13 +48,8 @@ export default class Process {
 
   changeTab(target) {
     if (Number(this.active) === Number(target.id)) return;
-    // for (let i = 0; i < this.tabArea.children.length; i += 1) {
-    //   const child = this.tabArea.children[i].firstElementChild;
-    //   child.classList.remove("active");
-    // };
-    // target.classList.add("active");
     setActive(this.tabArea.children, target, true);
-    this.previewScreen.src = data[target.id - 1].img;
+    this.setImg(this.previewScreen, data[target.id - 1]);
     this.active = target.id;
   }
 
@@ -66,6 +61,12 @@ export default class Process {
   closeModal() {
     this.modal.close();
     this.video.src = "";
+  }
+
+  setImg(element, data) {
+    const { img, alt } = data;
+    element.src = img;
+    element.alt = alt;
   }
 }
 

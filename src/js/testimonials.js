@@ -32,7 +32,7 @@ export default class Testimonials {
     const newPhoto = document.createElement("li");
     newPhoto.className = "people__item";
     newPhoto.id = data.id;
-    newPhoto.innerHTML = `<img class="people__portrait" src=${data.img}>`;
+    newPhoto.innerHTML = `<img class="people__portrait" src=${data.img} alt="client avatar">`;
     return newPhoto;
   }
 
