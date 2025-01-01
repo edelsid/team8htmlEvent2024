@@ -22,7 +22,7 @@
     @include flex-column;
     justify-content: space-between;
     padding: 48px;
-    border: 1px solid $standart-light;
+    border: $border-thin $standart-light;
     background-color: $white;
     cursor: pointer;
 
@@ -73,7 +73,7 @@
     gap: $gap-small;
     padding-bottom: 30px;
     margin-block: 20px 30px;
-    border-bottom: 1px solid $standart-light;
+    border-bottom: $border-thin $standart-light;
 
     &::before {
       content: "\2730";

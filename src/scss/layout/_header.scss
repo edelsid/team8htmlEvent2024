@@ -75,14 +75,14 @@
     justify-content: end;
     align-items: center;
     gap: $gap-mini;
-    border-left: 1px solid $standart-transp;
+    border-left: $border-thin $standart-transp;
   }
 }
 
 .contacts {
   @include flex-standard;
   padding-inline: 110px 30px;
-  border-bottom: 1px solid $standart-transp;
+  border-bottom: $border-thin $standart-transp;
 
   &__descriptions {
     display: flex;

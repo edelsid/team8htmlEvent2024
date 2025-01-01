@@ -102,7 +102,7 @@
   justify-content: space-between;
   gap: $gap-small;
   padding: 30px;
-  border: 1px solid $standart-light;
+  border: $border-thin $standart-light;
   cursor: pointer;
 
   &:hover {
