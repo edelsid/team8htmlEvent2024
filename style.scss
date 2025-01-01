@@ -101,7 +101,7 @@ button {
     @include font-text-standart;
     text-transform: capitalize;
     display: flex;
-    gap: 10px;
+    gap: $gap-mini;
     margin-block: 0 22px;
 
     &::before {
@@ -325,7 +325,7 @@ button {
   @include flex-column;
   justify-content: end;
   padding: 25px;
-  gap: 25px;
+  gap: $gap-standart;
   color: $white;
   cursor: pointer;
   z-index: 1;

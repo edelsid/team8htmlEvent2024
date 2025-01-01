@@ -5,7 +5,7 @@
 
   &__text {
     @include flex-standard;
-    margin-bottom: $title-margin;
+    margin-bottom: $margin-title;
     gap: 174px;
   }
 
@@ -16,7 +16,7 @@
 
   &__sliders {
     @include flex-standard;
-    gap: 25px;
+    gap: $gap-standart;
   }
 
   &__item {
@@ -51,7 +51,7 @@
 .button__wrapper {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: $gap-standart;
 }
 
 .arrows-about {

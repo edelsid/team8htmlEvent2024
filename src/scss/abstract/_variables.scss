@@ -1,8 +1,14 @@
 @use 'colors' as colors;
 
-$title-margin: 86px;
 $shadow: 2px 2px 4px colors.$standart-transp;
+
+$margin-title: 86px;
 $margin-section: 160px;
 $margin-thin: 148px;
+
 $font-text-small: 14px;
 $font-text-additional: 16px;
+
+$gap-standart: 25px;
+$gap-small: 20px;
+$gap-mini: 10px;

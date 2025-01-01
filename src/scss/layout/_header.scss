@@ -74,7 +74,7 @@
     display: flex;
     justify-content: end;
     align-items: center;
-    gap: 10px;
+    gap: $gap-mini;
     border-left: 1px solid $standart-transp;
   }
 }
@@ -92,14 +92,14 @@
 
   &__socials {
     @include flex-center;
-    gap: 20px;
+    gap: $gap-small;
   }
 }
 
 .descriptions {
   &__item {
     @include flex-center;
-    gap: 10px;
+    gap: $gap-mini;
   }
 }
 

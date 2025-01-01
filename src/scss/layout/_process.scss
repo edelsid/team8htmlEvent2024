@@ -9,7 +9,7 @@
 
   &__tabs {
     @include flex-standard;
-    gap: 25px;
+    gap: $gap-standart;
     margin-bottom: 90px;
   }
 
@@ -45,7 +45,7 @@
     border: 0;
     padding: 30px;
     @include flex-column;
-    gap: 20px;
+    gap: $gap-small;
   }
 
   &__video {

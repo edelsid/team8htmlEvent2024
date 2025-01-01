@@ -21,7 +21,7 @@
     padding-left: 110px;
     @include flex-column;
     align-items: center;
-    gap: 10px;
+    gap: $gap-mini;
 
     &::before {
       content: "";

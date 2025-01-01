@@ -33,7 +33,7 @@
   &__list {
     margin-top: 24px;
     @include flex-column;
-    gap: 24px;
+    gap: $gap-standart;
 
     & a {
       color: $white;

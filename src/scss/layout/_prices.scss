@@ -14,7 +14,7 @@
   &__table {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: $gap-standart;
   }
 
   &__item {
@@ -52,7 +52,7 @@
     display: flex;
     align-items: end;
     font-weight: 600;
-    gap: 10px;
+    gap: $gap-mini;
 
     &>h3, &>p {
       margin: 0;
@@ -70,7 +70,7 @@
     @include font-text-standart;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: $gap-small;
     padding-bottom: 30px;
     margin-block: 20px 30px;
     border-bottom: 1px solid $standart-light;

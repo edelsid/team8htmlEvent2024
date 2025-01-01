@@ -20,7 +20,7 @@
   &__news {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: $gap-standart;
   }
 
   &__btn {
@@ -85,7 +85,7 @@
 
   &__author, &__topic {
     display: flex;
-    gap: 10px;
+    gap: $gap-mini;
   }
 
   &__author::before {
@@ -100,7 +100,7 @@
 .news-card {
   @include flex-column;
   justify-content: space-between;
-  gap: 20px;
+  gap: $gap-small;
   padding: 30px;
   border: 1px solid $standart-light;
   cursor: pointer;

@@ -8,7 +8,7 @@
   &__text {
     @include flex-standard;
     align-items: end;
-    margin-bottom: $title-margin;
+    margin-bottom: $margin-title;
   }
 
   &__sliders {
@@ -19,7 +19,7 @@
     @include flex-standard;
     @include animation(left, 0.5s);
     flex-wrap: nowrap;
-    gap: 25px;
+    gap: $gap-standart;
   }
 
   &__item {
