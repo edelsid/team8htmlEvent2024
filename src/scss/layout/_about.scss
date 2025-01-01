@@ -43,9 +43,8 @@
 }
 
 .subtitle-button {
+  @include font-header-standart;
   font-family: "Jost";
-  font-size: 32px;
-  line-height: 42px;
   font-weight: 600;
 }
 

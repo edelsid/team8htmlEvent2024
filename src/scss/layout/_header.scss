@@ -56,7 +56,7 @@
 
   &__link {
     color: $standart-light;
-    font-size: 1.4rem;
+    font-size: $font-text-small;
   }
 }
 
@@ -120,10 +120,10 @@
 }
 
 .navigation {
+  @include font-text-standart;
   display: flex;
   padding-left: 110px;
   color: white;
-  font-size: 1.6rem;
   font-weight: 600;
   padding-block: 35px;
 
@@ -158,10 +158,10 @@
   }
 
   &__number {
-    margin: 0;
+    @include font-text-standart;
     font-family: "Jost";
+    margin: 0;
     font-weight: 600;
-    font-size: 1.6rem;
     color: $white;
   }
 }

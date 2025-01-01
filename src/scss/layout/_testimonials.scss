@@ -64,10 +64,9 @@
 }
 
 .quote {
+  @include font-header-standart;
   font-family: "Jost";
   color: $standart;
-  font-size: 32px;
-  line-height: 42px;
   text-transform: capitalize;
   margin-block: 0 50px;
 
@@ -91,16 +90,14 @@
   }
 
   &__name {
+    @include font-header-standart;
     font-family: "Jost";
-    font-size: 32px;
-    line-height: 42px;
     font-weight: 600;
   }
 
   &__status {
     font-family: "Barlow";
-    font-size: 24px;
-    line-height: 32px;
+    @include font-header-small;
     color: $standart;
   }
 }

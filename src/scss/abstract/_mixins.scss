@@ -24,34 +24,6 @@
   flex-direction: column;
 }
 
-@mixin font-bold {
-  font-family: "Jost";
-  font-weight: 600;
-  font-style: normal;
-  text-transform: capitalize;
-}
-
-@mixin font-header-h2 {
-  font-size: 5.2rem;
-  line-height: 6.2rem;
-}
-
-@mixin font-header-h4 {
-  font-size: 2.4rem;
-  line-height: 3.4rem;
-}
-
-@mixin font-main {
-  font-size: 1.6rem;
-  line-height: 2.6rem;
-}
-
-@mixin font-text {
-  font-family: "Barlow";
-  font-weight: 400;
-  font-style: normal;
-}
-
 @mixin animation ($characteristic, $time) {
   -webkit-transition: $characteristic $time ease-in-out;
   -moz-transition: $characteristic $time ease-in-out;
@@ -71,4 +43,23 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@mixin font-header-standart {
+  font-size: 32px;
+  line-height: 42px;
+}
+
+@mixin font-header-small {
+  font-size: 24px;
+  line-height: 34px;
+}
+
+@mixin header-accent {
+  
+}
+
+@mixin font-text-standart {
+  font-size: 16px;
+  line-height: 26px;
 }

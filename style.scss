@@ -22,7 +22,6 @@ body {
 }
 
 html {
-  font-size: 10px;
   color: $black;
   scroll-behavior: smooth;
 }
@@ -38,18 +37,15 @@ ul {
 }
 
 h3 {
-  font-size: 32px;
-  line-height: 42px;
+  @include font-header-standart;
 }
 
 h4 {
-  font-size: 24px;
-  line-height: 34px;
+  @include font-header-small;
 }
 
 h5 {
-  font-size: 16px;
-  line-height: 26px;
+  @include font-text-standart;
 }
 
 button {
@@ -102,8 +98,7 @@ button {
 
   &-mini {
     color: $black;
-    font-size: 16px;
-    line-height: 26px; 
+    @include font-text-standart;
     text-transform: capitalize;
     display: flex;
     gap: 10px;
@@ -116,14 +111,12 @@ button {
   }
 
   &-accent {
-    font-size: 32px;
-    line-height: 42px;
+    @include font-header-standart;
   }
 
   &-card {
     text-align: center;
-    font-size: 24px;
-    line-height: 34px;
+    @include font-header-small;
   }
 }
 
@@ -131,21 +124,18 @@ button {
   font-family: "Barlow";
 
   &-banner {
-    font-size: 24px;
-    line-height: 36px;
+    @include font-header-small;
     color: $standart-light;
     margin-block: 0 54px;
   }
 
   &-standart {
-    font-size: 16px;
-    line-height: 26px;
+    @include font-text-standart;
     color: $standart;
   }
 
   &-list {
-    font-size: 16px;
-    line-height: 26px;
+    @include font-text-standart;
 
     &::before {
       content: "+";
@@ -157,8 +147,7 @@ button {
     margin: 0;
     font-family: 'Jost';
     font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
+    @include font-text-standart;
   }
 }
 
@@ -204,15 +193,15 @@ button {
   }
 
   &__desc {
-    font-family: Barlow;
-    font-size: 14px;
+    font-family: "Barlow";
+    font-size: $font-text-small;
     font-weight: 400;
     margin-block: 0 10px;
   }
 
   &__title {
-    font-family: Jost;
-    font-size: 32px;
+    font-family: "Jost";
+    @include font-header-standart;
     font-style: normal;
     font-weight: 600;
     margin: 0;
@@ -222,8 +211,7 @@ button {
 .btn {
   @include animation-all(0.3s);
   font-family: "Jost";
-  font-size: 16px;
-  line-height: 26px;
+  @include font-text-standart;
   font-weight: 600;
   width: fit-content;
   display: flex;
@@ -249,6 +237,7 @@ button {
 
     &:hover {
       background-color: $accent;
+      border: 1px solid $accent;
     }
   }
 
@@ -300,7 +289,7 @@ button {
 
   &-primary::after, &-secondary::after, &-thin::after {
     content: "\2197";
-    font-size: 26px;
+    font-size: $font-text-additional;
   }
 
   &-link {

@@ -30,19 +30,17 @@
   &__item {
     @include flex-column;
     @include animation-all(0.5s);
+    @include font-header-small;
     align-items: end;
-    font-size: 24px;
-    line-height: 34px;
     cursor: pointer;
     text-align: end;
     user-select: none;
 
     &.active {
       & > p:is(.names__name) {
+        @include font-header-standart;
         @include animation-all(0.5s);
         color: $accent;
-        font-size: 32px;
-        line-height: 42px;
         text-decoration: underline;
       }
     }
