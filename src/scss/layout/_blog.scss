@@ -76,9 +76,9 @@
 }
 
 .tags {
-  display: flex;
-  font-family: "Barlow";
+  font-family: $font-family-second;
   @include font-text-standart;
+  display: flex;
   color: $standart;
   gap: 16px;
   cursor: pointer;

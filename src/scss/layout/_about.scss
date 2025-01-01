@@ -44,7 +44,7 @@
 
 .subtitle-button {
   @include font-header-standart;
-  font-family: "Jost";
+  font-family: $font-family-main;
   font-weight: 600;
 }
 

@@ -62,7 +62,7 @@
       left: -135%;
       margin-block: auto;
       opacity: 0.1;
-      font-family: "Jost";
+      font-family: $font-family-main;
       font-size: 96px;
       line-height: 106px;
       font-weight: 600;
@@ -82,10 +82,10 @@
     }
 
     & input {
-      border: none;
+      border: 0;
       border-bottom: 1px solid $white;
       background-color: transparent;
-      font-family: "Barlow";
+      font-family: $font-family-second;
       font-size: $font-text-small;
       line-height: 24px;
       padding: 0;
@@ -112,7 +112,7 @@
 }
 
 .subtitle-footer {
-  font-family: "Barlow";
+  font-family: $font-family-second;
   @include font-text-standart;
   color: $white;
   opacity: 0.7;
@@ -122,7 +122,7 @@
   margin-top: 50px;
 
   &__dates {
-    font-family: "Barlow";
+    font-family: $font-family-second;
     @include font-text-standart;
     margin-top: 5px;
     color: $accent;

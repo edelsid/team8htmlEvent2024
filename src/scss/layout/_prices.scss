@@ -59,14 +59,14 @@
     }
 
     &>p {
-      font-family: "Jost";
+      font-family: $font-family-main;
       @include font-text-standart;
       color: $standart;
     }
   }
 
   &__tier {
-    font-family: "Barlow";
+    font-family: $font-family-second;
     @include font-text-standart;
     display: flex;
     align-items: center;
@@ -84,7 +84,7 @@
   }
 
   &__deal {
-    font-family: "Jost";
+    font-family: $font-family-main;
     font-size: 16px;
     line-height: 36px;
     list-style: inside;
@@ -97,7 +97,7 @@
 }
 
 .label {
-  font-family: "Jost";
+  font-family: $font-family-main;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -105,7 +105,7 @@
   border-radius: 100px;
   @include font-text-standart;
   font-weight: 400;
-  border: none;
+  border: 0;
   color: $white;
   background-color: #39CA6E;
   cursor: default;

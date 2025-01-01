@@ -44,7 +44,7 @@
     width: 70px;
     aspect-ratio: 1 / 1;
     background-color: $standart-light;
-    border-radius: 50%;
+    border-radius: $border-circle;
     cursor: pointer;
     user-select: none;
     @include animation-all(0.5s);
@@ -58,14 +58,14 @@
 
   &__portrait {
     @include flex-center;
-    border-radius: 50%;
+    border-radius: $border-circle;
     width: 100%;
   }
 }
 
 .quote {
   @include font-header-standart;
-  font-family: "Jost";
+  font-family: $font-family-main;
   color: $standart;
   text-transform: capitalize;
   margin-block: 0 50px;
@@ -91,12 +91,12 @@
 
   &__name {
     @include font-header-standart;
-    font-family: "Jost";
+    font-family: $font-family-main;
     font-weight: 600;
   }
 
   &__status {
-    font-family: "Barlow";
+    font-family: $font-family-second;
     @include font-header-small;
     color: $standart;
   }

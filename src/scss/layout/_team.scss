@@ -51,12 +51,12 @@
   }
 
   &__name {
-    font-family: "Jost";
+    font-family: $font-family-main;
     font-weight: 600;
   }
 
   &__role {
-    font-family: "Barlow";
+    font-family: $font-family-second;
     color: $standart;
   }
 }

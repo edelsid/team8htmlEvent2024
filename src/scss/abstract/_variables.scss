@@ -1,5 +1,15 @@
 @use 'colors' as colors;
 
+@font-face {
+  font-family: Jost;
+  src: url(assets/fonts/Jost-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Barlow;
+  src: url(assets/fonts/Barlow-Regular.ttf);
+}
+
 $shadow: 2px 2px 4px colors.$standart-transp;
 
 $margin-title: 86px;
@@ -12,3 +22,8 @@ $font-text-additional: 16px;
 $gap-standart: 25px;
 $gap-small: 20px;
 $gap-mini: 10px;
+
+$border-circle: 50%;
+
+$font-family-main: "Jost";
+$font-family-second: "Barlow";

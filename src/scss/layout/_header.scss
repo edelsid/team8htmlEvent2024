@@ -1,7 +1,7 @@
 @use '../abstract/index.scss' as *;
 
 .header {
-  font-family: 'Barlow';
+  font-family: $font-family-second;
   z-index: 9999;
 
   &__content {
@@ -159,7 +159,7 @@
 
   &__number {
     @include font-text-standart;
-    font-family: "Jost";
+    font-family: $font-family-main;
     margin: 0;
     font-weight: 600;
     color: $white;

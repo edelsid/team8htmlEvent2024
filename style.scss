@@ -1,16 +1,6 @@
 @use './src/scss/abstract/' as *;
 @use './src/scss/layout/' as layout;
 
-@font-face {
-  font-family: Jost;
-  src: url(assets/fonts/Jost-VariableFont_wght.ttf);
-}
-
-@font-face {
-  font-family: Barlow;
-  src: url(assets/fonts/Barlow-Regular.ttf);
-}
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box; 
@@ -78,7 +68,7 @@ button {
 }
 
 .title {
-  font-family: "Jost";
+  font-family: $font-family-main;
   font-weight: 600;
   text-transform: capitalize;
   margin: 0;
@@ -121,7 +111,7 @@ button {
 }
 
 .subtitle {
-  font-family: "Barlow";
+  font-family: $font-family-second;
 
   &-banner {
     @include font-header-small;
@@ -145,7 +135,7 @@ button {
 
   &-accent {
     margin: 0;
-    font-family: 'Jost';
+    font-family: $font-family-main;
     font-weight: 600;
     @include font-text-standart;
   }
@@ -193,14 +183,14 @@ button {
   }
 
   &__desc {
-    font-family: "Barlow";
+    font-family: $font-family-second;
     font-size: $font-text-small;
     font-weight: 400;
     margin-block: 0 10px;
   }
 
   &__title {
-    font-family: "Jost";
+    font-family: $font-family-main;
     @include font-header-standart;
     font-style: normal;
     font-weight: 600;
@@ -210,8 +200,8 @@ button {
 
 .btn {
   @include animation-all(0.3s);
-  font-family: "Jost";
   @include font-text-standart;
+  font-family: $font-family-main;
   font-weight: 600;
   width: fit-content;
   display: flex;
@@ -275,7 +265,7 @@ button {
     width: 120px;
     aspect-ratio: 1 / 1;
     background-color: $accent;
-    border-radius: 50%;
+    border-radius: $border-circle;
     margin: auto;
     border: 0;
     font-size: 38px;
@@ -289,7 +279,7 @@ button {
 
   &-primary::after, &-secondary::after, &-thin::after {
     content: "\2197";
-    font-size: $font-text-additional;
+    font-size: 24px;
   }
 
   &-link {
@@ -309,8 +299,7 @@ button {
 
 .arrow {
   line-height: 0;
-  cursor: pointer;
-  border: none;
+  border: 0;
   font-size: 40px;
   padding: 0;
   background-color: transparent;
