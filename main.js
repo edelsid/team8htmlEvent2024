@@ -4,8 +4,18 @@ import {
   Projects, 
   Process,
   Testimonials, 
-  Team, 
-  footerResize,
+  Team,
+  calculateTop,
 } from "./src/js/index";
 
-footerResize();
+//debounce
+function calculations () {
+  calculateTop();
+}
+
+function setCalc () {
+  calculations();
+  window.addEventListener("resize", () => calculations());
+}
+
+setCalc();

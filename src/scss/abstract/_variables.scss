@@ -12,6 +12,10 @@
 
 $shadow: 2px 2px 4px colors.$standart-transp;
 
+$header-logo-width: 510px;
+$header-margin: 95px;
+$header-main-padding: calc($header-logo-width + 20px) 30px;
+
 $margin-title: 86px;
 $margin-section: 160px;
 $margin-thin: 148px;
@@ -28,3 +32,32 @@ $border-thin: 1px solid;
 
 $font-family-main: "Jost";
 $font-family-second: "Barlow";
+
+$width-mobile: 480px;
+$width-tablets-low: 481px;
+$width-tablets-large: 768px;
+$width-desktop: 1025px;
+
+// @media (max-width: $width-mobile) {
+//   body {
+//     background-color: red;
+//   }
+// }
+
+// @media (min-width: $width-tablets-low) and (max-width: calc($width-tablets-large - 1px)) {
+//   body {
+//     background-color: yellow;
+//   }
+// }
+
+// @media (min-width: $width-tablets-large) and (max-width: calc($width-desktop - 1px)) {
+//   body {
+//     background-color: blue;
+//   }
+// }
+
+// @media (min-width: $width-desktop) {
+//   body {
+//     background-color: green;
+//   }
+// }
