@@ -88,6 +88,7 @@ export default class Projects {
     this.setContent(data[this.msgCount]);
   }
 
+  //переделать. менять прозрачность, не прикреплять узлы
   addContent(data) {
     const newMsg = document.createElement('div');
     newMsg.className = "slider__content";

@@ -90,6 +90,7 @@ export default class About {
     return newSlider;
   }
 
+  //переделать. менять прозрачность/дисплей, не прикреплять узлы
   listFormation(content) {
     const newMsg = document.createElement("ul");
     newMsg.className = "slider__list";

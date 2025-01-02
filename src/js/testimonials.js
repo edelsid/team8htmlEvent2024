@@ -6,6 +6,7 @@ export default class Testimonials {
   constructor(container) {
     this.bindToDOM(container);
     this.active = 1;
+    this.step =  100 / (data.length + 1);
   }
 
   bindToDOM(container) {
@@ -25,7 +26,7 @@ export default class Testimonials {
       newPhoto.addEventListener("click", (e) => this.changeText(e.target));
     });
     this.setText(data[0]);
-    this.photoArea.style.setProperty("--position", `${this.active * 25}%`);
+    this.photoArea.style.setProperty("--position", `${this.active * this.step}%`);
   }
 
   setPhoto(data) {
@@ -42,7 +43,7 @@ export default class Testimonials {
     const arr = this.photoArea.children;
     setActive(arr, arr[parent.id - 1], false);
     this.active = parent.id;
-    this.photoArea.style.setProperty("--position", `${this.active * 25}%`);
+    this.photoArea.style.setProperty("--position", `${this.active * this.step}%`);
     this.setText(data[parent.id - 1]);
   }
 
