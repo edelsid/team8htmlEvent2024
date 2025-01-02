@@ -1,5 +1,11 @@
 @use '../abstract/index.scss' as *;
 
+.container-banner {
+  max-width: 1735px;
+  width: 85%;
+  align-items: end;
+}
+
 .banner {
   position: relative;
   background-color: $black;
@@ -28,11 +34,13 @@
   &__text {
     width: 56%;
     padding-top: 230px;
+    margin-bottom: 200px;
   }
 
   &__image {
     padding-top: 54px;
     width: 38%;
+    height: max-content;
     flex-shrink: 0;
     margin-bottom: 76px;
     position: relative;

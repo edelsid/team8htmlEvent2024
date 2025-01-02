@@ -56,11 +56,6 @@ button {
     @include flex-standard;
   }
 
-  &-banner {
-    max-width: 1735px;
-    width: 85%;
-  }
-
   &-standart {
     max-width: 1415px;
     width: 75%;
@@ -75,14 +70,14 @@ button {
   
   &-standart {
     font-size: 52px;
-    line-height: 62px;
+    line-height: 1.2;
     margin: 0;
   }
 
   &-banner {
     color: $white;
     font-size: 158px;
-    line-height: 138px;
+    line-height: 0.87;
     margin-block: 0 30px;
   }
 
@@ -207,8 +202,7 @@ button {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 25px 38px;
-  cursor: pointer;
+  padding: 17px 35px;
 
   &-primary {
     border: $border-thin $accent;
@@ -224,6 +218,7 @@ button {
   &-secondary {
     border: $border-thin $black;
     background-color: transparent;
+    color: $black;
 
     &:hover {
       background-color: $accent;
@@ -273,13 +268,10 @@ button {
     z-index: 2;
   }
 
-  &-thin {
-    padding: 17px 35px;
-  }
-
   &-primary::after, &-secondary::after, &-thin::after {
     content: "\2197";
     font-size: 24px;
+    line-height: 1;
   }
 
   &-link {

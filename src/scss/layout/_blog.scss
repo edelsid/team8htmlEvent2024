@@ -54,6 +54,7 @@
     cursor: pointer;
   }
 
+  //переделать через полигон
   &__date {
     position: absolute;
     user-select: none;
@@ -61,8 +62,8 @@
     left: -72px;
 
     & > p {
-      font-size: $font-text-additional;
-      line-height: 32px;
+      @include font-header-small;
+      padding: 14px;
     } 
   }
 }
@@ -125,6 +126,7 @@
 
     & > p {
       @include font-text-standart;
+      padding: 6px;
     }
   }
 

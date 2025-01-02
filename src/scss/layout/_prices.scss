@@ -71,8 +71,8 @@
     display: flex;
     align-items: center;
     gap: $gap-small;
-    padding-bottom: 30px;
-    margin-block: 20px 30px;
+    padding-bottom: 26px;
+    margin-block: 12px 26px;
     border-bottom: $border-thin $standart-light;
 
     &::before {
@@ -86,7 +86,7 @@
   &__deal {
     font-family: $font-family-main;
     font-size: 16px;
-    line-height: 36px;
+    line-height: 2.25;
     list-style: inside;
     margin-bottom: 50px;
   }
