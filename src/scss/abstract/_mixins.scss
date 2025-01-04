@@ -52,18 +52,20 @@
 }
 
 @mixin font-header-small {
-  font-size: 24px;
+  font-size: var(--font-header-small);
   line-height: 1.4;
 }
 
 @mixin font-text-standart {
-  font-size: 16px;
+  font-size: var(--font-text-standart);
   line-height: 1.625;
 }
 
 @media (max-width: vars.$width-mobile) {
   :root {
     --font-header-standart: 20px;
+    --font-header-small: 24px;
+    --font-text-standart: 20px;
   }
 }
 
@@ -78,5 +80,7 @@
 @media (min-width: vars.$width-desktop) {
   :root {
     --font-header-standart: 32px;
+    --font-header-small: 24px;
+    --font-text-standart: 16px;
   }
 }

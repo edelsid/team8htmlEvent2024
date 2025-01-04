@@ -1,9 +1,7 @@
 @use '../abstract/index.scss' as *;
 
 .container-banner {
-  max-width: 1735px;
-  width: 85%;
-  align-items: end;
+  display: flex;
 }
 
 .banner {
@@ -31,26 +29,65 @@
     animation-fill-mode: forwards;
   }
 
-  &__text {
-    width: 56%;
-    padding-top: 230px;
-    margin-bottom: 200px;
-  }
-
   &__image {
-    padding-top: 54px;
-    width: 38%;
     height: max-content;
     flex-shrink: 0;
-    margin-bottom: 76px;
     position: relative;
     display: flex;
 
     &-char {
       position: absolute;
+      right: 0;
       bottom: 0;
       left: 0;
-      right: 0;
+    }
+  }
+}
+
+@media (max-width: $width-mobile) {
+  .container-banner {
+    height: 100%;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .banner {
+    height: calc(100vh - 90px);
+
+    &__image {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $width-tablets-low) and (max-width: calc($width-tablets-large - 1px)) {
+
+}
+
+@media (min-width: $width-tablets-large) and (max-width: calc($width-desktop - 1px)) {
+
+}
+
+@media (min-width: $width-desktop) {
+  .container-banner {
+    justify-content: space-between;
+    max-width: 1735px;
+    width: 85%;
+    align-items: end;
+  }
+
+  .banner {
+    &__text {
+      width: 56%;
+      padding-top: 230px;
+      margin-bottom: 200px;
+    }
+
+    &__image {
+      padding-top: 54px;
+      width: 38%;
+      margin-bottom: 76px;
     }
   }
 }

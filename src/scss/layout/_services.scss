@@ -91,3 +91,21 @@
     }
   }
 }
+
+@media (max-width: $width-mobile) {
+  .decor {
+    display: none;
+  }
+}
+
+@media (min-width: $width-tablets-low) and (max-width: calc($width-tablets-large - 1px)) {
+
+}
+
+@media (min-width: $width-tablets-large) and (max-width: calc($width-desktop - 1px)) {
+
+}
+
+@media (min-width: $width-desktop) {
+
+}

@@ -60,11 +60,6 @@ img {
   &-flex {
     @include flex-standard;
   }
-
-  &-standart {
-    max-width: 1415px;
-    width: 75%;
-  }
 }
 
 .title {
@@ -76,14 +71,11 @@ img {
   &-standart {
     font-size: 52px;
     line-height: 1.2;
-    margin: 0;
   }
 
   &-banner {
     color: $white;
-    font-size: 158px;
     line-height: 0.87;
-    margin-block: 0 30px;
   }
 
   &-mini {
@@ -116,7 +108,6 @@ img {
   &-banner {
     @include font-header-small;
     color: $standart-light;
-    margin-block: 0 54px;
   }
 
   &-standart {
@@ -347,5 +338,56 @@ img {
 
   &-left::before {
     top: 46%;
+  }
+}
+
+@media (max-width: $width-mobile) {
+  section {
+    height: 100vh;
+  }
+
+  .container-standart {
+    width: 95%;
+  }
+
+  .title {
+    &-banner {
+      font-size: 60px;
+      margin-block: 0 10%;
+    }
+  }
+
+  .subtitle {
+    &-banner {
+      margin-block: 0 20%;
+    }
+  }
+}
+
+@media (min-width: $width-tablets-low) and (max-width: calc($width-tablets-large - 1px)) {
+
+}
+
+@media (min-width: $width-tablets-large) and (max-width: calc($width-desktop - 1px)) {
+
+}
+
+@media (min-width: $width-desktop) {
+  .container-standart {
+    max-width: 1415px;
+    width: 75%;
+  }
+
+  .title {
+    &-banner {
+      font-size: 158px;
+      margin-block: 0 30px;
+    }
+  }
+
+  .subtitle {
+    &-banner {
+      margin-block: 0 54px;
+    }
   }
 }
