@@ -12,15 +12,15 @@
 
 $shadow: 2px 2px 4px colors.$standart-transp;
 
-$header-logo-width: 510px;
-$header-margin: 95px;
+$header-logo-width: var(--header-logo-width);
+$header-margin: var(--header-margin);
 $header-main-padding: calc($header-logo-width + 20px) 30px;
 
 $margin-title: 86px;
 $margin-section: 160px;
 $margin-thin: 148px;
 
-$font-text-small: 14px;
+$font-text-small: var(--font-text-small);
 $font-text-additional: 16px;
 
 $gap-standart: 25px;
@@ -38,26 +38,28 @@ $width-tablets-low: 481px;
 $width-tablets-large: 768px;
 $width-desktop: 1025px;
 
-// @media (max-width: $width-mobile) {
-//   body {
-//     background-color: red;
-//   }
-// }
+@media (max-width: $width-mobile) {
+  :root {
+    --header-margin: 25px;
+    --header-logo-width: 70%;
 
-// @media (min-width: $width-tablets-low) and (max-width: calc($width-tablets-large - 1px)) {
-//   body {
-//     background-color: yellow;
-//   }
-// }
+    --font-text-small: 12px;
+  }
+}
 
-// @media (min-width: $width-tablets-large) and (max-width: calc($width-desktop - 1px)) {
-//   body {
-//     background-color: blue;
-//   }
-// }
+@media (min-width: $width-tablets-low) and (max-width: calc($width-tablets-large - 1px)) {
 
-// @media (min-width: $width-desktop) {
-//   body {
-//     background-color: green;
-//   }
-// }
+}
+
+@media (min-width: $width-tablets-large) and (max-width: calc($width-desktop - 1px)) {
+
+}
+
+@media (min-width: $width-desktop) {
+  :root {
+    --header-margin: 95px;
+    --header-logo-width: 510px;
+
+    --font-text-small: 14px;
+  }
+}

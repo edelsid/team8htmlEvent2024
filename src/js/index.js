@@ -1,3 +1,4 @@
+import Header from "./header";
 import About from "./about";
 import Services from "./services";
 import Projects from "./projects";
@@ -6,4 +7,4 @@ import Testimonials from "./testimonials";
 import Team from "./team";
 import calculateTop from "./footer";
 
-export { Services, About, Projects, Process, Team, Testimonials, calculateTop };
+export { Header, Services, About, Projects, Process, Team, Testimonials, calculateTop };
