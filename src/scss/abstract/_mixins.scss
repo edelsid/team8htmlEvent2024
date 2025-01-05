@@ -46,6 +46,7 @@
   background-repeat: no-repeat;
 }
 
+//переписать ряд шрифтов как миксины с реактивностью
 @mixin font-header-standart {
   font-size: var(--font-header-standart);
   line-height: 1.3;

@@ -3,6 +3,14 @@
 .header {
   font-family: $font-family-second;
 
+  @include sm {
+    position: relative;
+  }
+
+  @include xxl {
+    position: static;
+  }
+
   &__content {
     display: flex;
     position: relative;
@@ -42,11 +50,42 @@
   &__menu {
     margin-right: $header-margin;
     display: flex;
+
+    @include sm {
+      height: 100px;
+      justify-content: end;
+      align-items: center;
+    }
+
+    @include xxl {
+      justify-content: space-between;
+    }
   }
 
   &__link {
     color: $standart-light;
     font-size: $font-text-small;
+  }
+
+  &__burger {
+    @include sm {
+      position: absolute;
+      padding: 15%;
+      top: 0;
+      right: -600px;
+      height: 100vh;
+      width: 100vw;
+      @include flex-column;
+      @include animation(right, 0.5s);
+      align-items: center;
+      justify-content: space-evenly;
+      background-color: $black;
+      z-index: 999;
+    }
+
+    @include xxl {
+      display: none;
+    }
   }
 }
 
@@ -57,23 +96,46 @@
 .menu {
   &__textual {
     width: 100%;
+
+    @include sm {
+      display: none;
+    }
+
+    @include xxl {
+      @include flex-column;
+    }
   }
 
   &__phone {
     width: min-content;
-    display: flex;
     align-items: center;
     justify-content: end;
     border-left: $border-thin $standart-transp;
+
+    @include sm {
+      display: none;
+    }
+
+    @include xxl {
+      display: flex;
+    }
   }
 
   &__burger {
     color: $white;
+
+    @include xxl {
+      display: none;
+    }
   }
 }
 
 .menu__burger, .burger__close {
   line-height: 1;
+
+  @include sm {
+    font-size: 44px;
+  }
 }
 
 .burger__close {
@@ -123,8 +185,30 @@
   color: white;
   font-weight: 600;
 
+  @include sm {
+    width: 100%;
+    font-size: 24px;
+  }
+
+  @include xxl {
+    display: flex;
+    @include font-text-standart;
+    padding-inline: $header-main-padding;
+  }
+
   &__anchors {
     display: flex;
+
+    @include sm {
+      @include flex-column;
+      align-items: center;
+      gap: 35px;
+    }
+
+    @include xxl {
+      flex-wrap: wrap;
+      column-gap: 40px;
+    }
   }
 }
 
@@ -133,6 +217,10 @@
   display: block;
   line-height: 1;
   color: $white;
+
+  @include xxl {
+    padding-block: 35px;
+  }
 }
 
 .phone {
@@ -140,6 +228,10 @@
     display: flex;
     align-items: center;
     gap: $gap-mini;
+
+    @include xxl {
+      margin-left: 23px;
+    }
   }
 
   &__data {
@@ -179,100 +271,8 @@
   }
 }
 
-@media (max-width: $width-mobile) {
-  .header {
-    position: relative;
-
-    &__menu {
-      height: 100px;
-      justify-content: end;
-      align-items: center;
-    }
-
-    &__burger {
-      position: absolute;
-      padding: 15%;
-      top: 0;
-      right: -600px;
-      height: 100vh;
-      width: 100vw;
-      @include flex-column;
-      @include animation(right, 0.5s);
-      align-items: center;
-      justify-content: space-evenly;
-      background-color: $black;
-      z-index: 999;
-    }
-  }
-
-  .menu {
-    &__textual, &__phone {
-      display: none;
-    }
-  }
-
-  .logo {
-    &__img {
-      width: 60px;
-    }
-  }
-
-  .navigation {
-    width: 100%;
-    font-size: 24px;
-
-    &__anchors {
-      @include flex-column;
-      align-items: center;
-      gap: 35px;
-    }
-  }
-
-  .menu__burger, .burger__close {
-    font-size: 44px;
-  }
-}
-
-@media (min-width: $width-tablets-low) and (max-width: calc($width-tablets-large - 1px)) {
-
-}
-
-@media (min-width: $width-tablets-large) and (max-width: calc($width-desktop - 1px)) {
-
-}
-
-@media (min-width: $width-desktop) {
-  .header {
-    &__menu {
-      justify-content: space-between;
-    }
-
-    &__burger {
-      display: none;
-    }
-  }
-
-  .menu__burger {
-    display: none;
-  }
-
-  .navigation {
-    display: flex;
-    @include font-text-standart;
-    padding-inline: $header-main-padding;
-  
-    &__anchors {
-      display: flex;
-      flex-wrap: wrap;
-      column-gap: 40px;
-    }
-  }
-
-  .anchors__link {
-    padding-block: 35px;
-  }
-
-  .phone__wrapper {
-    margin-left: 23px;
+.logo__img {
+  @include sm {
+    width: 60px;
   }
 }
