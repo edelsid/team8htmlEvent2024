@@ -20,7 +20,8 @@
       position: absolute;
       bottom: -10px;
       left: 0;
-      width: calc($header-logo-width - 80px);
+      //переделать
+      width: calc(var(--header-logo-width) - 45px);
       height: 10px;
       background: #b1400c;
       z-index: 1;
@@ -35,7 +36,7 @@
       align-items: center;
       background-color: $accent;
       height: calc(100% + 10px);
-      width: $header-logo-width;
+      width: var(--header-logo-width);
       z-index: 3;
       clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
     }
@@ -48,8 +49,8 @@
   }
 
   &__menu {
-    margin-right: $header-margin;
     display: flex;
+    @include header-margin(margin-right);
 
     @include sm {
       height: 100px;
@@ -64,7 +65,7 @@
 
   &__link {
     color: $standart-light;
-    font-size: $font-text-small;
+    @include font-text-small;
   }
 
   &__burger {
@@ -90,7 +91,7 @@
 }
 
 .logo-header {
-  margin-left: $header-margin;
+  @include header-margin(margin-left);
 }
 
 .menu {
@@ -146,9 +147,9 @@
 }
 
 .contacts {
-  @include flex-standard;
-  padding-inline: $header-main-padding;
+  padding-inline: var(--header-main-padding);
   border-bottom: $border-thin $standart-transp;
+  @include flex-standard;
 
   &__descriptions {
     display: flex;
@@ -157,15 +158,15 @@
   }
 
   &__socials {
-    @include flex-center;
     gap: $gap-small;
+    @include flex-center;
   }
 }
 
 .descriptions {
   &__item {
-    @include flex-center;
     gap: $gap-mini;
+    @include flex-center;
   }
 }
 
@@ -192,17 +193,17 @@
 
   @include xxl {
     display: flex;
+    padding-inline: var(--header-main-padding);
     @include font-text-standart;
-    padding-inline: $header-main-padding;
   }
 
   &__anchors {
     display: flex;
 
     @include sm {
-      @include flex-column;
       align-items: center;
       gap: 35px;
+      @include flex-column;
     }
 
     @include xxl {
@@ -243,11 +244,11 @@
   }
 
   &__number {
-    @include font-text-standart;
     font-family: $font-family-main;
     margin: 0;
     font-weight: 600;
     color: $white;
+    @include font-text-standart;
   }
 }
 

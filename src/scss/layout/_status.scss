@@ -4,9 +4,9 @@
   margin-bottom: $margin-section;
 
   &__headers {
-    @include flex-column;
-    align-items: center;
     margin-bottom: $margin-title;
+    align-items: center;
+    @include flex-column;
   }
 
   &__cards {
@@ -16,14 +16,14 @@
   }
 
   &__item {
-    @include animation(background-color, 0.5s);
-    @include animation(color, 0.5s);
-    @include flex-column;
     background-color: transparent;
     padding: 60px;
     gap: 18px;
     align-items: center;
     cursor: pointer;
+    @include animation(background-color, 0.5s);
+    @include animation(color, 0.5s);
+    @include flex-column;
 
     &:hover {
       background-color: $accent;

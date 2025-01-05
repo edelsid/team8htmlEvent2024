@@ -1,9 +1,11 @@
+@use './variables' as var;
+
 $breakpoints: (
-  "sm": 479px,
-  "md": 719px,
-  "lg": 959px,
-  "xl": 1199px,
-  "xxl": 1200px,
+  "sm": var.$width-sm,
+  "md": var.$width-md,
+  "lg": var.$width-lg,
+  "xl": var.$width-xl,
+  "xxl": var.$width-xxl,
 );
 
 @mixin sm {

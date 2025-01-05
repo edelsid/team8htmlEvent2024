@@ -6,9 +6,9 @@
   margin-bottom: $margin-section;
   
   &__text {
-    @include flex-standard;
     align-items: end;
     margin-bottom: $margin-title;
+    @include flex-standard;
   }
 
   &__sliders {
@@ -16,17 +16,17 @@
     top: 0;
     left: 0;
     width: 100%;
-    @include flex-standard;
-    @include animation(left, 0.5s);
     flex-wrap: nowrap;
     gap: $gap-standart;
+    @include flex-standard;
+    @include animation(left, 0.5s);
   }
 
   &__item {
-    @include background;
     position: relative;
     height: 484px;
     min-width: 33%;
+    @include background;
 
     & .slider__content {
       opacity: 0;
@@ -36,7 +36,6 @@
 }
 
 .btn-slider {
-  @include flex-center;
   background-color: $accent;
   width: 60px;
   aspect-ratio: 1 / 1;
@@ -44,13 +43,14 @@
   padding: 0;
   font-size: 34px;
   color: $white;
+  @include flex-center;
 
   &__wrapper {
-    @include absolute-filler;
-    @include flex-center;
     margin: auto;
     background-color: #0d0d0d4d;
     width: 82px;
     aspect-ratio: 1 / 1;
+    @include absolute-filler;
+    @include flex-center;
   }
 }

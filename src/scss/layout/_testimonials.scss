@@ -8,9 +8,9 @@
   }
 
   &__content {
-    @include flex-standard;
     gap: 170px;
     border-bottom: $border-thin $standart-light;
+    @include flex-standard;
   }
 
   &__people {
@@ -19,9 +19,9 @@
     height: calc(100% - 60px);
     padding-block: 5px;
     padding-left: 110px;
-    @include flex-column;
     align-items: center;
     gap: $gap-mini;
+    @include flex-column;
 
     &::before {
       content: "";
@@ -57,18 +57,18 @@
   }
 
   &__portrait {
-    @include flex-center;
     border-radius: $border-circle;
     width: 100%;
+    @include flex-center;
   }
 }
 
 .quote {
-  @include font-header-standart;
   font-family: $font-family-main;
   color: $standart;
   text-transform: capitalize;
   margin-block: 0 50px;
+  @include font-header-standart;
 
   &__bubble {
     padding-top: 60px;
@@ -90,14 +90,14 @@
   }
 
   &__name {
-    @include font-header-standart;
     font-family: $font-family-main;
     font-weight: 600;
+    @include font-header-standart;
   }
 
   &__status {
     font-family: $font-family-second;
-    @include font-header-small;
     color: $standart;
+    @include font-header-small;
   }
 }

@@ -20,28 +20,28 @@
   }
 
   &__names {
-    @include flex-column;
     justify-content: space-between;
     width: 31%;
+    @include flex-column;
   }
 }
 
 .names {
   &__item {
-    @include flex-column;
-    @include animation-all(0.5s);
-    @include font-header-small;
     align-items: end;
     cursor: pointer;
     text-align: end;
     user-select: none;
+    @include flex-column;
+    @include animation-all(0.5s);
+    @include font-header-small;
 
     &.active {
       & > p:is(.names__name) {
-        @include font-header-standart;
-        @include animation-all(0.5s);
         color: $accent;
         text-decoration: underline;
+        @include animation-all(0.5s);
+        @include font-header-standart;
       }
     }
   }

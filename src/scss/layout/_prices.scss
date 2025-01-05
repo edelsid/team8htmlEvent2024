@@ -19,12 +19,12 @@
 
   &__item {
     position: relative;
-    @include flex-column;
     justify-content: space-between;
     padding: 48px;
     border: $border-thin $standart-light;
     background-color: $white;
     cursor: pointer;
+    @include flex-column;
 
     &.active::before {
       border-top: 50px solid $accent;
@@ -60,20 +60,20 @@
 
     &>p {
       font-family: $font-family-main;
-      @include font-text-standart;
       color: $standart;
+      @include font-text-standart;
     }
   }
 
   &__tier {
     font-family: $font-family-second;
-    @include font-text-standart;
     display: flex;
     align-items: center;
     gap: $gap-small;
     padding-bottom: 26px;
     margin-block: 12px 26px;
     border-bottom: $border-thin $standart-light;
+    @include font-text-standart;
 
     &::before {
       content: "\2730";
@@ -103,10 +103,10 @@
   right: 10px;
   padding: 5px 25px;
   border-radius: 100px;
-  @include font-text-standart;
   font-weight: 400;
   border: 0;
   color: $white;
   background-color: #39CA6E;
   cursor: default;
+  @include font-text-standart;
 }

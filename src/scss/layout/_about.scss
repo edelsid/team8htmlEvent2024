@@ -4,35 +4,35 @@
   margin-bottom: $margin-section;
 
   &__text {
-    @include flex-standard;
     margin-bottom: $margin-title;
     gap: 174px;
+    @include flex-standard;
   }
 
   &__additional {
-    @include flex-column;
     justify-content: space-between;
+    @include flex-column;
   }
 
   &__sliders {
-    @include flex-standard;
     gap: $gap-standart;
+    @include flex-standard;
   }
 
   &__item {
     height: 360px;
     width: 33%;
-    @include background;
     position: relative;
+    @include background;
 
     &::after {
       content: "";
-      @include absolute-filler;
       background: linear-gradient(
         180deg,
         #05000000 0%,
         #0E0E0E 100%
       );
+      @include absolute-filler;
     }
   }
 }
@@ -43,9 +43,9 @@
 }
 
 .subtitle-button {
-  @include font-header-standart;
-  font-family: $font-family-main;
   font-weight: 600;
+  font-family: $font-family-main;
+  @include font-header-standart;
 }
 
 .button__wrapper {

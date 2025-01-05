@@ -23,9 +23,9 @@
     &::after {
       content: "";
       display: inline-block;
-      @include absolute-filler;
       background: #0e0e0e73;
       z-index: 1;
+      @include absolute-filler;
     }
   }
 }
@@ -44,8 +44,8 @@
     width: 60%;
     border: 0;
     padding: 30px;
-    @include flex-column;
     gap: $gap-small;
+    @include flex-column;
   }
 
   &__video {

@@ -8,9 +8,9 @@
   }
 
   &__body {
-    @include flex-column;
     gap: 30px;
     margin-bottom: 42px;
+    @include flex-column;
   }
 
   &__highlight {
@@ -62,8 +62,8 @@
     left: -72px;
 
     & > p {
-      @include font-header-small;
       padding: 14px;
+      @include font-header-small;
     } 
   }
 }
@@ -71,18 +71,20 @@
 .date__label {
   @include absolute-filler;
   @include flex-center;
-  top: -10px;
-  text-align: center;
-  color: $white;
+  & {
+    top: -10px;
+    text-align: center;
+    color: $white;
+  }
 }
 
 .tags {
-  font-family: $font-family-second;
-  @include font-text-standart;
   display: flex;
-  color: $standart;
   gap: 16px;
   cursor: pointer;
+  color: $standart;
+  font-family: $font-family-second;
+  @include font-text-standart;
 
   &__author, &__topic {
     display: flex;
@@ -99,13 +101,13 @@
 }
 
 .news-card {
-  @include flex-column;
   justify-content: space-between;
-  gap: $gap-small;
   padding: 30px;
-  border: $border-thin $standart-light;
   cursor: pointer;
   height: 100%;
+  gap: $gap-small;
+  border: $border-thin $standart-light;
+  @include flex-column;
 
   &:hover {
     box-shadow: $shadow;
@@ -126,15 +128,15 @@
     }
 
     & > p {
-      @include font-text-standart;
       padding: 6px;
+      @include font-text-standart;
     }
   }
 
   &__img {
     width: 100%;
     height: 300px;
-    background-color: $standart-light;
     object-fit: cover;
+    background-color: $standart-light;
   }
 }

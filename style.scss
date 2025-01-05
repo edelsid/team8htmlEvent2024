@@ -108,11 +108,11 @@ img {
 
   &-mini {
     color: $black;
-    @include font-text-standart;
     text-transform: capitalize;
     display: flex;
     gap: $gap-mini;
     margin-block: 0 22px;
+    @include font-text-standart;
 
     &::before {
       content: "—";
@@ -134,8 +134,8 @@ img {
   font-family: $font-family-second;
 
   &-banner {
-    @include font-header-small;
     color: $standart-light;
+    @include font-header-small;
 
     @include sm {
       margin-block: 0 20%;
@@ -147,8 +147,8 @@ img {
   }
 
   &-standart {
-    @include font-text-standart;
     color: $standart;
+    @include font-text-standart;
   }
 
   &-list {
@@ -189,9 +189,9 @@ img {
 }
 
 .headers-centered {
-  @include flex-column;
   align-items: center;
   margin-inline: auto;
+  @include flex-column;
 }
 
 .decor {
@@ -211,23 +211,21 @@ img {
 
   &__desc {
     font-family: $font-family-second;
-    font-size: $font-text-small;
     font-weight: 400;
     margin-block: 0 10px;
+    @include font-text-small;
   }
 
   &__title {
     font-family: $font-family-main;
-    @include font-header-standart;
     font-style: normal;
     font-weight: 600;
     margin: 0;
+    @include font-header-standart;
   }
 }
 
 .btn {
-  @include animation-all(0.3s);
-  @include font-text-standart;
   font-family: $font-family-main;
   font-weight: 600;
   width: fit-content;
@@ -235,6 +233,8 @@ img {
   align-items: center;
   gap: 12px;
   padding: 17px 35px;
+  @include animation-all(0.3s);
+  @include font-text-standart;
 
   &-primary {
     border: $border-thin $accent;
@@ -288,7 +288,6 @@ img {
   }
 
   &-play {
-    @include absolute-filler;
     width: 120px;
     aspect-ratio: 1 / 1;
     background-color: $accent;
@@ -298,6 +297,7 @@ img {
     font-size: 38px;
     color: $white;
     z-index: 2;
+    @include absolute-filler;
   }
 
   &-primary::after, &-secondary::after, &-thin::after {
@@ -321,9 +321,9 @@ img {
 }
 
 .arrows {
-  @include flex-standard;
   width: fit-content;
   gap: 28px;
+  @include flex-standard;
 }
 
 .arrow {
@@ -339,14 +339,14 @@ img {
 }
 
 .slider__content {
-  @include absolute-filler;
-  @include flex-column;
   justify-content: end;
   padding: 25px;
   gap: $gap-standart;
   color: $white;
   cursor: pointer;
   z-index: 1;
+  @include absolute-filler;
+  @include flex-column;
 }
 
 .decorated, .decorated-right, .decorated-left, .decorated-about {

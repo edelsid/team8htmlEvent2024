@@ -1,5 +1,5 @@
 @use './colors' as colors;
-@use './variables' as vars;
+@use './breakpoints' as br;
 
 @mixin absolute-filler {
   position: absolute;
@@ -46,42 +46,58 @@
   background-repeat: no-repeat;
 }
 
-//переписать ряд шрифтов как миксины с реактивностью
 @mixin font-header-standart {
-  font-size: var(--font-header-standart);
   line-height: 1.3;
-}
 
-@mixin font-header-small {
-  font-size: var(--font-header-small);
-  line-height: 1.4;
-}
+  @include br.sm {
+    font-size: 20px;
+  }
 
-@mixin font-text-standart {
-  font-size: var(--font-text-standart);
-  line-height: 1.625;
-}
-
-@media (max-width: vars.$width-mobile) {
-  :root {
-    --font-header-standart: 20px;
-    --font-header-small: 24px;
-    --font-text-standart: 20px;
+  @include br.xxl {
+    font-size: 32px;
   }
 }
 
-@media (min-width: vars.$width-tablets-low) and (max-width: calc(vars.$width-tablets-large - 1px)) {
+@mixin font-header-small {
+  line-height: 1.4;
 
+  @include br.sm {
+    font-size: 24px;
+  }
+
+  @include br.xxl {
+    font-size: 24px;
+  }
 }
 
-@media (min-width: vars.$width-tablets-large) and (max-width: calc(vars.$width-desktop - 1px)) {
+@mixin font-text-standart {
+  line-height: 1.625;
 
+  @include br.sm {
+    font-size: 20px;
+  }
+
+  @include br.xxl {
+    font-size: 16px;
+  }
 }
 
-@media (min-width: vars.$width-desktop) {
-  :root {
-    --font-header-standart: 32px;
-    --font-header-small: 24px;
-    --font-text-standart: 16px;
+@mixin font-text-small {
+  @include br.sm {
+    font-size: 12px;
+  }
+
+  @include br.xxl {
+    font-size: 14px;
+  }
+}
+
+@mixin header-margin($margin) {
+  @include br.sm {
+    #{$margin}: 25px;
+  }
+
+  @include br.xxl {
+    #{$margin}: 95px;
   }
 }

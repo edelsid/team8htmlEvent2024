@@ -12,15 +12,10 @@
 
 $shadow: 2px 2px 4px colors.$standart-transp;
 
-$header-logo-width: var(--header-logo-width);
-$header-margin: var(--header-margin);
-$header-main-padding: calc($header-logo-width + 20px) 30px;
-
 $margin-title: 86px;
 $margin-section: 160px;
 $margin-thin: 148px;
 
-$font-text-small: var(--font-text-small);
 $font-text-additional: 16px;
 
 $gap-standart: 25px;
@@ -33,33 +28,36 @@ $border-thin: 1px solid;
 $font-family-main: "Jost";
 $font-family-second: "Barlow";
 
-$width-mobile: 480px;
-$width-tablets-low: 481px;
-$width-tablets-large: 768px;
-$width-desktop: 1025px;
+$width-sm: 479px;
+$width-md: 719px;
+$width-lg: 959px;
+$width-xl: 1119px;
+$width-xxl: 1200px;
 
-@media (max-width: $width-mobile) {
+:root {
+  --header-main-padding: calc(var(--header-logo-width) + 20px) 30px;
+}
+
+@media (max-width: $width-sm) {
   :root {
-    --header-margin: 25px;
     --header-logo-width: 70%;
-
-    --font-text-small: 12px;
   }
 }
 
-@media (min-width: $width-tablets-low) and (max-width: calc($width-tablets-large - 1px)) {
+@media (max-width:$width-md) {
 
 }
 
-@media (min-width: $width-tablets-large) and (max-width: calc($width-desktop - 1px)) {
+@media (max-width: $width-lg) {
 
 }
 
-@media (min-width: $width-desktop) {
+@media (max-width: $width-xl) {
+
+}
+
+@media (min-width: $width-xxl) {
   :root {
-    --header-margin: 95px;
     --header-logo-width: 510px;
-
-    --font-text-small: 14px;
   }
 }

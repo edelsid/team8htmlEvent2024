@@ -35,6 +35,10 @@
 .decor {
   pointer-events: none;
 
+  @include sm {
+    display: none;
+  }
+
   &-crane {
     top: 0;
     left: 34px;
@@ -70,8 +74,6 @@
 
 .service {
   &__wrapper {
-    @include animation-all(0.5s);
-    @include flex-column;
     justify-content: space-between;
     height: 100%;
     padding: 25px;
@@ -81,6 +83,8 @@
       #0E0E0E 100%
     );
     opacity: 0;
+    @include animation-all(0.5s);
+    @include flex-column;
 
     & p {
       color: $white;
@@ -90,22 +94,4 @@
       text-decoration: underline;
     }
   }
-}
-
-@media (max-width: $width-mobile) {
-  .decor {
-    display: none;
-  }
-}
-
-@media (min-width: $width-tablets-low) and (max-width: calc($width-tablets-large - 1px)) {
-
-}
-
-@media (min-width: $width-tablets-large) and (max-width: calc($width-desktop - 1px)) {
-
-}
-
-@media (min-width: $width-desktop) {
-
 }
