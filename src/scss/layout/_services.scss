@@ -1,33 +1,81 @@
 @use '../abstract/index.scss' as *;
 
 .services {
-  padding-top: 330px;
   position: relative;
   margin-bottom: $margin-section;
 
+  & > .container {
+    @include sm {
+      position: static;
+    }
+  }
+
+  @include xxl {
+    padding-top: 330px;
+  }
+
   &__text {
-    width: 34%;
-    position: relative;
-    margin-bottom: 80px;
+    @include sm {
+      @media (max-height: 800px) {
+        margin-bottom: 30vh;
+      };
+    }
+
+    @include xxl {
+      width: 34%;
+      position: relative;
+      margin-bottom: 80px;
+    }
+  }
+
+  & .subtitle-standart {
+    @include sm {
+      color: $black;
+      width: 60%;
+    }
   }
 
   &__sliders {
-    display: flex;
-    justify-content: end;
-    gap: $gap-standart;
-    width: 56%;
+    @include sm {
+      @include absolute-filler;
+      width: 100%;
+      z-index: -1;
+    }
+
+    @include xxl {
+      display: flex;
+      justify-content: end;
+      gap: $gap-standart;
+      width: 56%;
+    }
   }
 
   &__item {
-    width: 26%;
     @include background;
     @include animation(width, 0.5s);
     cursor: pointer;
 
+    @include sm {
+      @include absolute-filler;
+      width: 0;
+      height: 100%;
+    }
+
+    @include xxl {
+      width: 26%;
+    }
+
     &.active {
       @include animation(width, 0.5s);
       color: $white;
-      width: 41%;
+
+      @include sm {
+        width: 100%;
+      }
+
+      @include xxl {
+        width: 41%;
+      }
     }
   }
 }
@@ -56,6 +104,10 @@
   position: absolute;
   right: -35px;
   bottom: -35px;
+
+  @include sm {
+    display: none;
+  }
 }
 
 #services {
@@ -74,24 +126,57 @@
 
 .service {
   &__wrapper {
-    justify-content: space-between;
     height: 100%;
     padding: 25px;
-    background: linear-gradient(
-      180deg,
-      #05000000 0%,
-      #0E0E0E 100%
-    );
     opacity: 0;
     @include animation-all(0.5s);
     @include flex-column;
 
-    & p {
-      color: $white;
+    @include sm {
+      justify-content: end;
+      align-items: end;
+      @include gradient(90deg, 20%, 100%, $white, #ffffff00);
+    }
+
+    @include xxl {
+      justify-content: space-between;
+      background: linear-gradient(
+        180deg,
+      #05000000 0%,
+      #0E0E0E 100%
+      );
     }
 
     & h4 {
-      text-decoration: underline;
+      @include sm {
+        font-size: 40px;
+        text-align: end;
+        text-shadow: 2px 2px 4px #00000080;
+      }
+
+      @include xxl {
+        text-decoration: underline;
+      }
+    }
+
+    & p {
+      color: $white;
+
+      @include sm {
+        display: none;
+      }
+    }
+  }
+
+  &__headers {
+    @include sm {
+      width: 80%;
+    }
+  }
+
+  &__icon {
+    @include sm {
+      display: none;
     }
   }
 }

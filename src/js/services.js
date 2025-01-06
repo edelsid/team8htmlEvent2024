@@ -54,7 +54,7 @@ export default class Services {
         this.active = 0;
       };
       this.chooseSlide(this.slides[this.active]);
-    }, 3000);
+    }, 50000);
   }
 
   addFormation() {
@@ -77,4 +77,4 @@ export default class Services {
 
 const root = document.querySelector(".services__sliders");
 const services = new Services(root);
-//services.init();
+services.init();

@@ -19,7 +19,8 @@ html {
 
 section {
   @include sm {
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
   }
 }
 
@@ -68,6 +69,8 @@ img {
 
     @include sm {
       width: 90%;
+      padding-block: 20px;
+      height: 100%;
     }
 
     @include xxl {
@@ -87,8 +90,8 @@ img {
   margin: 0;
   
   &-standart {
-    font-size: 52px;
     line-height: 1.2;
+    font-size: 52px;
   }
 
   &-banner {
@@ -354,6 +357,10 @@ img {
 }
 
 .decorated {
+  @include sm {
+    display: none;
+  }
+
   &::before, &-right::after, &::after, &-left::before {
     content: url('assets/svg/Architecture.svg');
     position: absolute;

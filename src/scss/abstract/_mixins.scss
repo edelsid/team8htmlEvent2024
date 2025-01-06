@@ -46,6 +46,20 @@
   background-repeat: no-repeat;
 }
 
+@mixin gradient ($deg1, $percent1, $percent2, $color1, $color2) {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    $deg1,
+    $color1 $percent1,
+    $color2 $percent2,
+  );
+}
+
 @mixin font-header-standart {
   line-height: 1.3;
 
