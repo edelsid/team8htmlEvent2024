@@ -3,7 +3,7 @@
 .projects {
   position: relative;
   overflow: hidden;
-  margin-bottom: $margin-section;
+  margin-bottom: var(--margin-section);
   
   &__text {
     align-items: end;

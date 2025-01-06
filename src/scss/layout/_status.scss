@@ -1,7 +1,7 @@
 @use '../abstract/index.scss' as *;
 
 .status {
-  margin-bottom: $margin-section;
+  margin-bottom: var(--margin-section);
 
   &__headers {
     margin-bottom: $margin-title;

@@ -1,12 +1,29 @@
 @use '../abstract/index.scss' as *;
 
 .about {
-  margin-bottom: $margin-section;
+  margin-bottom: var(--margin-section);
 
   &__text {
-    margin-bottom: $margin-title;
-    gap: 174px;
-    @include flex-standard;
+    @include sm {
+      @include flex-column;
+      justify-content: space-evenly;
+      text-align: center;
+      height: 100%;
+    }
+
+    @include xxl {
+      @include flex-standard;
+      gap: 174px;
+      margin-bottom: $margin-title;
+    }
+  }
+
+  &__headers {
+    @include sm {
+      @include flex-column;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__additional {
@@ -37,9 +54,17 @@
   }
 }
 
-.slider__list {
-  opacity: 0;
-  @include animation(opacity, 0.3s);
+.sliders {
+  &__wrapper {
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__list {
+    opacity: 0;
+    @include animation(opacity, 0.3s);
+  }
 }
 
 .subtitle-button {
@@ -49,9 +74,21 @@
 }
 
 .button__wrapper {
-  display: flex;
-  align-items: center;
-  gap: $gap-standart;
+  @include sm {
+    @include flex-column;
+    flex-direction: column-reverse;
+
+    & .btn {
+      width: 100%;
+      @include flex-center;
+    }
+  }
+
+  @include xxl {
+    display: flex;
+    align-items: center;
+    gap: $gap-standart;
+  }
 }
 
 .arrows-about {

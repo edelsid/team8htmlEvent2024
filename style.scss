@@ -69,8 +69,8 @@ img {
 
     @include sm {
       width: 90%;
-      padding-block: 20px;
-      height: 100%;
+      padding-block: 30px;
+      height: 100vh;
     }
 
     @include xxl {
@@ -357,13 +357,13 @@ img {
 }
 
 .decorated {
-  @include sm {
-    display: none;
-  }
-
   &::before, &-right::after, &::after, &-left::before {
     content: url('assets/svg/Architecture.svg');
     position: absolute;
+
+    @include sm {
+      display: none;
+    }
   }
 
   &::before, &-right::after {
