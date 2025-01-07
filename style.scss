@@ -195,7 +195,9 @@ img {
 }
 
 .margin-standart {
-  margin-block: 10px 55px;
+  @include xxl {
+    margin-block: 10px 55px;
+  }
 }
 
 .headers-centered {
@@ -392,5 +394,11 @@ img {
 
   .arrow:hover {
     color: $accent;
+  }
+}
+
+.mobile {
+  @include xxl {
+    display: none;
   }
 }

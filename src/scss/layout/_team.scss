@@ -3,38 +3,82 @@
 .team {
   margin-bottom: $margin-thin;
 
+  & .btn {
+    @include sm {
+      width: 100%;
+      @include flex-center;
+    }
+  }
+
   & > .container-flex {
     gap: 70px;
+
+    @include sm {
+      flex-direction: column;
+      gap: 30px;
+    }
   }
 
   &__headers {
-    width: 37%;
+    @include sm {
+      @include flex-column-center;
+
+      & .btn {
+        display: none;
+      }
+    }
+
+    @include xxl {
+      width: 37%;
+    }
   }
 
   &__photo {
     background-color: $standart-light;
     object-fit: cover;
-    width: 32%;
-    height: 480px;
     cursor: pointer;
+
+    @include sm {
+      width: 100%;
+    }
+
+    @include xxl {
+      width: 32%;
+      height: 480px;
+    }
   }
 
   &__names {
-    justify-content: space-between;
-    width: 31%;
-    @include flex-column;
+    @include flex-column;    
+
+    @include sm {
+      width: 100%;
+      gap: 10px;
+    }
+
+    @include xxl {
+      width: 31%;
+      justify-content: space-between;
+    }
   }
 }
 
 .names {
   &__item {
-    align-items: end;
     cursor: pointer;
-    text-align: end;
     user-select: none;
     @include flex-column;
     @include animation-all(0.5s);
     @include font-header-small;
+
+    @include sm {
+      text-align: center;
+    }
+
+    @include xxl {
+      align-items: end;
+      text-align: end;
+    }
 
     &.active {
       & > p:is(.names__name) {
