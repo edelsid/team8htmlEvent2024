@@ -4,7 +4,10 @@
   font-family: $font-family-second;
 
   @include sm {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 
   @include xxl {
@@ -21,7 +24,7 @@
       bottom: -10px;
       left: 0;
       //переделать
-      width: calc(var(--header-logo-width) - 45px);
+      width: calc(var(--header-logo-width) - 80px);
       height: 10px;
       background: #b1400c;
       z-index: 1;
@@ -70,7 +73,7 @@
 
   &__burger {
     @include sm {
-      position: absolute;
+      position: fixed;
       padding: 15%;
       top: 0;
       right: -600px;

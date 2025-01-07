@@ -4,7 +4,7 @@
   display: flex;
 
   @include sm {
-    height: 100%;
+    height: calc(100vh + 10px);
     width: 90%;
     flex-direction: column;
     justify-content: center;
@@ -23,22 +23,8 @@
   background-color: $black;
   background-image: url(assets/img/ivan-bandura-nnY_e2zCVAc-unsplash-2.webp);
 
-  @include sm {
-    height: calc(100vh - 90px);
-  }
-
   &::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(
-      180deg,
-      #0e0e0e99 0%,
-      #0e0e0e 100%
-    );
+    @include gradient (180deg, 0%, 100%, #0e0e0e99, #0e0e0e);
   }
 
   &__text, &__image {

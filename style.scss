@@ -9,7 +9,7 @@
 
 body {
   margin: 0;
-  width: 100vw;
+  max-width: 100vw;
 }
 
 html {
@@ -70,7 +70,7 @@ img {
     @include sm {
       width: 90%;
       padding-block: 30px;
-      height: 100vh;
+      min-height: 100vh;
     }
 
     @include xxl {
