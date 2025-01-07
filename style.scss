@@ -243,22 +243,12 @@ img {
     border: $border-thin $accent;
     background-color: $accent;
     color: $white;
-
-    &:hover {
-      background-color: $black;
-      border: $border-thin $white;
-    }
   }
 
   &-secondary {
     border: $border-thin $black;
     background-color: transparent;
     color: $black;
-
-    &:hover {
-      background-color: $accent;
-      border: $border-thin $accent;
-    }
   }
 
   &-switch {
@@ -316,10 +306,6 @@ img {
     &::after {
       content: "\27F6";
     }
-
-    &:hover {
-      color: $accent;
-    }
   }
 }
 
@@ -335,10 +321,6 @@ img {
   font-size: 40px;
   padding: 0;
   background-color: transparent;
-
-  &:hover {
-    color: $accent;
-  }
 }
 
 .slider__content {
@@ -381,5 +363,27 @@ img {
 
   &-left::before {
     top: 46%;
+  }
+}
+
+@media (hover: hover) {
+  .btn {
+    &-primary:hover {
+      background-color: $black;
+      border: $border-thin $white;
+    }
+    
+    &-secondary:hover {
+      background-color: $accent;
+      border: $border-thin $accent;
+    }
+
+    &-link:hover {
+      color: $accent;
+    }
+  }
+
+  .arrow:hover {
+    color: $accent;
   }
 }

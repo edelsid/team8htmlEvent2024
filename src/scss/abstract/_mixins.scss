@@ -25,6 +25,12 @@
   flex-direction: column;
 }
 
+@mixin flex-column-center {
+  @include flex-column;
+  align-items: center;
+  text-align: center;
+}
+
 @mixin animation ($characteristic, $time) {
   -webkit-transition: $characteristic $time ease-in-out;
   -moz-transition: $characteristic $time ease-in-out;
