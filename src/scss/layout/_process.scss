@@ -3,18 +3,46 @@
 .process{
   margin-bottom: var(--margin-section);
 
+  & > .container {
+    @include flex-column;
+    justify-content: space-between;
+  }
+
   &__headers {
-    margin-bottom: 50px;
+    @include sm {
+      text-align: center;
+    }
+    
+    @include xxl {
+      margin-bottom: 50px;
+    }
   }
 
   &__tabs {
-    @include flex-standard;
-    gap: $gap-standart;
-    margin-bottom: 90px;
+    @include sm {
+      @include flex-column;
+      gap: 15px;
+    }
+
+    @include xxl {
+      @include flex-standard;
+      margin-bottom: 90px;
+      gap: $gap-standart;
+    }
   }
 
   &__item {
-    width: 33%;
+    @include sm {
+      width: 100%;
+
+      & > .btn {
+        font-size: 16px;
+      }
+    }
+    
+    @include xxl {
+      width: 33%;
+    }
   }
 
   &__video {
@@ -33,19 +61,37 @@
 .video {
   &__player {
     width: 100%;
-    height: 540px;
     object-fit: cover;
     @include animation-all(0.5s);
+
+    @include xxl {
+      height: 540px;
+    }
   }
 }
 
 .modal {
   &[open] {
-    width: 60%;
     border: 0;
-    padding: 30px;
     gap: $gap-small;
     @include flex-column;
+
+    @include sm {
+      width: 100%;
+      padding: 10px 10px 20px 10px;
+
+      & > .btn {
+        font-size: 16px;
+        padding: 10px;
+        width: 100%;
+        @include flex-center;
+      }
+    }
+
+    @include xxl {
+      width: 60%;
+      padding: 30px;
+    }
   }
 
   &__video {
