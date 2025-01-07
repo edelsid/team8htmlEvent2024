@@ -9,7 +9,6 @@
     @include sm {
       @include flex-column-center;
       gap: 20px;
-      margin-bottom: 30px;
       height: 35%;
     }
 
@@ -84,5 +83,11 @@
     aspect-ratio: 1 / 1;
     @include absolute-filler;
     @include flex-center;
+  }
+}
+
+.arrows-projects {
+  @include sm {
+    margin-top: 30px;
   }
 }

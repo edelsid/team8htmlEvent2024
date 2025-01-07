@@ -91,7 +91,14 @@ img {
   
   &-standart {
     line-height: 1.2;
-    font-size: 52px;
+
+    @include sm {
+      font-size: 46px;
+    }
+
+    @include xxl {
+      font-size: 52px;
+    }
   }
 
   &-banner {
