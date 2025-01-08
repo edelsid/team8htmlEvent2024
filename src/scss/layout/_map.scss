@@ -1,6 +1,14 @@
-.map__frame {
-  width: 100%;
-  height: 568px;
-  filter: grayscale(1);
-  border: 0;
+@use '../abstract/index.scss' as *;
+
+.map {
+  @include sm {
+    min-height: fit-content;
+  }
+
+  &__frame {
+    width: 100%;
+    height: 568px;
+    filter: grayscale(1);
+    border: 0;
+  }
 }
