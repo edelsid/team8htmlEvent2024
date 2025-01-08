@@ -7,6 +7,12 @@
   background-image: url("assets/svg/footer_picture.svg");
   background-repeat: no-repeat;
   background-size: contain;
+
+  @include sm {
+    & .container {
+      min-height: fit-content;
+    }
+  }
   
   &__container {
     padding-block: 238px 145px;
@@ -16,16 +22,35 @@
     position: absolute;
     align-items: center;
     background-color: $accent;
-    padding: 56px 108px;
     color: $white;
     width: 100%;
     overflow: hidden;
     @include flex-standard;
+
+    @include sm {
+      padding: 16px 26px;
+    }
+
+    @include xxl {
+      padding: 56px 108px;
+    }
   }
 
   &__body {
     color: $white;
     @include flex-standard;
+
+    @include sm {
+      flex-direction: column;
+      text-align: center;
+      padding-top: 120px;
+    }
+  }
+
+  &__site-overview a {
+    @include sm {
+      justify-content: center;
+    }
   }
 
   &__list {
@@ -41,18 +66,32 @@
       }
     }
   }
+
+  &__links, &__info {
+    @include sm {
+      display: none;
+    }
+  }
 }
 
 .subscription {
   &__title {
     width: 34%;
+    font-size: 16px;
   }
 
   &__input {
-    width: 32%;
     position: relative;
     display: flex;
     align-items: center;
+
+    @include sm {
+      width: 50%;
+    }
+    
+    @include xxl {
+      width: 32%;
+    }
 
     &::before {
       content: "Newsletter";
@@ -61,9 +100,16 @@
       margin-block: auto;
       opacity: 0.1;
       font-family: $font-family-main;
-      font-size: 96px;
       line-height: 1.1;
       font-weight: 600;
+
+      @include sm {
+        font-size: 56px;
+      }
+
+      @include xxl {
+        font-size: 96px;
+      }
     }
 
     &::after {
@@ -117,7 +163,9 @@
 }
 
 .availability {
-  margin-top: 50px;
+  @include xxl {
+    margin-top: 50px;
+  }
 
   &__dates {
     font-family: $font-family-second;
