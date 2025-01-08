@@ -2,64 +2,145 @@
 
 .blog {
   margin-bottom: var(--margin-section);
+  @include sm {
+    & .btn {
+      width: 100%;
+      @include flex-center;
+    }
+  }
+  
 
   &__headers {
-    margin-bottom: 78px;
+    @include sm {
+      @include flex-column-center;
+      margin-bottom: 30px;
+    }
+
+    @include xxl {
+      margin-bottom: 78px;
+    }
   }
 
   &__body {
-    gap: 30px;
-    margin-bottom: 42px;
     @include flex-column;
+
+    @include sm {
+      gap: $gap-standart;
+    }
+
+    @include xxl {
+      gap: 30px;
+      margin-bottom: 42px;
+    }
   }
 
   &__highlight {
     @include flex-standard;
+
+    @include sm {
+      flex-direction: row-reverse;
+      gap: 20px;
+    }
+
+    @include xxl {
+
+    }
   }
 
   &__news {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: $gap-standart;
+
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include xxl {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   &__btn {
-    margin-inline: auto;
+    @include sm {
+      margin-top: 30px;
+    }
+
+    @include xxl {
+      margin-inline: auto;
+    }
   }
 }
 
 .highlight {
   &__text {
-    width: 35%;
+    @include sm {
+      & .btn {
+        display: none;
+      }
+    }
+
+    @include xxl {
+      width: 35%;
+    }
 
     & > p {
-      width: 91%;
+      @include sm {
+        display: none;
+      }
+
+      @include xxl {
+        width: 91%;
+      }
     }
 
     & > .tags {
-      margin-bottom: 20px;
+      @include sm {
+        margin-bottom: 10px;
+      }
+
+      @include xxl {
+        margin-bottom: 20px;
+      }
     }
   }
 
   &__img-wrapper {
     position: relative;
-    width: 49%;
+
+    @include xxl {
+      width: 49%;
+    }
   }
 
   &__img {
     object-fit: cover;
-    height: 361px;
-    width: 100%;
     background-color: $standart-light;
     cursor: pointer;
+
+    @include sm {
+      height: 100px;
+      aspect-ratio: 1 / 1;
+    }
+
+    @include xxl {
+      height: 361px;
+      width: 100%;
+    }
   }
 
   //переделать через полигон
   &__date {
     position: absolute;
     user-select: none;
-    top: 10px;
-    left: -72px;
+  
+    @include sm {
+      display: none;
+    }
+
+    @include xxl {
+      top: 10px;
+      left: -72px;
+    }
 
     & > p {
       padding: 14px;
@@ -69,13 +150,11 @@
 }
 
 .date__label {
+  top: -10px;
+  text-align: center;
+  color: $white;
   @include absolute-filler;
   @include flex-center;
-  & {
-    top: -10px;
-    text-align: center;
-    color: $white;
-  }
 }
 
 .tags {
@@ -84,7 +163,14 @@
   cursor: pointer;
   color: $standart;
   font-family: $font-family-second;
-  @include font-text-standart;
+
+  @include sm {
+    font-size: 14px;
+  }
+
+  @include xxl {
+    @include font-text-standart;
+  }
 
   &__author, &__topic {
     display: flex;
@@ -102,15 +188,36 @@
 
 .news-card {
   justify-content: space-between;
-  padding: 30px;
   cursor: pointer;
-  height: 100%;
-  gap: $gap-small;
-  border: $border-thin $standart-light;
-  @include flex-column;
 
-  &:hover {
-    box-shadow: $shadow;
+  @include sm {
+    @include flex-standard;
+    gap: 20px;
+
+    & .btn {
+      display: none;
+    }
+  }
+
+  @include xxl {
+    @include flex-column;
+    padding: 30px;
+    gap: $gap-small;
+    height: 100%;
+    justify-content: start;
+    border: $border-thin $standart-light;
+  }
+
+  &__text {
+    @include flex-column;
+
+    @include sm {
+      gap: 10px;
+    }
+
+    @include xxl {
+      gap: 20px;
+    }
   }
 
   &__img-wrapper {
@@ -131,12 +238,30 @@
       padding: 6px;
       @include font-text-standart;
     }
+
+    @include sm {
+      display: none;
+    }
   }
 
   &__img {
-    width: 100%;
-    height: 300px;
     object-fit: cover;
     background-color: $standart-light;
+
+    @include sm {
+      height: 100px;
+      aspect-ratio: 1 / 1;
+    }
+
+    @include xxl {
+      width: 100%;
+      height: 300px;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .news-card {
+    box-shadow: $shadow;
   }
 }

@@ -1,8 +1,10 @@
 @use '../abstract/index.scss' as *;
 
 .team {
-  margin-bottom: $margin-thin;
-
+  @include xxl {
+    margin-bottom: $margin-thin;
+  }
+  
   & .btn {
     @include sm {
       width: 100%;
