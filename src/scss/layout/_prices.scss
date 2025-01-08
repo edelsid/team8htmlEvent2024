@@ -4,34 +4,68 @@
   background-color: #F8F8F8;
   background-image: url("/assets/svg/image 15.svg");
   background-repeat: no-repeat;
-  padding-block: 146px 262px;
-  margin-bottom: $margin-thin;
+  
+  @include xxl {
+    padding-block: 146px 262px;
+    margin-bottom: $margin-thin;
+  }
 
   &__headers {
-    margin-bottom: 78px;
+    @include sm {
+      @include flex-column-center;
+      margin-bottom: 30px;
+    }
+
+    @include xxl {
+      margin-bottom: 78px;
+    }
   }
 
   &__table {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: $gap-standart;
+
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include xxl {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   &__item {
     position: relative;
     justify-content: space-between;
-    padding: 48px;
     border: $border-thin $standart-light;
     background-color: $white;
     cursor: pointer;
     @include flex-column;
 
-    &.active::before {
-      border-top: 50px solid $accent;
+    @include sm {
+      padding: 28px;
+
+      & .btn {
+        width: 100%;
+        @include flex-center;
+        font-size: 16px;
+        padding: 10px;
+        margin-top: 20px;
+      }
     }
 
-    &:hover {
-      box-shadow: $shadow;
+    @include xxl {
+      padding: 48px;
+    }
+
+    &.active::before {
+      @include sm {
+        border-top: 20px solid $accent;
+      }
+
+      @include xxl {
+        border-top: 20px solid $accent;
+      }
     }
 
     &::before {
@@ -39,12 +73,23 @@
       content: "";
       width: 0; 
       height: 0; 
-      top: -8px;
-      left: -33px;
       transform: rotate(135deg);
-      border-left: 50px solid transparent;
-      border-right: 50px solid transparent;
-      border-top: 50px solid $black;
+      
+      @include sm {
+        top: -4px;
+        left: -14px;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid $black;
+      }
+
+      @include xxl {
+        top: -8px;
+        left: -33px;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 50px solid $black;
+      }
     }
   }
 
@@ -70,10 +115,17 @@
     display: flex;
     align-items: center;
     gap: $gap-small;
-    padding-bottom: 26px;
-    margin-block: 12px 26px;
-    border-bottom: $border-thin $standart-light;
     @include font-text-standart;
+
+    @include sm {
+      margin-block: 0;
+    }
+
+    @include xxl {
+      padding-bottom: 26px;
+      border-bottom: $border-thin $standart-light;
+      margin-block: 12px 26px;
+    }
 
     &::before {
       content: "\2730";
@@ -88,7 +140,10 @@
     font-size: 16px;
     line-height: 2.25;
     list-style: inside;
-    margin-bottom: 50px;
+
+    @include xxl {
+      margin-bottom: 50px;
+    }
   }
 }
 
@@ -109,4 +164,10 @@
   background-color: #39CA6E;
   cursor: default;
   @include font-text-standart;
+}
+
+@media (hover: hover) {
+  .prices__item:hover {
+    box-shadow: $shadow;
+  }
 }
