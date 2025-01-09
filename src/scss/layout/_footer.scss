@@ -77,7 +77,10 @@
 .subscription {
   &__title {
     width: 34%;
-    font-size: 16px;
+
+    @include sm {
+      font-size: 16px;
+    }
   }
 
   &__input {

@@ -61,7 +61,11 @@
 
     & .slider__content {
       opacity: 0;
-      @include animation(opacity, 0.3s);
+      @include animation(opacity, 0.5s);
+    }
+
+    &.active .slider__content {
+      opacity: 1;
     }
   }
 }

@@ -6,7 +6,6 @@ export default class Projects {
   this.bindToDOM(container);
   this.active = 1;
   this.count = 0;
-  this.msgCount = 1;
   }
 
   bindToDOM(container) {
@@ -25,10 +24,10 @@ export default class Projects {
   bindSliders() {
     for (let i = 0; i < data.length; i += 1) {
       const newSlider = this.createSlider(data[i]);
+      const sliderContent = this.addContent(data[i]);
+      newSlider.appendChild(sliderContent);
       this.sliderArea.appendChild(newSlider);
     };
-    this.width = this.sliderArea.children[0].getBoundingClientRect().width;
-    this.setContent(data[this.msgCount]);
   }
 
   createSlider(data) {
@@ -41,54 +40,41 @@ export default class Projects {
   setContent(data) {
     const childEl = this.addContent(data);
     this.sliderArea.children[this.active].appendChild(childEl);
-    setTimeout(() => {
-      childEl.style.opacity = 1;
-    }, 300);
   }
 
   changeSlide(target) {
     if (!target.id) return;
-    this.sliderArea.children[this.active].innerHTML = "";
+    this.sliderArea.children[this.active].classList.remove("active");
     const position = getComputedStyle(this.sliderArea).left;
     if (target.id === "forward") {
       this.forward(position);
-      return;
+    } else {
+      this.back(position);
     };
-    this.back(position);
+    this.setActive();
   }
 
   forward(position) {
     if (this.active > this.sliderArea.children.length - 3) {
-      const newSlider = this.sliderArea.children[this.count].cloneNode();
+      const newSlider = this.sliderArea.children[this.count].cloneNode(true);
       this.sliderArea.appendChild(newSlider);
       this.count += 1;
     }
     this.active += 1;
-    this.msgCount +=1;
-    if (this.msgCount > data.length - 1) {
-      this.msgCount = 0;
-    }
-    this.sliderArea.style.left = `calc((${position} - ${this.width}px) - 25px)`;
-    this.setContent(data[this.msgCount]);
+    this.sliderArea.style.left = `calc((${position} - ${this.width}px) - ${this.gap}px)`;
   }
 
   back(position) {
     if (this.active !== 1) {
       this.active -= 1;
-      this.msgCount -= 1;
-      if (this.msgCount < 0) {
-        this.msgCount = data.length - 1;
-      }
-      this.sliderArea.style.left = `calc((${position} + ${this.width}px) + 25px)`;
+      this.sliderArea.style.left = `calc((${position} + ${this.width}px) + ${this.gap}px)`;
       if (this.active < this.sliderArea.children.length - 5) {
         this.sliderArea.removeChild(this.sliderArea.lastElementChild);
         this.count -= 1;
       }
     };
-    this.setContent(data[this.msgCount]);
   }
 
-  //переделать. менять прозрачность, не прикреплять узлы
   addContent(data) {
     const newMsg = document.createElement('div');
     newMsg.className = "slider__content";
@@ -101,8 +87,22 @@ export default class Projects {
 
     return newMsg;
   }
-}
 
-const root = document.querySelector(".projects");
-const projects = new Projects(root);
-projects.init(root);
+  setActive() {
+    this.sliderArea.children[this.active].classList.add("active");
+  }
+
+  reset() {
+    this.width = this.sliderArea.children[0].getBoundingClientRect().width;
+    this.sliderArea.children[this.active].classList.remove("active");
+    this.active = 1;
+    if (window.innerWidth < 480) {
+      this.gap = 0;
+      this.sliderArea.style.left = `-${this.width}px`;
+    } else {
+      this.sliderArea.style.left = `0px`;
+      this.gap = 25;
+    }
+    this.setActive();
+  }
+}
