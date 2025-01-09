@@ -52,6 +52,31 @@
       @include absolute-filler;
     }
   }
+
+  &-slider {
+    @include slider-content;
+
+    &:hover .about-slider__list {
+      opacity: 1;
+      max-height: 100%;
+      margin-top: 15px;
+
+      & li {
+        display: block;
+      }
+    }
+
+    &__list {
+      opacity: 0;
+      max-height: 0;
+      margin-top: 0;
+      @include animation-all(0.3s);
+
+      & li {
+        display: none;
+      }
+    }
+  }
 }
 
 .sliders {
@@ -59,11 +84,6 @@
     @include sm {
       display: none;
     }
-  }
-
-  &__list {
-    opacity: 0;
-    @include animation(opacity, 0.3s);
   }
 }
 

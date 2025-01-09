@@ -66,6 +66,16 @@
   );
 }
 
+@mixin slider-content {
+  justify-content: end;
+  padding: 25px;
+  color: colors.$white;
+  cursor: pointer;
+  z-index: 1;
+  @include absolute-filler;
+  @include flex-column;
+}
+
 @mixin font-header-standart {
   line-height: 1.3;
 

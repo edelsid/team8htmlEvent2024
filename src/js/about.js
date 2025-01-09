@@ -29,33 +29,13 @@ export default class About {
       const starterSlider = this.sliderFormation(this.contents[i]);
       const slider = this.sliders[i];
       slider.style.backgroundImage = `url(${this.contents[i].url})`;
-      slider.innerHTML = "";
       slider.appendChild(starterSlider);
-      slider.addEventListener("mouseenter", () => this.onHover(slider.id, starterSlider));
-      slider.addEventListener("mouseleave", () => this.onLeave(starterSlider));
     };
-  }
-
-  onHover(id, target) {
-    const list = this.listFormation(this.contents[id - 1]);
-    target.appendChild(list);
-    setTimeout(() => {
-      list.style.opacity = 1;
-    }, 300);
-  }
-
-  onLeave(target) {
-    const list = target.lastElementChild;
-    setTimeout(() => {
-      list.style.opacity = 0;
-      setTimeout(() => {
-        list.remove();
-      }, 300);
-    }, 300);
   }
 
   changeSlide(target) {
     if (!target.id) return;
+    this.clearAll();
     if (target.id === "forward") {
       this.forward();
       return;
@@ -85,15 +65,16 @@ export default class About {
 
   sliderFormation(obj) {
     const newSlider = document.createElement("div");
-    newSlider.classList = "slider__content";
+    newSlider.classList = "about-slider";
     newSlider.innerHTML = `<h3 class="title title-accent">${obj.title}</h3>`;
+    const list = this.listFormation(obj);
+    newSlider.appendChild(list);
     return newSlider;
   }
 
-  //переделать. менять прозрачность/дисплей, не прикреплять узлы
   listFormation(content) {
     const newMsg = document.createElement("ul");
-    newMsg.className = "slider__list";
+    newMsg.className = "about-slider__list";
     for (let i = 0; i < content.characteristics.length; i += 1) {
       const listItem = document.createElement("li");
       listItem.className = "subtitle subtitle-list";
@@ -101,6 +82,13 @@ export default class About {
       newMsg.appendChild(listItem);
     };
     return newMsg;
+  }
+
+  clearAll() {
+    const sliderArr = Array.from(this.sliders);
+    sliderArr.forEach((item) => {
+      item.innerHTML = "";
+    })
   }
 }
 
