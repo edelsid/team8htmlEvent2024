@@ -13,7 +13,7 @@
   &__headers {
     @include sm {
       @include flex-column-center;
-      margin-bottom: 30px;
+      margin-bottom: $margin-mobile;
     }
 
     @include xxl {

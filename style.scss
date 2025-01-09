@@ -19,7 +19,6 @@ html {
 
 section {
   @include sm {
-    min-height: 100vh;
     height: fit-content;
   }
 }
@@ -69,8 +68,7 @@ img {
 
     @include sm {
       width: 90%;
-      padding-block: 30px;
-      min-height: 100vh;
+      padding-block: 60px;
     }
 
     @include xxl {
@@ -335,12 +333,20 @@ img {
 .slider__content {
   justify-content: end;
   padding: 25px;
-  gap: $gap-standart;
+  
   color: $white;
   cursor: pointer;
   z-index: 1;
   @include absolute-filler;
   @include flex-column;
+
+  @include sm {
+    gap: 10px;
+  }
+
+  @include xxl {
+    gap: $gap-standart;
+  }
 }
 
 .decorated, .decorated-right, .decorated-left, .decorated-about {

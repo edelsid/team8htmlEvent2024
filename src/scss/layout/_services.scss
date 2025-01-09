@@ -4,6 +4,10 @@
   position: relative;
   margin-bottom: var(--margin-section);
 
+  @include sm {
+    min-height: 100vh;
+  }
+
   & > .container {
     @include sm {
       position: static;

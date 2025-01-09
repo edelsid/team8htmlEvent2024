@@ -3,10 +3,14 @@
 .testimonials {
   margin-bottom: var(--margin-section);
 
+  @include sm {
+    background-color: #F8F8F8;
+  }
+
   &__headers {
     @include sm {
       @include flex-column-center;
-      margin-bottom: 30px;
+      margin-bottom: $margin-mobile;
     }
 
     @include xxl {
@@ -90,7 +94,7 @@
   @include font-header-standart;
 
   @include sm {
-    margin-block: 0 30px;
+    margin-block: 0 $margin-mobile;
   }
 
   @include xxl {

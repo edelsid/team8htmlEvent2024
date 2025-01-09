@@ -6,6 +6,7 @@
   & > .container {
     @include flex-column;
     justify-content: space-between;
+    gap: $gap-standart;
   }
 
   &__headers {

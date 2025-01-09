@@ -17,7 +17,7 @@
 
     @include sm {
       flex-direction: column;
-      gap: 30px;
+      gap: $margin-mobile;
     }
   }
 

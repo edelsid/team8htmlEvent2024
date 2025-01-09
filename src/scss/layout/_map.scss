@@ -2,7 +2,7 @@
 
 .map {
   @include sm {
-    min-height: fit-content;
+    height: 50vh;
   }
 
   &__frame {
