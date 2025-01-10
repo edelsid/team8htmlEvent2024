@@ -1,30 +1,30 @@
 [{
   "id": 1,
-  "url": "/assets/img/projects1.webp",
+  "url": "./assets/img/projects1.webp",
   "title": "Modern Library Design",
   "subtitle": "Contraction"
 }, 
 {
   "id": 2,
-  "url": "/assets/img/projects2.webp",
+  "url": "./assets/img/projects2.webp",
   "title": "Skyline Tower Renovation",
   "subtitle": "Contraction"
 }, 
 {
   "id": 3,
-  "url": "/assets/img/projects3.webp",
+  "url": "./assets/img/projects3.webp",
   "title": "Exhibition Hall Redone",
   "subtitle": "Contraction"
 }, 
 {
   "id": 4,
-  "url": "/assets/img/projects4.webp",
+  "url": "./assets/img/projects4.webp",
   "title": "Central Mall Project",
   "subtitle": "Contraction"
 }, 
 {
   "id": 5,
-  "url": "/assets/img/projects5.webp",
+  "url": "./assets/img/projects5.webp",
   "title": "South Town Bridge",
   "subtitle": "Contraction"
 }]

@@ -62,7 +62,7 @@ export default class Services {
     newMsg.className = 'service__wrapper';
     newMsg.innerHTML = `
     <div class="service__icon">
-      <img src="./assets/png/Icon.png" alt="icon of a tall building">
+      <img src="assets/png/Icon.png" alt="icon of a tall building">
     </div>
     <div class="service__headers">
       <h4 class="title">Building Contraction</h4>
