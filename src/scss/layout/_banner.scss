@@ -21,7 +21,7 @@
 .banner {
   position: relative;
   background-color: $black;
-  background-image: url(assets/img/ivan-bandura-nnY_e2zCVAc-unsplash-2.webp);
+  background-image: url(/img/ivan-bandura-nnY_e2zCVAc-unsplash-2.webp);
 
   &::before {
     @include gradient (180deg, 0%, 100%, #0e0e0e99, #0e0e0e);

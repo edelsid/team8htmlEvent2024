@@ -2,20 +2,20 @@
   "id": 1,
   "name": "Michael Redmond",
   "role": "Senior Designer",
-  "img": "./assets/img/quote1.webp",
+  "img": "img/quote1.webp",
   "text": "It is rare to find a company so considerate of it's clients and willing to provide this level of support. Professionals at conbuild have truly went above and beyond."
 }, 
 {
   "id": 2,
   "name": "Brooklyn Simmons",
   "role": "Architect Designer",
-  "img": "./assets/img/quote2.webp",
+  "img": "img/quote2.webp",
   "text": "Working with consik a fantastic experience. They truly understood our vision and turned our dream home into a reality. The attention to detail and dedication were The team."
 }, 
 {
   "id": 3,
   "name": "Andrew Brown",
   "role": "Engineer",
-  "img": "./assets/img/quote3.webp",
+  "img": "img/quote3.webp",
   "text": "The team at this agency has been simply amazing. Their efficient work and professional advice has made out project a reality, for which we are grateful!"
 }]
