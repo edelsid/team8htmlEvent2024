@@ -355,7 +355,7 @@ img {
 
 .decorated {
   &::before, &_right::after, &::after, &_left::before {
-    content: url('svg/Architecture.svg');
+    content: url('/svg/Architecture.svg');
     position: absolute;
 
     @include sm {
