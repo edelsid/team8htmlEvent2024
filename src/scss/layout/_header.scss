@@ -3,7 +3,7 @@
 .header {
   font-family: $font-family-second;
 
-  @include sm {
+  @include sm; @include md {
     position: absolute;
     top: 0;
     left: 0;
@@ -55,10 +55,17 @@
     display: flex;
     @include header-margin(margin-right);
 
-    @include sm {
-      height: 100px;
+    @include sm; @include md; @include lg {
       justify-content: end;
       align-items: center;
+    }
+
+    @include sm {
+      height: 100px;
+    }
+
+    @include md; @include lg {
+      height: 80px;
     }
 
     @include xxl {
@@ -72,19 +79,26 @@
   }
 
   &__burger {
-    @include sm {
+    @include sm; @include md; @include lg {
       position: fixed;
-      padding: 15%;
       top: 0;
-      right: -600px;
+      right: -100vw;
       height: 100vh;
       width: 100vw;
       @include flex-column;
       @include animation(right, 0.5s);
+      justify-content: space-around;
       align-items: center;
-      justify-content: space-evenly;
       background-color: $black;
       z-index: 999;
+    }
+
+    @include sm {
+      padding: 15%;
+    }
+
+    @include md; @include lg {
+      padding: 10% 20%;
     }
 
     @include xxl {
@@ -93,8 +107,16 @@
   }
 }
 
-.logo_header {
-  @include header-margin(margin-left);
+.logo {
+  &_header {
+    @include header-margin(margin-left);
+  }
+
+  &__img {
+    @include sm; @include md; @include lg {
+      width: 60px;
+    }
+  }
 }
 
 .menu {
@@ -116,7 +138,7 @@
     justify-content: end;
     border-left: $border-thin $standart-transp;
 
-    @include sm {
+    @include sm; @include md; @include lg {
       display: none;
     }
 
@@ -140,6 +162,10 @@
   @include sm {
     font-size: 44px;
   }
+
+  @include md; @include lg {
+    font-size: 34px;
+  }
 }
 
 .burger__close {
@@ -151,13 +177,25 @@
 
 .contacts {
   padding-inline: var(--header-main-padding);
-  border-bottom: $border-thin $standart-transp;
-  @include flex-standard;
+  
+  @include md; @include lg {
+    display: flex;
+    justify-content: end;
+  }
+
+  @include xxl {
+    @include flex-standard;
+    border-bottom: $border-thin $standart-transp;
+  }
 
   &__descriptions {
     display: flex;
     gap: 50px;
     padding: 19.5px 0 19.5px;
+
+    @include md; @include lg {
+      display: none;
+    }
   }
 
   &__socials {
@@ -173,14 +211,19 @@
   }
 }
 
-.socials__item {
-  width: 13px;
-  height: 13px;
+.socials__item, .socials__item svg {
+  @include md; @include lg {
+    width: 23px;
+    height: 23px;
+  }
+
+  @include xxl {
+    width: 13px;
+    height: 13px;
+  }
 }
 
 .socials__item svg {
-  width: 13px;
-  height: 13px;
   opacity: 0.3;
   @include animation(opacity, 0.5s);
 }
@@ -189,9 +232,8 @@
   color: white;
   font-weight: 600;
 
-  @include sm {
-    width: 100%;
-    font-size: 24px;
+  @include md; @include lg {
+    display: none;
   }
 
   @include xxl {
@@ -209,9 +251,26 @@
       @include flex-column;
     }
 
+    @include md; @include lg {
+      @include flex-center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
     @include xxl {
       flex-wrap: wrap;
       column-gap: 40px;
+    }
+  }
+
+  &_burger {
+    @include sm; @include md; @include lg {
+      width: 100%;
+      font-size: 24px;
+    }
+
+    @include md; @include lg {
+      display: block;
     }
   }
 }
@@ -275,8 +334,3 @@
   }
 }
 
-.logo__img {
-  @include sm {
-    width: 60px;
-  }
-}

@@ -25,7 +25,7 @@ export default class Header {
 
   close() {
     if (!this.isOpen) return;
-    this.burgerMenu.style.right = `-500px`;
+    this.burgerMenu.style.right = `-100vw`;
     this.isOpen = !this.isOpen;
   }
 }

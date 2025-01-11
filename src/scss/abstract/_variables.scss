@@ -46,12 +46,16 @@ $width-xxl: 1200px;
   }
 }
 
-@media (max-width:$width-md) {
-
+@media (min-width: ($width-sm + 1px)) and (max-width: $width-md) {
+  :root {
+    --header-logo-width: 50%;
+  }
 }
 
-@media (max-width: $width-lg) {
-
+@media (min-width: ($width-md + 1px)) and (max-width: $width-lg) {
+  :root {
+    --header-logo-width: 40%;
+  }
 }
 
 @media (max-width: $width-xl) {
