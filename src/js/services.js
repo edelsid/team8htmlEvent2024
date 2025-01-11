@@ -66,7 +66,7 @@ export default class Services {
     </div>
     <div class="service__headers">
       <h4 class="title">Building Contraction</h4>
-      <p class="subtitle subtitle-standart">
+      <p class="subtitle subtitle_standart">
         This involves various stages like planning, design.
       </p>
     </div>`;

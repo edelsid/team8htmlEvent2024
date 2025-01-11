@@ -1,6 +1,7 @@
 # Лендинг строительной компании
 
 [Деплой](https://team8html-event2024-nine.vercel.app)
+[Макет](https://www.figma.com/design/xQeRhxFMgHJ1aqcvFNNoyV/Conbuild_With_Out_Products?node-id=0-1&p=f&t=UEDnBriWzmqfEVXz-0)
 
 Этот проект — доработанная версия сайта, разработанного в 2024 году в рамках благотворительного хакатона для начинающих фронтендеров. Оригинальную его версию можно посмотреть [здесь (репозиторий)](https://github.com/IlyaBurch/team8htmlEvent2024) и [здесь (деплой)](https://team8html-event2024.vercel.app). Все изменения, произведенные в данной версии, сделаны уже лично мной в целях дальнейшего обучения и совершенствования моих навыков.
 

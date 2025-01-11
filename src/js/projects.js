@@ -79,10 +79,10 @@ export default class Projects {
     const newMsg = document.createElement('div');
     newMsg.className = "slider__content";
     newMsg.innerHTML = `
-    <p class="subtitle subtitle-accent bg bg-subtitle">${data.subtitle}</p>
-    <h3 class="title title-accent bg bg-title">${data.title}</h3>
-    <div class="btn-slider__wrapper">
-      <a class="btn-slider">+</a>
+    <p class="subtitle subtitle_accent bg bg_subtitle">${data.subtitle}</p>
+    <h3 class="title title_accent bg bg_title">${data.title}</h3>
+    <div class="btn_slider__wrapper">
+      <a class="btn_slider">+</a>
     </div>`;
 
     return newMsg;

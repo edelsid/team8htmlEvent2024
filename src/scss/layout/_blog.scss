@@ -188,6 +188,7 @@
 
 .news-card {
   justify-content: space-between;
+  background-color: $white;
   cursor: pointer;
 
   @include sm {
@@ -261,7 +262,7 @@
 }
 
 @media (hover: hover) {
-  .news-card {
+  .news-card:hover {
     box-shadow: $shadow;
   }
 }

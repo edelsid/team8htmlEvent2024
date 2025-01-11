@@ -18,7 +18,7 @@ export default class Process {
   }
 
   init() {
-    const playBtn = this.container.querySelector(".btn-play");
+    const playBtn = this.container.querySelector(".btn_play");
     playBtn.addEventListener("click", (e) => this.openModal());
     const closeBtn = this.container.querySelector(".modal__close");
     closeBtn.addEventListener("click", (e) => this.closeModal());
@@ -40,7 +40,7 @@ export default class Process {
     const newTab = document.createElement("li");
     newTab.className = "process__item";
     newTab.innerHTML = `
-    <button class="btn btn-switch" type="button" id="${data.id}">
+    <button class="btn btn_switch" type="button" id="${data.id}">
       0${data.id}. ${data.title}
     </button>`;
     return newTab;

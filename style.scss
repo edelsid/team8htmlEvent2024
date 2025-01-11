@@ -63,7 +63,7 @@ img {
   margin: auto;
   z-index: 1;
 
-  &-standart {
+  &_standart {
     max-width: 1415px;
 
     @include sm {
@@ -76,7 +76,7 @@ img {
     }
   }
 
-  &-flex {
+  &_flex {
     @include flex-standard;
   }
 }
@@ -87,7 +87,7 @@ img {
   text-transform: capitalize;
   margin: 0;
   
-  &-standart {
+  &_standart {
     line-height: 1.2;
 
     @include sm {
@@ -99,7 +99,7 @@ img {
     }
   }
 
-  &-banner {
+  &_banner {
     color: $white;
     line-height: 0.87;
 
@@ -114,7 +114,7 @@ img {
     }
   }
 
-  &-mini {
+  &_mini {
     color: $black;
     text-transform: capitalize;
     display: flex;
@@ -128,11 +128,11 @@ img {
     }
   }
 
-  &-accent {
+  &_accent {
     @include font-header-standart;
   }
 
-  &-card {
+  &_card {
     text-align: center;
     @include font-header-small;
   }
@@ -141,7 +141,7 @@ img {
 .subtitle {
   font-family: $font-family-second;
 
-  &-banner {
+  &_banner {
     color: $standart-light;
     @include font-header-small;
 
@@ -154,12 +154,12 @@ img {
     }
   }
 
-  &-standart {
+  &_standart {
     color: $standart;
     @include font-text-standart;
   }
 
-  &-list {
+  &_list {
     @include font-text-standart;
 
     &::before {
@@ -168,7 +168,7 @@ img {
     }
   }
 
-  &-accent {
+  &_accent {
     margin: 0;
     font-family: $font-family-main;
     font-weight: 600;
@@ -179,26 +179,26 @@ img {
 .bg {
   width: fit-content;
 
-  &-title {
+  &_title {
     background-color: $black;
     padding-block: 18px;
     padding-inline: 26px;
   }
 
-  &-subtitle {
+  &_subtitle {
     background-color: $accent;
     padding-block: 5px;
     padding-inline: 16px;
   }
 }
 
-.margin-standart {
+.margin_standart {
   @include xxl {
     margin-block: 10px 55px;
   }
 }
 
-.headers-centered {
+.headers_centered {
   align-items: center;
   margin-inline: auto;
   @include flex-column;
@@ -246,19 +246,19 @@ img {
   @include animation-all(0.3s);
   @include font-text-standart;
 
-  &-primary {
+  &_primary {
     border: $border-thin $accent;
     background-color: $accent;
     color: $white;
   }
 
-  &-secondary {
+  &_secondary {
     border: $border-thin $black;
     background-color: transparent;
     color: $black;
   }
 
-  &-switch {
+  &_switch {
     width: 100%;
     height: 100%;
     justify-content: center;
@@ -287,7 +287,7 @@ img {
     }
   }
 
-  &-play {
+  &_play {
     width: 120px;
     aspect-ratio: 1 / 1;
     background-color: $accent;
@@ -300,13 +300,13 @@ img {
     @include absolute-filler;
   }
 
-  &-primary::after, &-secondary::after, &-thin::after {
+  &_primary::after, &_secondary::after, &_thin::after {
     content: "\2197";
     font-size: 24px;
     line-height: 1;
   }
 
-  &-link {
+  &_link {
     color: $black;
     padding: 0;
 
@@ -349,12 +349,12 @@ img {
   }
 }
 
-.decorated, .decorated-right, .decorated-left, .decorated-about {
+.decorated, .decorated_right, .decorated_left, .decorated_about {
   position: relative;
 }
 
 .decorated {
-  &::before, &-right::after, &::after, &-left::before {
+  &::before, &_right::after, &::after, &_left::before {
     content: url('svg/Architecture.svg');
     position: absolute;
 
@@ -363,37 +363,37 @@ img {
     }
   }
 
-  &::before, &-right::after {
+  &::before, &_right::after {
     right: -100px;
   }
 
-  &-about::after {
+  &_about::after {
     top: 92%;
   }
 
-  &::after, &-left::before {
+  &::after, &_left::before {
     transform: scaleX(-1);
     left: -100px;
   }
 
-  &-left::before {
+  &_left::before {
     top: 46%;
   }
 }
 
 @media (hover: hover) {
   .btn {
-    &-primary:hover {
+    &_primary:hover {
       background-color: $black;
       border: $border-thin $white;
     }
     
-    &-secondary:hover {
+    &_secondary:hover {
       background-color: $accent;
       border: $border-thin $accent;
     }
 
-    &-link:hover {
+    &_link:hover {
       color: $accent;
     }
   }

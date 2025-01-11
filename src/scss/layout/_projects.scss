@@ -82,7 +82,7 @@
   }
 }
 
-.btn-slider {
+.btn_slider {
   background-color: $accent;
   width: 60px;
   aspect-ratio: 1 / 1;
@@ -111,7 +111,7 @@
   }
 }
 
-.arrows-projects {
+.arrows_projects {
   @include sm {
     margin-top: $margin-mobile;
   }

@@ -66,7 +66,7 @@ export default class About {
   sliderFormation(obj) {
     const newSlider = document.createElement("div");
     newSlider.classList = "about-slider";
-    newSlider.innerHTML = `<h3 class="title title-accent">${obj.title}</h3>`;
+    newSlider.innerHTML = `<h3 class="title title_accent">${obj.title}</h3>`;
     const list = this.listFormation(obj);
     newSlider.appendChild(list);
     return newSlider;
@@ -77,7 +77,7 @@ export default class About {
     newMsg.className = "about-slider__list";
     for (let i = 0; i < content.characteristics.length; i += 1) {
       const listItem = document.createElement("li");
-      listItem.className = "subtitle subtitle-list";
+      listItem.className = "subtitle subtitle_list";
       listItem.innerText = content.characteristics[i];
       newMsg.appendChild(listItem);
     };

@@ -1,6 +1,6 @@
 @use '../abstract/index.scss' as *;
 
-.container-banner {
+.container_banner {
   display: flex;
 
   @include sm {
@@ -41,7 +41,7 @@
     }
   }
 
-  &__image {
+  &-image {
     height: max-content;
     flex-shrink: 0;
     position: relative;
@@ -57,7 +57,7 @@
       margin-bottom: 76px;
     }
 
-    &-char {
+    &__char {
       position: absolute;
       right: 0;
       bottom: 0;
