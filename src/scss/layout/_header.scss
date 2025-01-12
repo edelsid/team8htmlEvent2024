@@ -3,7 +3,7 @@
 .header {
   font-family: $font-family-second;
 
-  @include sm; @include md {
+  @include lg {
     position: absolute;
     top: 0;
     left: 0;
@@ -55,16 +55,13 @@
     display: flex;
     @include header-margin(margin-right);
 
-    @include sm; @include md; @include lg {
-      justify-content: end;
-      align-items: center;
-    }
-
     @include sm {
       height: 100px;
     }
 
-    @include md; @include lg {
+    @include lg {
+      justify-content: end;
+      align-items: center;
       height: 80px;
     }
 
@@ -79,7 +76,7 @@
   }
 
   &__burger {
-    @include sm; @include md; @include lg {
+    @include lg {
       position: fixed;
       top: 0;
       right: -100vw;
@@ -91,14 +88,11 @@
       align-items: center;
       background-color: $black;
       z-index: 999;
+      padding: 10% 20%;
     }
 
     @include sm {
       padding: 15%;
-    }
-
-    @include md; @include lg {
-      padding: 10% 20%;
     }
 
     @include xxl {
@@ -113,7 +107,7 @@
   }
 
   &__img {
-    @include sm; @include md; @include lg {
+    @include lg {
       width: 60px;
     }
   }
@@ -138,7 +132,7 @@
     justify-content: end;
     border-left: $border-thin $standart-transp;
 
-    @include sm; @include md; @include lg {
+    @include lg {
       display: none;
     }
 
@@ -163,7 +157,7 @@
     font-size: 44px;
   }
 
-  @include md; @include lg {
+  @include lg {
     font-size: 34px;
   }
 }
@@ -178,7 +172,7 @@
 .contacts {
   padding-inline: var(--header-main-padding);
   
-  @include md; @include lg {
+  @include lg {
     display: flex;
     justify-content: end;
   }
@@ -193,7 +187,7 @@
     gap: 50px;
     padding: 19.5px 0 19.5px;
 
-    @include md; @include lg {
+    @include lg {
       display: none;
     }
   }
@@ -212,7 +206,7 @@
 }
 
 .socials__item, .socials__item svg {
-  @include md; @include lg {
+  @include lg {
     width: 23px;
     height: 23px;
   }
@@ -232,7 +226,7 @@
   color: white;
   font-weight: 600;
 
-  @include md; @include lg {
+  @include lg {
     display: none;
   }
 
@@ -251,7 +245,7 @@
       @include flex-column;
     }
 
-    @include md; @include lg {
+    @include lg {
       @include flex-center;
       gap: 30px;
       flex-wrap: wrap;
@@ -264,12 +258,12 @@
   }
 
   &_burger {
-    @include sm; @include md; @include lg {
+    @include lg {
       width: 100%;
       font-size: 24px;
     }
 
-    @include md; @include lg {
+    @include lg {
       display: block;
     }
   }
@@ -333,4 +327,3 @@
     bottom: 0;
   }
 }
-

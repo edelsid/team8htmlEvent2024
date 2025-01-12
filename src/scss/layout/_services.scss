@@ -87,7 +87,7 @@
 .decor {
   pointer-events: none;
 
-  @include sm {
+  @include sm; @include md; @include lg {
     display: none;
   }
 

@@ -33,7 +33,19 @@ $breakpoints: (
 }
 
 @mixin xxl {
-  @media (min-width: map-get($breakpoints, "xxl")) {
+  @media (min-width: calc(map-get($breakpoints, "xl") + 1px)) {
+    @content;
+  }
+}
+
+@mixin land {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin portr {
+  @media (orientation: portrait) {
     @content;
   }
 }

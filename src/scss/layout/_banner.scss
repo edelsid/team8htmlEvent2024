@@ -3,11 +3,15 @@
 .container_banner {
   display: flex;
 
-  @include sm {
-    height: calc(100vh + 10px);
+  @include lg {
     width: 90%;
     flex-direction: column;
     justify-content: center;
+    height: calc(100vh + 10px);
+
+    @include land {
+      padding-top: 100px;
+    }
   }
 
   @include xxl {
@@ -47,7 +51,7 @@
     position: relative;
     display: flex;
 
-    @include sm {
+    @include lg {
       display: none;
     }
 
