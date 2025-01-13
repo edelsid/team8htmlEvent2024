@@ -4,7 +4,7 @@
   margin-bottom: var(--margin-section);
 
   &__text {
-    @include sm {
+    @include xl {
       @include flex-column;
       justify-content: space-evenly;
       text-align: center;
@@ -18,7 +18,7 @@
   }
 
   &__headers {
-    @include sm {
+    @include xl {
       @include flex-column;
       align-items: center;
       text-align: center;
@@ -80,7 +80,7 @@
 
 .sliders {
   &__wrapper {
-    @include sm {
+    @include xl {
       display: none;
     }
   }
@@ -93,8 +93,15 @@
 }
 
 .button__wrapper {
+  display: flex;
+
+  @include xl {
+    display: flex;
+    justify-content: center;
+    gap: $gap-standart;
+  }
+
   @include sm {
-    @include flex-column;
     flex-direction: column-reverse;
 
     & .btn {
@@ -104,7 +111,6 @@
   }
 
   @include xxl {
-    display: flex;
     align-items: center;
     gap: $gap-standart;
   }
