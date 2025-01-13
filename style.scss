@@ -66,7 +66,7 @@ img {
   &_standart {
     max-width: 1415px;
 
-    @include sm {
+    @include lg {
       width: 90%;
       padding-block: 60px;
     }
@@ -92,6 +92,10 @@ img {
 
     @include sm {
       font-size: 46px;
+    }
+
+    @include xl {
+      font-size: 40px;
     }
 
     @include xxl {
@@ -208,6 +212,14 @@ img {
 }
 
 .margin_standart {
+  @include xl {
+    margin-block: 10px 35px;
+  }
+
+  @include sm {
+    margin-block: 16px;
+  }
+
   @include xxl {
     margin-block: 10px 55px;
   }
@@ -373,7 +385,7 @@ img {
     content: url('/svg/Architecture.svg');
     position: absolute;
 
-    @include sm {
+    @include lg {
       display: none;
     }
   }

@@ -91,6 +91,10 @@
 @mixin font-header-small {
   line-height: 1.4;
 
+  @include br.xl {
+    font-size: 22px;
+  }
+
   @include br.sm {
     font-size: 20px;
   }
@@ -102,6 +106,10 @@
 
 @mixin font-text-standart {
   line-height: 1.625;
+
+  @include br.xl {
+    font-size: 16px;
+  }
 
   @include br.sm {
     font-size: 18px;

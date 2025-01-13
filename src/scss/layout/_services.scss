@@ -4,13 +4,17 @@
   position: relative;
   margin-bottom: var(--margin-section);
 
-  @include sm {
+  @include md {
     min-height: 100vh;
   }
 
   & > .container {
-    @include sm {
+    @include md {
       position: static;
+    }
+
+    @include lg {
+      gap: 40px;
     }
   }
 
@@ -19,28 +23,33 @@
   }
 
   &__text {
-    @include sm {
+    position: relative;
+
+    @include xxl {
+      width: 34%;
+      margin-bottom: 80px;
+    }
+
+    @include xl {
+      width: 70%;
+    }
+
+    @include md {
       @media (max-height: 800px) {
         margin-bottom: 30vh;
       };
     }
-
-    @include xxl {
-      width: 34%;
-      position: relative;
-      margin-bottom: 80px;
-    }
   }
 
   & .subtitle_standart {
-    @include sm {
+    @include md {
       color: $black;
       width: 60%;
     }
   }
 
   &__sliders {
-    @include sm {
+    @include md {
       @include absolute-filler;
       width: 100%;
       z-index: -1;
@@ -59,7 +68,7 @@
     @include animation(width, 0.5s);
     cursor: pointer;
 
-    @include sm {
+    @include md {
       @include absolute-filler;
       width: 0;
       height: 100%;
@@ -73,7 +82,11 @@
       @include animation(width, 0.5s);
       color: $white;
 
-      @include sm {
+      @include xl {
+        height: 100%;
+      }
+
+      @include md {
         width: 100%;
       }
 
@@ -87,7 +100,7 @@
 .decor {
   pointer-events: none;
 
-  @include sm; @include md; @include lg {
+  @include lg {
     display: none;
   }
 
@@ -106,10 +119,18 @@
 
 .backgroundIcon {
   position: absolute;
-  right: -35px;
-  bottom: -35px;
 
-  @include sm {
+  @include xxl {
+    right: -35px;
+    bottom: -35px;
+  }
+  
+  @include xl {
+    right: 50px;
+    bottom: -50px;
+  }
+
+  @include md {
     display: none;
   }
 }
@@ -136,23 +157,29 @@
     @include animation-all(0.5s);
     @include flex-column;
 
-    @include sm {
-      justify-content: end;
-      align-items: end;
-      @include gradient(90deg, 20%, 100%, $white, #ffffff00);
-    }
-
     @include xxl {
       justify-content: space-between;
       background: linear-gradient(
         180deg,
       #05000000 0%,
-      #0E0E0E 100%
-      );
+      #0E0E0E 100%);
+    }
+
+    @include xl {
+      justify-content: end;
+      background: linear-gradient(
+        180deg,
+      #05000000 0%,
+      #0E0E0E 100%);
+    }
+
+    @include md {
+      align-items: end;
+      @include gradient(90deg, 20%, 100%, $white, #ffffff00);
     }
 
     & h4 {
-      @include sm {
+      @include md {
         font-size: 40px;
         text-align: end;
         text-shadow: 2px 2px 4px #00000080;
@@ -166,7 +193,7 @@
     & p {
       color: $white;
 
-      @include sm {
+      @include md {
         display: none;
       }
     }
@@ -179,7 +206,7 @@
   }
 
   &__icon {
-    @include sm {
+    @include lg {
       display: none;
     }
   }

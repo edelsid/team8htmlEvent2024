@@ -54,7 +54,7 @@ export default class Services {
         this.active = 0;
       };
       this.chooseSlide(this.slides[this.active]);
-    }, 3000);
+    }, 50000);
   }
 
   addFormation() {
