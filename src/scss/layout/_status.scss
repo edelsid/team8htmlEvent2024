@@ -1,9 +1,14 @@
 @use '../abstract/index.scss' as *;
 
+@mixin colored-plate {
+  background-color: $accent;
+  color: $white;
+}
+
 .status {
   margin-bottom: var(--margin-section);
 
-  @include sm {
+  @include xl {
     background-color: #F8F8F8;
   }
 
@@ -11,7 +16,7 @@
     align-items: center;
     @include flex-column;
 
-    @include sm {
+    @include xl {
       text-align: center;
       margin-bottom: $margin-mobile;
     }
@@ -24,6 +29,10 @@
   &__cards {
     display: grid;
     gap: 0;
+
+    @include xl {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     @include sm {
       grid-template-columns: repeat(1, 1fr);
@@ -42,12 +51,19 @@
     @include animation-all(0.3s);
     @include flex-column;
 
+    @include xl {
+      padding: 30px;
+
+      &:nth-child(3n-1), &:nth-child(3n) {
+        @include colored-plate;
+      }
+    }
+
     @include sm {
       padding: 25px;
 
       &:nth-child(even) {
-        background-color: $accent;
-        color: $white;
+        @include colored-plate;
       }
     }
 
@@ -59,7 +75,6 @@
 
 @media (hover: hover) {
   .status__item:hover {
-    background-color: $accent;
-    color: $white;
+    @include colored-plate;
   }
 }
