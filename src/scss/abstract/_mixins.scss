@@ -79,17 +79,25 @@
 @mixin font-header-standart {
   line-height: 1.3;
 
-  @include br.sm {
-    font-size: 20px;
-  }
-
   @include br.xxl {
     font-size: 32px;
+  }
+
+  @include br.xl {
+    font-size: 24px;
+  }
+
+  @include br.sm {
+    font-size: 20px;
   }
 }
 
 @mixin font-header-small {
   line-height: 1.4;
+
+  @include br.xxl {
+    font-size: 24px;
+  }
 
   @include br.xl {
     font-size: 22px;
@@ -98,14 +106,14 @@
   @include br.sm {
     font-size: 20px;
   }
-
-  @include br.xxl {
-    font-size: 24px;
-  }
 }
 
 @mixin font-text-standart {
   line-height: 1.625;
+
+  @include br.xxl {
+    font-size: 16px;
+  }
 
   @include br.xl {
     font-size: 16px;
@@ -114,28 +122,28 @@
   @include br.sm {
     font-size: 18px;
   }
-
-  @include br.xxl {
-    font-size: 16px;
-  }
 }
 
 @mixin font-text-small {
-  @include br.sm {
-    font-size: 12px;
-  }
-
   @include br.xxl {
     font-size: 14px;
+  }
+
+  @include br.xl {
+    font-size: 12px;
   }
 }
 
 @mixin header-margin($margin) {
-  @include br.sm; @include br.lg {
-    #{$margin}: 25px;
-  }
-
   @include br.xxl {
     #{$margin}: 95px;
+  }
+
+  @include br.xl {
+    #{$margin}: 50px;
+  }
+
+  @include br.lg {
+    #{$margin}: 25px;
   }
 }

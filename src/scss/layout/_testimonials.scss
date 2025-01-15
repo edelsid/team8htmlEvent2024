@@ -3,12 +3,12 @@
 .testimonials {
   margin-bottom: var(--margin-section);
 
-  @include sm {
+  @include xl {
     background-color: #F8F8F8;
   }
 
   &__headers {
-    @include sm {
+    @include xl {
       @include flex-column-center;
       margin-bottom: $margin-mobile;
     }
@@ -19,7 +19,7 @@
   }
 
   &__content {
-    @include sm {
+    @include xl {
       text-align: center;
     }
 
@@ -35,7 +35,7 @@
     gap: $gap-mini;
     margin-block: 30px;
 
-    @include sm {
+    @include xl{
       @include flex-center;
     }
 
@@ -93,7 +93,7 @@
   text-transform: capitalize;
   @include font-header-standart;
 
-  @include sm {
+  @include xl {
     margin-block: 0 $margin-mobile;
   }
 
@@ -113,7 +113,7 @@
     padding-bottom: 50px;
     display: flex;
 
-    @include sm {
+    @include xl {
       justify-content: center;
       gap: 20px;
     }
@@ -125,8 +125,14 @@
   }
 
   &__img {
-    @include sm {
-      width: 12%;
+    @include xl {
+      @include portr {
+        width: 12%;
+      }
+      
+      @include land {
+        width: 6%;
+      }
     }
   }
 
