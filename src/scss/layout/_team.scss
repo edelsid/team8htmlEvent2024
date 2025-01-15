@@ -6,32 +6,57 @@
   }
   
   & .btn {
-    @include sm {
-      width: 100%;
-      @include flex-center;
+    @include xl {
+      @include portr {
+        width: 100%;
+        @include flex-center;
+      }
     }
   }
 
   & > .container_flex {
-    gap: 70px;
+    @include xxl {
+      gap: 70px;
+    }
 
-    @include sm {
-      flex-direction: column;
+    @include xl {
       gap: $margin-mobile;
+
+      @include portr {
+        flex-direction: column;
+      }
     }
   }
 
   &__headers {
-    @include sm {
-      @include flex-column-center;
-
-      & .btn {
-        display: none;
-      }
-    }
-
     @include xxl {
       width: 37%;
+    }
+
+    @include xl {
+      @include portr {
+        width: 100%;
+
+        & .btn {
+          display: none;
+        }
+      }
+      
+      @include land {
+        width: 33%;
+      }
+    }
+  }
+
+  .text__wrapper {
+    @include xl {
+      @include portr {
+        @include flex-column-center;
+      }
+      
+      @include land {
+        @include flex-column;
+      }
     }
   }
 
@@ -40,27 +65,39 @@
     object-fit: cover;
     cursor: pointer;
 
-    @include sm {
-      width: 100%;
-    }
-
     @include xxl {
       width: 32%;
       height: 480px;
     }
+
+    @include xl {
+      @include land {
+        width: 35%;
+      }
+      
+      @include portr {
+        width: 100%;
+      }
+    }
   }
 
   &__names {
-    @include flex-column;    
-
-    @include sm {
-      width: 100%;
-      gap: 10px;
-    }
-
+    @include flex-column;
+    justify-content: space-between;
+    
     @include xxl {
       width: 31%;
-      justify-content: space-between;
+    }
+
+    @include xl {
+      @include land {
+        width: 20%;
+      }
+      
+      @include portr {
+        width: 100%;
+        gap: 10px;
+      }
     }
   }
 }
@@ -73,13 +110,20 @@
     @include animation-all(0.5s);
     @include font-header-small;
 
-    @include sm {
-      text-align: center;
-    }
-
     @include xxl {
       align-items: end;
       text-align: end;
+    }
+
+    @include xl {
+      @include land {
+        align-items: end;
+        text-align: end;
+      }
+      
+      @include portr {
+        text-align: center;
+      }
     }
 
     &.active {

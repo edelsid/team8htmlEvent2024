@@ -90,17 +90,17 @@ img {
   &_standart {
     line-height: 1.2;
 
-    @include sm {
-      font-size: 46px;
-    }
-
-    @include xl {
-      font-size: 40px;
-    }
-
     @include xxl {
       font-size: 52px;
     }
+
+    @include xl {
+      font-size: 34px;
+    }
+
+    @include sm {
+      font-size: 46px;
+    }    
   }
 
   &_banner {
@@ -433,5 +433,11 @@ img {
 .mobile {
   @include xxl {
     display: none;
+  }
+
+  @include xl {
+    @include land {
+      display: none;
+    }
   }
 }
