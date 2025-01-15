@@ -11,13 +11,13 @@
   }
 
   &__headers {
-    @include sm {
-      @include flex-column-center;
-      margin-bottom: $margin-mobile;
-    }
-
     @include xxl {
       margin-bottom: 78px;
+    }
+
+    @include xl {
+      @include flex-column-center;
+      margin-bottom: $margin-mobile;
     }
   }
 
@@ -25,12 +25,16 @@
     display: grid;
     gap: $gap-standart;
 
-    @include sm {
-      grid-template-columns: repeat(1, 1fr);
-    }
-
     @include xxl {
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include xl {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include md {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 
@@ -42,7 +46,7 @@
     cursor: pointer;
     @include flex-column;
 
-    @include sm {
+    @include xl {
       padding: 28px;
 
       & .btn {
@@ -59,7 +63,7 @@
     }
 
     &.active::before {
-      @include sm {
+      @include xl {
         border-top: 20px solid $accent;
       }
 
@@ -75,7 +79,7 @@
       height: 0; 
       transform: rotate(135deg);
       
-      @include sm {
+      @include xl {
         top: -4px;
         left: -14px;
         border-left: 20px solid transparent;
@@ -117,7 +121,7 @@
     gap: $gap-small;
     @include font-text-standart;
 
-    @include sm {
+    @include xl {
       margin-block: 0;
     }
 
@@ -160,10 +164,21 @@
   border-radius: 100px;
   font-weight: 400;
   border: 0;
-  color: $white;
-  background-color: #39CA6E;
   cursor: default;
   @include font-text-standart;
+
+  @include xl {
+    background-color: transparent;
+    padding: 0 10px;
+    font-weight: 600;
+    color: #39CA6E;
+  }
+
+  @include xxl {
+    background-color: #39CA6E;
+    padding: 5px 25px;
+    color: $white;
+  }
 }
 
 @media (hover: hover) {
