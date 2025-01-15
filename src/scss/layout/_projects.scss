@@ -5,19 +5,14 @@
   overflow: hidden;
   margin-bottom: var(--margin-section);
 
-  @include sm {
+  @include xl {
     min-height: 100vh;
   }
-  
+
   &__text {
-    @include sm {
+    @include xl {
       @include flex-column-center;
       gap: 20px;
-      height: 35%;
-
-      @media (max-height: 800px) {
-        height: 50%;
-      };
     }
 
     @include xxl {
@@ -28,7 +23,7 @@
   }
 
   &__headers {
-    @include sm {
+    @include xl {
       @include flex-column-center;
     }
   }
@@ -39,21 +34,27 @@
     @include flex-standard;
     @include animation(left, 0.5s);
 
-    @include sm {
+    @include xl {
       position: absolute;
       bottom: 0;
-      height: 65%;
+      height: 70vh;
+      gap: $gap-standart;
+    }
 
-      @media (max-height: 800px) {
-        height: 50%;
-      };
+    @include sm {
+      gap: 0;
     }
 
     @include xxl {
       position: relative;
       top: 0;
-      left: 0;
       gap: $gap-standart;
+    }
+
+    &-wrapper {
+      @include xl {
+        height: 70vh;
+      }
     }
   }
 
@@ -61,9 +62,16 @@
     position: relative;
     @include background;
 
-    @include sm {
+    @include xl {
       height: 100%;
-      min-width: 100%;
+
+      @include portr {
+        min-width: 100%;
+      }
+
+      @include land {
+        min-width: 33%;
+      }
     }
 
     @include xxl {
@@ -105,14 +113,18 @@
     @include absolute-filler;
     @include flex-center;
 
+    @media (max-height: 580px) and (orientation: landscape) {
+      display: none;
+    }
+
     @media (max-height: 800px) {
       width: 42px;
-    };
+    }
   }
 }
 
 .arrows_projects {
-  @include sm {
+  @include xl {
     margin-top: $margin-mobile;
   }
 }
