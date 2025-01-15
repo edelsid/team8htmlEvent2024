@@ -2,18 +2,20 @@
 
 .blog {
   margin-bottom: var(--margin-section);
-  @include sm {
+  @include md {
     & .btn {
       width: 100%;
       @include flex-center;
     }
   }
-  
 
   &__headers {
-    @include sm {
-      @include flex-column-center;
+    @include xl {
       margin-bottom: $margin-mobile;
+    }
+
+    @include md {
+      @include flex-column-center;
     }
 
     @include xxl {
@@ -24,7 +26,7 @@
   &__body {
     @include flex-column;
 
-    @include sm {
+    @include xl {
       gap: $gap-standart;
     }
 
@@ -37,13 +39,12 @@
   &__highlight {
     @include flex-standard;
 
-    @include sm {
-      flex-direction: row-reverse;
+    @include xl {
       gap: 20px;
     }
 
-    @include xxl {
-
+    @include md {
+      flex-direction: row-reverse;
     }
   }
 
@@ -51,7 +52,11 @@
     display: grid;
     gap: $gap-standart;
 
-    @include sm {
+    @include xl {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include md {
       grid-template-columns: repeat(1, 1fr);
     }
 
@@ -61,19 +66,23 @@
   }
 
   &__btn {
-    @include sm {
-      margin-top: $margin-mobile;
-    }
+    margin-inline: auto;
 
-    @include xxl {
-      margin-inline: auto;
+    @include xl {
+      margin-top: $margin-mobile;
     }
   }
 }
 
 .highlight {
   &__text {
-    @include sm {
+    @include xl {
+      @include land {
+        width: 40%;
+      }
+    }
+
+    @include md {
       & .btn {
         display: none;
       }
@@ -84,7 +93,7 @@
     }
 
     & > p {
-      @include sm {
+      @include md {
         display: none;
       }
 
@@ -94,7 +103,7 @@
     }
 
     & > .tags {
-      @include sm {
+      @include xl {
         margin-bottom: 10px;
       }
 
@@ -110,6 +119,10 @@
     @include xxl {
       width: 49%;
     }
+
+    @include xl {      
+      width: 50%;
+    }
   }
 
   &__img {
@@ -117,9 +130,16 @@
     background-color: $standart-light;
     cursor: pointer;
 
-    @include sm {
-      height: 100px;
-      aspect-ratio: 1 / 1;
+    @include xl {
+      @include portr {
+        height: 100px;
+        aspect-ratio: 1 / 1;
+      }
+
+      @include land {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     @include xxl {
@@ -133,7 +153,7 @@
     position: absolute;
     user-select: none;
   
-    @include sm {
+    @include xl {
       display: none;
     }
 
@@ -164,7 +184,7 @@
   color: $standart;
   font-family: $font-family-second;
 
-  @include sm {
+  @include md {
     font-size: 14px;
   }
 
@@ -187,12 +207,17 @@
 }
 
 .news-card {
-  justify-content: space-between;
   background-color: $white;
   cursor: pointer;
 
-  @include sm {
-    @include flex-standard;
+  @include xl {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  @include md {
+    flex-direction: row;
     gap: 20px;
 
     & .btn {
@@ -202,6 +227,7 @@
 
   @include xxl {
     @include flex-column;
+    justify-content: space-between;
     padding: 30px;
     gap: $gap-small;
     height: 100%;
@@ -212,7 +238,7 @@
   &__text {
     @include flex-column;
 
-    @include sm {
+    @include xl {
       gap: 10px;
     }
 
@@ -240,7 +266,7 @@
       @include font-text-standart;
     }
 
-    @include sm {
+    @include xl {
       display: none;
     }
   }
@@ -249,9 +275,20 @@
     object-fit: cover;
     background-color: $standart-light;
 
-    @include sm {
+    @include xl {
+      @include portr {
+        height: 200px;
+        aspect-ratio: 1 / 1;
+      }
+      
+      @include land {
+        width: 100%;
+      }
+    }
+
+    @include md {
       height: 100px;
-      aspect-ratio: 1 / 1;
+      width: 100px;
     }
 
     @include xxl {
