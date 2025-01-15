@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   background-size: contain;
 
-  @include sm {
+  @include xl {
     & .container {
       min-height: fit-content;
     }
@@ -27,7 +27,7 @@
     overflow: hidden;
     @include flex-standard;
 
-    @include sm {
+    @include xl {
       padding: 16px 26px;
     }
 
@@ -40,15 +40,26 @@
     color: $white;
     @include flex-standard;
 
-    @include sm {
+    @include xl {
+      padding-top: 60px;
+    }
+
+    @include lg {
       flex-direction: column;
       text-align: center;
-      padding-top: 120px;
+
+      @include portr {
+        padding-top: 100px;
+      }
+      
+      @include land {
+        padding-top: 60px;
+      }
     }
   }
 
   &__site-overview a {
-    @include sm {
+    @include lg {
       justify-content: center;
     }
   }
@@ -67,8 +78,14 @@
     }
   }
 
-  &__links, &__info {
-    @include sm {
+  &__info {
+    @include lg {
+      display: none;
+    }
+  }
+
+  &__links {
+    @include xl {
       display: none;
     }
   }
@@ -78,7 +95,7 @@
   &__title {
     width: 34%;
 
-    @include sm {
+    @include md {
       font-size: 16px;
     }
   }
@@ -88,7 +105,7 @@
     display: flex;
     align-items: center;
 
-    @include sm {
+    @include md {
       width: 50%;
     }
     
@@ -106,7 +123,7 @@
       line-height: 1.1;
       font-weight: 600;
 
-      @include sm {
+      @include md {
         font-size: 56px;
       }
 

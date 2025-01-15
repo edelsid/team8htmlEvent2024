@@ -1,8 +1,14 @@
 @use '../abstract/index.scss' as *;
 
 .map {
-  @include sm {
-    height: 50vh;
+  @include xl {
+    @include portr {
+      height: 50vh;
+    }
+    
+    @include land {
+      height: 70vh;
+    }
   }
 
   &__frame {
