@@ -96,7 +96,7 @@ export default class Projects {
     this.width = this.sliderArea.children[0].getBoundingClientRect().width;
     this.sliderArea.children[this.active].classList.remove("active");
     this.active = 1;
-    if (window.innerWidth < 480) {
+    if (window.innerWidth < 720) {
       this.gap = 0;
       this.sliderArea.style.left = `-${this.width}px`;
     } else {

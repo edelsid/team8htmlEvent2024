@@ -34,6 +34,12 @@
     @include flex-standard;
     @include animation(left, 0.5s);
 
+    @include xxl {
+      position: relative;
+      top: 0;
+      gap: $gap-standart;
+    }
+
     @include xl {
       position: absolute;
       bottom: 0;
@@ -41,14 +47,8 @@
       gap: $gap-standart;
     }
 
-    @include sm {
+    @include md {
       gap: 0;
-    }
-
-    @include xxl {
-      position: relative;
-      top: 0;
-      gap: $gap-standart;
     }
 
     &-wrapper {
@@ -62,21 +62,18 @@
     position: relative;
     @include background;
 
-    @include xl {
-      height: 100%;
-
-      @include portr {
-        min-width: 100%;
-      }
-
-      @include land {
-        min-width: 33%;
-      }
-    }
-
     @include xxl {
       height: 484px;
       min-width: 33%;
+    }
+
+    @include lg {
+      height: 100%;
+      min-width: 33%;
+    }
+
+    @include md {
+      min-width: 100%;
     }
 
     & .slider__content {
