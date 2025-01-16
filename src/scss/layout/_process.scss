@@ -20,15 +20,20 @@
   }
 
   &__tabs {
-    @include xl {
-      @include flex-column;
-      gap: 15px;
-    }
-
     @include xxl {
       @include flex-standard;
       margin-bottom: 90px;
       gap: $gap-standart;
+    }
+
+    @include xl {
+      @include flex-standard;
+      gap: $gap-standart;
+    }
+
+    @include md {
+      @include flex-column;
+      gap: 15px;
     }
   }
 

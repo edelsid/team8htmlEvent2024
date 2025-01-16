@@ -3,8 +3,22 @@
 .container_banner {
   display: flex;
 
-  @include lg {
+  @include xxl {
+    justify-content: space-between;
+    max-width: 1735px;
+    width: 85%;
+    align-items: end;
+  }
+
+  @include xl {
     width: 90%;
+    min-height: calc(100vh - 100px);
+    justify-content: space-between;
+    align-items: end;
+    gap: 50px;
+  }
+
+  @include lg {
     flex-direction: column;
     justify-content: center;
     height: calc(100vh + 10px);
@@ -12,13 +26,6 @@
     @include land {
       padding-top: 100px;
     }
-  }
-
-  @include xxl {
-    justify-content: space-between;
-    max-width: 1735px;
-    width: 85%;
-    align-items: end;
   }
 }
 
@@ -43,6 +50,14 @@
       padding-top: 230px;
       margin-bottom: 200px;
     }
+
+    @include xl {
+      margin-bottom: 150px;
+    }
+
+    @include lg {
+      margin-bottom: 0;
+    }
   }
 
   &-image {
@@ -51,14 +66,23 @@
     position: relative;
     display: flex;
 
-    @include lg {
-      display: none;
-    }
-
     @include xxl {
       padding-top: 54px;
       width: 38%;
       margin-bottom: 76px;
+    }
+
+    @include xl {
+      width: 38%;
+      margin-bottom: 50px;
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    @include lg {
+      display: none;
     }
 
     &__char {

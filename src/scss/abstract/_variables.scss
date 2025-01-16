@@ -58,7 +58,7 @@ $width-xxl: 1200px;
   }
 }
 
-@media (max-width: $width-xxl) {
+@media (min-width: ($width-lg + 1px)) and (max-width: $width-xxl) {
   :root {
     --header-logo-width: 32%;
   }

@@ -107,8 +107,13 @@ img {
     color: $white;
     line-height: 0.87;
 
-    @include sm {
-      margin-block: 0 10%;
+    @include xxl {
+      font-size: 158px;
+      margin-block: 0 30px;
+    }
+
+    @include xl {
+      font-size: 70px;
     }
 
     @include lg {
@@ -121,9 +126,8 @@ img {
       }
     }
 
-    @include xxl {
-      font-size: 158px;
-      margin-block: 0 30px;
+    @include sm {
+      margin-block: 0 10%;
     }
   }
 

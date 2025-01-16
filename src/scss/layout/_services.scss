@@ -171,11 +171,15 @@
     }
 
     @include xl {
-      justify-content: end;
+      justify-content: space-between;
       background: linear-gradient(
         180deg,
       #05000000 0%,
       #0E0E0E 100%);
+    }
+
+    @include lg {
+      justify-content: end;
     }
 
     @include md {

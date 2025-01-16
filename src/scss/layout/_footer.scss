@@ -27,12 +27,16 @@
     overflow: hidden;
     @include flex-standard;
 
-    @include xl {
-      padding: 16px 26px;
-    }
-
     @include xxl {
       padding: 56px 108px;
+    }
+
+    @include xl {
+      padding: 36px 56px;
+    }
+
+    @include lg {
+      padding: 16px 26px;
     }
   }
 
@@ -105,12 +109,16 @@
     display: flex;
     align-items: center;
 
-    @include md {
-      width: 50%;
-    }
-    
     @include xxl {
       width: 32%;
+    }
+
+    @include xl {
+      width: 42%;
+    }
+
+    @include md {
+      width: 50%;
     }
 
     &::before {
@@ -123,12 +131,16 @@
       line-height: 1.1;
       font-weight: 600;
 
-      @include md {
-        font-size: 56px;
-      }
-
       @include xxl {
         font-size: 96px;
+      }
+
+      @include xl {
+        font-size: 66px;
+      }
+
+      @include md {
+        font-size: 56px;
       }
     }
 

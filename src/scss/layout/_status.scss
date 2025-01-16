@@ -35,6 +35,10 @@
     }
 
     @include xl {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include lg {
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -53,7 +57,9 @@
 
     @include xl {
       padding: 30px;
+    }
 
+    @include lg {
       &:nth-child(3n-1), &:nth-child(3n) {
         @include colored-plate;
       }
