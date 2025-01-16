@@ -36,7 +36,8 @@
     }
 
     @include xl {
-      width: 70%;
+      width: 50%;
+      height: fit-content;
     }
 
     @include md {

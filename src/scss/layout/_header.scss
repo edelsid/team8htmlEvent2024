@@ -23,8 +23,7 @@
       position: absolute;
       bottom: -10px;
       left: 0;
-      //переделать
-      width: calc(var(--header-logo-width) - 80px);
+      width: calc(var(--header-logo-width) - (var(--header-logo-width) / 6.375));
       height: 10px;
       background: #b1400c;
       z-index: 1;
@@ -204,6 +203,10 @@
     @include xl {
       display: none;
     }
+
+    @media (max-width: 1400px) {
+      gap: 10px;
+    }
   }
 
   &__socials {
@@ -211,7 +214,7 @@
     @include flex-center;
 
     @include xl {
-      padding-block: 20px;
+      padding-block: 19.5px;
     }
 
     @include lg {
@@ -224,6 +227,12 @@
   &__item {
     gap: $gap-mini;
     @include flex-center;
+
+    & > svg {
+      width: 12px;
+      height: 12px;
+      flex-shrink: 0;
+    }
   }
 }
 
@@ -264,7 +273,6 @@
     display: flex;
     padding-inline: var(--header-main-padding);
     justify-content: end;
-    padding-block: 20px;
   }
 
   @include lg {
@@ -276,23 +284,26 @@
 
     @include xxl {
       flex-wrap: wrap;
-      column-gap: 40px;
+      gap: 20px;
+
+      @media (min-width: 1570px) {
+        gap: 40px;
+      }
     }
 
     @include xl {
-      gap: 20px;
-    }
-
-    @include lg {
       @include flex-center;
-      gap: 30px;
       flex-wrap: wrap;
+      gap: 16px;
     }
 
     @include sm {
-      align-items: center;
-      gap: 35px;
       @include flex-column;
+      gap: 40px;
+
+      @media (max-height: 800px) {
+        gap: 20px;
+      }
     }
   }
 
@@ -302,6 +313,10 @@
       width: 100%;
       font-size: 24px;
       padding: 0;
+
+      @media (max-height: 800px) {
+        font-size: 18px;
+      }
     }
   }
 }
@@ -314,6 +329,14 @@
 
   @include xxl {
     padding-block: 35px;
+  }
+
+  @include xl {
+    padding-block: 19.5px;
+  }
+
+  @include lg {
+    padding-block: 0;
   }
 }
 

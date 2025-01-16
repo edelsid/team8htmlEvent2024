@@ -103,34 +103,6 @@ img {
     }    
   }
 
-  &_banner {
-    color: $white;
-    line-height: 0.87;
-
-    @include xxl {
-      font-size: 158px;
-      margin-block: 0 30px;
-    }
-
-    @include xl {
-      font-size: 70px;
-    }
-
-    @include lg {
-      @include portr {
-        font-size: 52px;
-      }
-      
-      @include land {
-        font-size: 50px;
-      }
-    }
-
-    @include sm {
-      margin-block: 0 10%;
-    }
-  }
-
   &_mini {
     color: $black;
     text-transform: capitalize;
@@ -157,25 +129,6 @@ img {
 
 .subtitle {
   font-family: $font-family-second;
-
-  &_banner {
-    color: $standart-light;
-    @include font-header-small;
-
-    @include lg {
-      @include portr {
-        margin-block: 30px;
-      }
-      
-      @include land {
-        margin-block: 20px;
-      }
-    }
-
-    @include xxl {
-      margin-block: 0 54px;
-    }
-  }
 
   &_standart {
     color: $standart;

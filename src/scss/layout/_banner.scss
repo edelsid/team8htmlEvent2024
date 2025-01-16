@@ -12,10 +12,18 @@
 
   @include xl {
     width: 90%;
-    min-height: calc(100vh - 100px);
+    
     justify-content: space-between;
     align-items: end;
     gap: 50px;
+
+    @media (max-height: 750px) {
+      min-height: calc(100vh - 100px);
+    }
+
+    @media (min-height: 751px) {
+      min-height: 70vh;
+    }
   }
 
   @include lg {
@@ -66,6 +74,10 @@
     position: relative;
     display: flex;
 
+    & img {
+      width: 100%;
+    }
+
     @include xxl {
       padding-top: 54px;
       width: 38%;
@@ -75,10 +87,6 @@
     @include xl {
       width: 38%;
       margin-bottom: 50px;
-
-      & img {
-        width: 100%;
-      }
     }
 
     @include lg {
@@ -90,6 +98,52 @@
       right: 0;
       bottom: 0;
       left: 0;
+    }
+  }
+}
+
+.title_banner {
+  color: $white;
+  line-height: 0.87;
+
+  @include xxl {
+    font-size: 8.16vw;
+  }
+
+  @include xl {
+    font-size: 70px;
+  }
+
+  @include lg {
+    @include portr {
+      font-size: 52px;
+    }
+    
+    @include land {
+      font-size: 50px;
+    }
+  }
+
+  @include sm {
+    margin-block: 0 10%;
+  }
+}
+
+.subtitle_banner {
+  color: $standart-light;
+  @include font-header-small;
+
+  @include xxl {
+    margin-block: 30px 54px;
+  }
+
+  @include xl {
+    margin-block: 30px;
+  }
+
+  @include lg {    
+    @include land {
+      margin-block: 20px;
     }
   }
 }

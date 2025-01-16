@@ -13,7 +13,6 @@
 $shadow: 2px 2px 4px colors.$standart-transp;
 
 $margin-title: 86px;
-$margin-section: 160px;
 $margin-thin: 148px;
 $margin-mobile: 30px;
 
@@ -33,7 +32,7 @@ $width-sm: 480px;
 $width-md: 720px;
 $width-lg: 960px;
 $width-xl: 1120px;
-$width-xxl: 1200px;
+$width-xxl: 1440px;
 
 :root {
   --header-main-padding: calc(var(--header-logo-width) + 20px) 30px;
@@ -42,7 +41,6 @@ $width-xxl: 1200px;
 @media (max-width: $width-sm) {
   :root {
     --header-logo-width: 70%;
-    --margin-section: 0;
   }
 }
 
