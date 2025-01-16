@@ -3,15 +3,15 @@
 .header {
   font-family: $font-family-second;
 
+  @include xxl {
+    position: static;
+  }
+
   @include lg {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-  }
-
-  @include xxl {
-    position: static;
   }
 
   &__content {
@@ -55,8 +55,8 @@
     display: flex;
     @include header-margin(margin-right);
 
-    @include sm {
-      height: 100px;
+    @include xxl {
+      justify-content: space-between;
     }
 
     @include lg {
@@ -65,8 +65,8 @@
       height: 80px;
     }
 
-    @include xxl {
-      justify-content: space-between;
+    @include sm {
+      height: 100px;
     }
   }
 
@@ -76,6 +76,14 @@
   }
 
   &__burger {
+    @include xxl {
+      display: none;
+    }
+
+    @include xl {
+      display: none;
+    }
+
     @include lg {
       position: fixed;
       top: 0;
@@ -93,10 +101,6 @@
 
     @include sm {
       padding: 15%;
-    }
-
-    @include xxl {
-      display: none;
     }
   }
 }
@@ -117,16 +121,17 @@
   &__textual {
     width: 100%;
 
-    @include sm {
-      display: none;
-    }
-
     @include xxl {
       @include flex-column;
+    }
+
+    @include sm {
+      display: none;
     }
   }
 
   &__phone {
+    @include flex-center;
     width: min-content;
     align-items: center;
     justify-content: end;
@@ -135,10 +140,6 @@
     @include lg {
       display: none;
     }
-
-    @include xxl {
-      display: flex;
-    }
   }
 
   &__burger {
@@ -146,6 +147,14 @@
 
     @include xxl {
       display: none;
+    }
+
+    @include xl {
+      display: none;
+    }
+
+    @include lg {
+      display: block;
     }
   }
 }
@@ -171,15 +180,20 @@
 
 .contacts {
   padding-inline: var(--header-main-padding);
-  
-  @include lg {
-    display: flex;
-    justify-content: end;
-  }
 
   @include xxl {
     @include flex-standard;
     border-bottom: $border-thin $standart-transp;
+  }
+
+  @include xl {
+    display: flex;
+    justify-content: end;
+    border-bottom: $border-thin $standart-transp;
+  }
+  
+  @include lg {
+    border-bottom: 0;
   }
 
   &__descriptions {
@@ -187,7 +201,7 @@
     gap: 50px;
     padding: 19.5px 0 19.5px;
 
-    @include lg {
+    @include xl {
       display: none;
     }
   }
@@ -195,6 +209,14 @@
   &__socials {
     gap: $gap-small;
     @include flex-center;
+
+    @include xl {
+      padding-block: 20px;
+    }
+
+    @include lg {
+      padding-block: 0;
+    }
   }
 }
 
@@ -206,14 +228,19 @@
 }
 
 .socials__item, .socials__item svg {
-  @include lg {
-    width: 23px;
-    height: 23px;
-  }
-
   @include xxl {
     width: 13px;
     height: 13px;
+  }
+
+  @include xl {
+    width: 17px;
+    height: 17px;
+  }
+
+  @include lg {
+    width: 23px;
+    height: 23px;
   }
 }
 
@@ -225,24 +252,35 @@
 .navigation {
   color: white;
   font-weight: 600;
+  @include font-text-standart;
+
+  @include xxl {
+    display: flex;
+    padding-inline: var(--header-main-padding);
+    
+  }
+
+  @include xl {
+    display: flex;
+    padding-inline: var(--header-main-padding);
+    justify-content: end;
+    padding-block: 20px;
+  }
 
   @include lg {
     display: none;
   }
 
-  @include xxl {
-    display: flex;
-    padding-inline: var(--header-main-padding);
-    @include font-text-standart;
-  }
-
   &__anchors {
     display: flex;
 
-    @include sm {
-      align-items: center;
-      gap: 35px;
-      @include flex-column;
+    @include xxl {
+      flex-wrap: wrap;
+      column-gap: 40px;
+    }
+
+    @include xl {
+      gap: 20px;
     }
 
     @include lg {
@@ -251,20 +289,19 @@
       flex-wrap: wrap;
     }
 
-    @include xxl {
-      flex-wrap: wrap;
-      column-gap: 40px;
+    @include sm {
+      align-items: center;
+      gap: 35px;
+      @include flex-column;
     }
   }
 
   &_burger {
     @include lg {
+      display: block;
       width: 100%;
       font-size: 24px;
-    }
-
-    @include lg {
-      display: block;
+      padding: 0;
     }
   }
 }
@@ -289,10 +326,32 @@
     @include xxl {
       margin-left: 23px;
     }
+
+    @include xl {
+      margin-left: 20px;
+    }
+
+    & > img {
+      @include xl {
+        width: 40px;
+      }
+
+      @include lg {
+        width: auto;
+      }
+    }
   }
 
   &__data {
     width: max-content;
+
+    @include xl {
+      display: none;
+    }
+
+    @include lg {
+      display: block;
+    }
   }
 
   &__cta {

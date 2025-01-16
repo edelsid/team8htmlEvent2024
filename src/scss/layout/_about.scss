@@ -4,16 +4,16 @@
   margin-bottom: var(--margin-section);
 
   &__text {
-    @include xl {
-      @include flex-column;
-      justify-content: space-evenly;
-      text-align: center;
-    }
-
     @include xxl {
       @include flex-standard;
       gap: 174px;
       margin-bottom: $margin-title;
+    }
+
+    @include xl {
+      @include flex-column;
+      justify-content: space-evenly;
+      text-align: center;
     }
   }
 
@@ -78,11 +78,14 @@
   }
 }
 
-.sliders {
-  &__wrapper {
-    @include xl {
-      display: none;
-    }
+.sliders__wrapper {
+  @include xl {
+    margin-top: $margin-mobile;
+  }
+
+  @include lg {
+    display: none;
+    margin-top: 0;
   }
 }
 

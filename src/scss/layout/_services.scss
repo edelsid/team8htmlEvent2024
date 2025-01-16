@@ -9,12 +9,17 @@
   }
 
   & > .container {
-    @include md {
-      position: static;
+    @include xl {
+      min-height: 60vh;
+      gap: 60px;
     }
 
     @include lg {
       gap: 40px;
+    }
+
+    @include md {
+      position: static;
     }
   }
 
@@ -35,7 +40,7 @@
     }
 
     @include md {
-      @media (max-height: 800px) {
+      @media (max-height: 700px) {
         margin-bottom: 30vh;
       };
     }
@@ -100,7 +105,7 @@
 .decor {
   pointer-events: none;
 
-  @include lg {
+  @include xl {
     display: none;
   }
 
@@ -179,14 +184,14 @@
     }
 
     & h4 {
+      @include xxl {
+        text-decoration: underline;
+      }
+
       @include md {
         font-size: 40px;
         text-align: end;
         text-shadow: 2px 2px 4px #00000080;
-      }
-
-      @include xxl {
-        text-decoration: underline;
       }
     }
 

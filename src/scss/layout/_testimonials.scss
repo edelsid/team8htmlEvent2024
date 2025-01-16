@@ -8,25 +8,25 @@
   }
 
   &__headers {
+    @include xxl {
+      width: 51%;
+    }
+
     @include xl {
       @include flex-column-center;
       margin-bottom: $margin-mobile;
     }
-
-    @include xxl {
-      width: 51%;
-    }
   }
 
   &__content {
-    @include xl {
-      text-align: center;
-    }
-
     @include xxl {
       @include flex-standard;
       gap: 170px;
       border-bottom: $border-thin $standart-light;
+    }
+
+    @include xl {
+      text-align: center;
     }
   }
 
@@ -34,10 +34,6 @@
     position: relative;
     gap: $gap-mini;
     margin-block: 30px;
-
-    @include xl{
-      @include flex-center;
-    }
 
     @include xxl {
       border-left: $border-thin $standart;
@@ -59,6 +55,10 @@
         height: 40px;
         transform: skew(-45deg);
       }
+    }
+
+    @include xl {
+      @include flex-center;
     }
   }
 }
@@ -93,12 +93,12 @@
   text-transform: capitalize;
   @include font-header-standart;
 
-  @include xl {
-    margin-block: 0 $margin-mobile;
-  }
-
   @include xxl {
     margin-block: 0 50px;
+  }
+
+  @include xl {
+    margin-block: 0 $margin-mobile;
   }
 
   &__bubble {
@@ -113,14 +113,14 @@
     padding-bottom: 50px;
     display: flex;
 
-    @include xl {
-      justify-content: center;
-      gap: 20px;
-    }
-
     @include xxl {
       width: 55%;
       gap: 38px;
+    }
+
+    @include xl {
+      justify-content: center;
+      gap: 20px;
     }
   }
 

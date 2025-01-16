@@ -385,7 +385,7 @@ img {
     content: url('/svg/Architecture.svg');
     position: absolute;
 
-    @include lg {
+    @include xl {
       display: none;
     }
   }
