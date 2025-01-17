@@ -10,15 +10,15 @@
   }
 
   &__text {
-    @include xl {
-      @include flex-column-center;
-      gap: 20px;
-    }
-
     @include xxl {
       @include flex-standard;
       align-items: end;
       margin-bottom: $margin-title;
+    }
+
+    @include xl {
+      @include flex-column-center;
+      gap: 20px;
     }
   }
 
@@ -67,7 +67,7 @@
       min-width: 33%;
     }
 
-    @include lg {
+    @include xl {
       height: 100%;
       min-width: 33%;
     }

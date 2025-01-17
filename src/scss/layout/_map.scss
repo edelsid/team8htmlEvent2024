@@ -1,19 +1,23 @@
 @use '../abstract/index.scss' as *;
 
 .map {
+  @include xxl {
+    height: 568px;
+  }
+
   @include xl {
     @include portr {
       height: 50vh;
     }
     
     @include land {
-      height: 70vh;
+      height: 60vh;
     }
   }
 
   &__frame {
     width: 100%;
-    height: 568px;
+    height: 100%;
     filter: grayscale(1);
     border: 0;
   }

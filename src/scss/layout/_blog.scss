@@ -300,6 +300,8 @@
 
 @media (hover: hover) {
   .news-card:hover {
-    box-shadow: $shadow;
+    @include xxl {
+      box-shadow: $shadow;
+    }
   }
 }

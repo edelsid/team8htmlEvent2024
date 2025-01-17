@@ -13,15 +13,23 @@ const root = document.querySelector(".projects");
 const projects = new Projects(root);
 projects.init(root);
 
-//debounce
-function calculations () {
+let timer = null;
+
+function calculations() {
   calculateTop();
   projects.reset();
 }
 
 function setCalc () {
   calculations();
-  window.addEventListener("resize", () => calculations());
+  window.addEventListener("resize", () => debounce());
+}
+
+function debounce() {
+  clearTimeout(timer);
+  timer = setTimeout(() => { 
+    calculations();
+  }, 300);
 }
 
 setCalc();

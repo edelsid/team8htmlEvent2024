@@ -95,11 +95,11 @@
       align-items: center;
       background-color: $black;
       z-index: 999;
-      padding: 10% 20%;
+      padding: 80px 40px;
     }
 
     @include sm {
-      padding: 15%;
+      padding: 20px;
     }
   }
 }
@@ -143,6 +143,7 @@
 
   &__burger {
     color: $white;
+    cursor: pointer;
 
     @include xxl {
       display: none;
@@ -175,6 +176,7 @@
   position: absolute;
   top: 20px;
   right: 20px;
+  cursor: pointer;
 }
 
 .contacts {
@@ -314,8 +316,19 @@
       font-size: 24px;
       padding: 0;
 
-      @media (max-height: 800px) {
+      @media (max-height: 800px) or (max-width: 500px) {
         font-size: 18px;
+      }
+
+      & > .navigation__anchors {
+        @include flex-column;
+        align-items: center;
+        gap: 40px;
+
+        @media (max-height: 700px) {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
       }
     }
   }
