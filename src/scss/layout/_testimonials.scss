@@ -1,5 +1,21 @@
 @use '../abstract/index.scss' as *;
 
+blockquote {
+  margin-inline: 0;
+  font-family: $font-family-main;
+  color: $standart;
+  text-transform: capitalize;
+  @include font-header-standart;
+
+  @include xxl {
+    margin-block: 0 50px;
+  }
+
+  @include xl {
+    margin-block: 0 $margin-mobile;
+  }
+}
+
 .testimonials {
   margin-bottom: var(--margin-section);
 
@@ -88,19 +104,6 @@
 }
 
 .quote {
-  font-family: $font-family-main;
-  color: $standart;
-  text-transform: capitalize;
-  @include font-header-standart;
-
-  @include xxl {
-    margin-block: 0 50px;
-  }
-
-  @include xl {
-    margin-block: 0 $margin-mobile;
-  }
-
   &__bubble {
     @include xxl {
       padding-top: 60px;

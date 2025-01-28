@@ -177,7 +177,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="navigation">
+              <nav class="navigation">
                 <ul class="navigation__anchors">
                   <li class="anchors__item">
                     <a class="anchors__link" href="#services">Home</a>
@@ -204,7 +204,7 @@
                     <a class="anchors__link" href="#map">Contacts</a>
                   </li>
                 </ul>
-              </div>
+              </nav>
             </div>
             <div class="menu__phone">
               <a class="phone__wrapper" href="tel:(704) 555-0127">
@@ -226,7 +226,7 @@
         </div>
       </div>
       <div class="header__burger">
-        <div class="navigation navigation_burger">
+        <nav class="navigation navigation_burger">
           <ul class="navigation__anchors">
             <li class="anchors__item">
               <a class="anchors__link" href="#services">Home</a>
@@ -253,7 +253,7 @@
               <a class="anchors__link" href="#map">Contacts</a>
             </li>
           </ul>
-        </div>
+        </nav>
         <div class="menu__phone-burger">
           <a class="phone__wrapper" href="tel:(704) 555-0127">
             <img
@@ -426,16 +426,18 @@
             <button class="btn_play">&#11208;</button>          
           </div>
           <dialog class="modal">
-            <iframe 
-              class="modal__video" 
-              src="" 
-              title="YouTube video player" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin" 
-              allowfullscreen>
-            </iframe>
-            <button class="btn btn_secondary modal__close">Close</button>
+            <div class="modal__wrapper">
+              <iframe 
+                class="modal__video" 
+                src="" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+              </iframe>
+              <button class="btn btn_secondary modal__close">Close</button>
+            </div>
           </dialog>
         </div>
       </section>
@@ -449,7 +451,7 @@
           </div>
           <div class="testimonials__content">
             <div class="quote__bubble">
-              <p class="quote"></p>
+              <blockquote class="quote"></blockquote>
               <div class="quote__citation">
                 <img class="quote__img" src="svg/quote.svg" alt="quotation marks">
                 <div class="quote__person">

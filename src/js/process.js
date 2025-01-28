@@ -19,9 +19,10 @@ export default class Process {
 
   init() {
     const playBtn = this.container.querySelector(".btn_play");
-    playBtn.addEventListener("click", (e) => this.openModal());
+    playBtn.addEventListener("click", () => this.openModal());
     const closeBtn = this.container.querySelector(".modal__close");
-    closeBtn.addEventListener("click", (e) => this.closeModal());
+    closeBtn.addEventListener("click", () => this.closeModal());
+    this.modal.addEventListener("click", (e) => this.checkClick(e));
 
     data.forEach((item) => {
       const newTab = this.setTab(item);
@@ -61,6 +62,12 @@ export default class Process {
   closeModal() {
     this.modal.close();
     this.video.src = "";
+  }
+
+  checkClick(e) {
+    if (this.modal.open && !this.modal.firstElementChild.contains(e.target)) {
+      this.closeModal();
+    }
   }
 
   setImg(element, data) {

@@ -5,6 +5,10 @@
 
 Этот проект — доработанная версия сайта, разработанного в 2024 году в рамках благотворительного хакатона для начинающих фронтендеров. Оригинальную его версию можно посмотреть [здесь (репозиторий)](https://github.com/IlyaBurch/team8htmlEvent2024) и [здесь (деплой)](https://team8html-event2024.vercel.app). Все изменения, произведенные в данной версии, сделаны уже лично мной в целях дальнейшего обучения и совершенствования моих навыков.
 
+## Использованные технологии
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
 ## Как запустить проект:
 ```
 npm i
@@ -31,6 +35,3 @@ npm run dev
 ### 📱 **Адаптивность.** 
 Прописаны стили для разных экранов. Их дизайн брался по сути из головы. В первоначальном варианте была доступна лишь версия для десктопа.
 
-## Использованные технологии
-
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)

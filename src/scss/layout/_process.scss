@@ -83,12 +83,9 @@
 
   &[open] {
     border: 0;
-    gap: $gap-small;
-    @include flex-column;
+    padding: 0;
 
     @include xl {
-      padding: 10px;
-
       & > .btn {
         font-size: 16px;
         padding: 10px;
@@ -111,6 +108,18 @@
 
     @include xxl {
       width: 60%;
+    }
+  }
+
+  &__wrapper {
+    gap: $gap-small;
+    @include flex-column;
+
+    @include xl {
+      padding: 10px;
+    }
+
+    @include xxl {
       padding: 30px;
     }
   }
