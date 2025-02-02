@@ -60,7 +60,7 @@ export default class Services {
   addFormation() {
     const newMsg = document.createElement('div');
     newMsg.className = 'service__wrapper';
-    newMsg.innerHTML = `
+    const inner = `
     <div class="service__icon">
       <img src="png/Icon.png" alt="icon of a tall building">
     </div>
@@ -69,8 +69,8 @@ export default class Services {
       <p class="subtitle subtitle_standart">
         This involves various stages like planning, design.
       </p>
-    </div>`;
-
+    </div>`
+    newMsg.insertAdjacentHTML("afterbegin", inner);
     return newMsg;
   }
 }

@@ -40,10 +40,11 @@ export default class Process {
   setTab(data) {
     const newTab = document.createElement("li");
     newTab.className = "process__item";
-    newTab.innerHTML = `
+    const inner = `
     <button class="btn btn_switch" type="button" id="${data.id}">
       0${data.id}. ${data.title}
     </button>`;
+    newTab.insertAdjacentHTML("afterbegin", inner);
     return newTab;
   }
 

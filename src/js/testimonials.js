@@ -33,7 +33,8 @@ export default class Testimonials {
     const newPhoto = document.createElement("li");
     newPhoto.className = "people__item";
     newPhoto.id = data.id;
-    newPhoto.innerHTML = `<img class="people__portrait" src=${data.img} alt="client avatar">`;
+    const inner = `<img class="people__portrait" src=${data.img} alt="client avatar">`
+    newPhoto.insertAdjacentHTML("afterbegin", inner);
     return newPhoto;
   }
 
@@ -49,9 +50,11 @@ export default class Testimonials {
 
   setText(data) {
     this.textArea.innerText = data.text;
-    this.authorArea.innerHTML = `
+    const inner = `
     <p class="quote__name">${data.name}</p>
     <p class="quote__status">${data.role}</p>`;
+    this.authorArea.innerHTML = '';
+    this.authorArea.insertAdjacentHTML("afterbegin", inner);
   }
 }
 

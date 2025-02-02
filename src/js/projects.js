@@ -78,13 +78,13 @@ export default class Projects {
   addContent(data) {
     const newMsg = document.createElement('div');
     newMsg.className = "slider__content";
-    newMsg.innerHTML = `
+    const inner = `
     <p class="subtitle subtitle_accent bg bg_subtitle">${data.subtitle}</p>
     <h3 class="title title_accent bg bg_title">${data.title}</h3>
     <div class="btn_slider__wrapper">
       <a class="btn_slider">+</a>
-    </div>`;
-
+    </div>`
+    newMsg.insertAdjacentHTML("afterbegin", inner);
     return newMsg;
   }
 

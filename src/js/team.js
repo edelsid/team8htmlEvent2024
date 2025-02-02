@@ -30,9 +30,10 @@ export default class Team {
     const newName = document.createElement("li");
     newName.className = "names__item";
     newName.id = data.id;
-    newName.innerHTML = `
+    const inner = `
     <p class="names__name">${data.name}</p>
     <p class="names__role">${data.role}</p>`;
+    newName.insertAdjacentHTML("afterbegin", inner);
     return newName;
   }
 

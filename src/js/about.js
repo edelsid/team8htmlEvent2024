@@ -66,7 +66,8 @@ export default class About {
   sliderFormation(obj) {
     const newSlider = document.createElement("div");
     newSlider.classList = "about-slider";
-    newSlider.innerHTML = `<h3 class="title title_accent">${obj.title}</h3>`;
+    const inner = `<h3 class="title title_accent">${obj.title}</h3>`;
+    newSlider.insertAdjacentHTML("afterbegin", inner); 
     const list = this.listFormation(obj);
     newSlider.appendChild(list);
     return newSlider;
