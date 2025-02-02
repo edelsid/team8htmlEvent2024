@@ -33,13 +33,19 @@ export default class Testimonials {
     const newPhoto = document.createElement("li");
     newPhoto.className = "people__item";
     newPhoto.id = data.id;
-    const inner = `<img class="people__portrait" src=${data.img} alt="client avatar">`
+    const inner = `
+      <picture class="people__portrait">
+        <source srcSet=${data.img} type='image/webp'/>
+        <img 
+          src=${data.img2} 
+          alt="client avatar"/>
+      </picture>`
     newPhoto.insertAdjacentHTML("afterbegin", inner);
     return newPhoto;
   }
 
   changeText(target) {
-    const parent = target.parentElement;
+    const parent = target.closest(".people__item");
     if (Number(this.active) === Number(parent.id)) return;
     const arr = this.photoArea.children;
     setActive(arr, arr[parent.id - 1], false);

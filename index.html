@@ -287,10 +287,12 @@
             <img
               class="banner-image__bg"
               src="svg/workersvg.svg"/>
-            <img
-              class="banner-image__char"
-              src="img/cheerful-engineer-with-set-square-1.webp"
-              alt="engineer"/>
+            <picture class="banner-image__char">
+              <source srcSet="img/cheerful-engineer-with-set-square-1.webp" type='image/webp'/>
+              <img 
+                src="img/cheerful-engineer-with-set-square-1.png" 
+                alt="engineer"/>
+            </picture>
           </div>
         </div>
       </section>
@@ -319,11 +321,12 @@
               option.
             </p>
             <a class="btn btn_secondary" href="/">See All</a>
-            <img
-              class="backgroundIcon"
-              src="png/worker.png"
-              alt="worker with schematics in hand"
-            />
+            <picture class="backgroundIcon">
+              <source srcSet="img/worker.webp" type='image/webp'/>
+              <img 
+                src="img/worker.png" 
+                alt="worker with schematics in hand"/>
+            </picture>
           </div>
           <ul class="services__sliders">
             <li class="services__item" id="services-1"></li>
@@ -482,7 +485,12 @@
               <a class="btn btn_secondary" href="/">See All Member</a>
             </div>
           </div>
-          <img class="team__photo" src="" alt="team member photo">
+          <picture class="team__photo">
+            <source srcSet="" type='image/webp'/>
+            <img 
+              src="" 
+              alt="team member photo"/>
+          </picture>
           <ul class="team__names"></ul>
           <a class="btn btn_secondary mobile" href="/">See All Member</a>
         </div>
@@ -582,14 +590,24 @@
                   <img src="svg/Date.svg" alt="badge with a date">
                   <p class="subtitle date__label">29 Jun 2024</p>
                 </div>
-                <img class="highlight__img" src="img/blog-main.webp" alt="two workers, one facing thr camera and another holding schematics">
+                <picture class="highlight__img">
+                  <source srcSet="img/blog-main.webp" type='image/webp'/>
+                  <img 
+                    src="img/blog-main.jpg" 
+                    alt="two workers, one facing the camera and another holding schematics"/>
+                </picture>
               </div>
             </article>
             <ul class="blog__news">
               <li class="news__item">
                 <article class="news-card">
                   <div class="news-card__img-wrapper">
-                    <img class="news-card__img" src="img/blog1.webp" alt="worker looking into the discance">
+                    <picture class="news-card__img">
+                      <source srcSet="img/blog1.webp" type='image/webp'/>
+                      <img 
+                        src="img/blog1.jpg" 
+                        alt="worker looking into the discance"/>
+                    </picture>
                   </div>
                   <div class="news-card__text">
                     <ul class="tags">
@@ -608,7 +626,12 @@
                       <img src="svg/Date.svg" alt="badge with a date">
                       <p class="subtitle date__label">29 Jun 2024</p>
                     </div>
-                    <img class="news-card__img" src="img/blog2.webp" alt="worker holding a notebook">
+                    <picture class="news-card__img">
+                      <source srcSet="img/blog2.webp" type='image/webp'/>
+                      <img 
+                        src="img/blog2.jpg" 
+                        alt="worker holding a notebook"/>
+                    </picture>
                   </div>
                   <div class="news-card__text">
                     <ul class="tags">
@@ -623,7 +646,12 @@
               <li class="news__item">
                 <article class="news-card">
                   <div class="news-card__img-wrapper">
-                    <img class="news-card__img" src="img/blog3.webp" alt="two workers communicating">
+                    <picture class="news-card__img">
+                      <source srcSet="img/blog3.webp" type='image/webp'/>
+                      <img 
+                        src="img/blog3.jpg" 
+                        alt="two workers communicating"/>
+                    </picture>
                   </div>
                   <div class="news-card__text">
                     <ul class="tags">

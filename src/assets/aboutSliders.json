@@ -1,6 +1,7 @@
 [{
   "id": 1,
   "url": "img/about1.webp",
+  "url2": "img/about1.jpg",
   "title": "Our vision",
   "characteristics": [
     "Integrity and ethics", 
@@ -11,6 +12,7 @@
 {
   "id": 2,
   "url": "img/about2.webp",
+  "url2": "img/about2.jpg",
   "title": "Core Values",
   "characteristics": [
     "Responsibility", 
@@ -21,6 +23,7 @@
 {
   "id": 3,
   "url": "img/about3.webp",
+  "url2": "img/about3.jpg",
   "title": "Community Engagement",
   "characteristics": [
     "Personal contact partners",
@@ -32,6 +35,7 @@
 {
   "id": 4,
   "url": "img/about4.webp",
+  "url2": "img/about4.jpg",
   "title": "Our Reach",
   "characteristics": [
     "Offices in 10 countries", 
@@ -41,6 +45,7 @@
 {
   "id": 5,
   "url": "img/about5.webp",
+  "url2": "img/about5.jpg",
   "title": "Commitment to Quality",
   "characteristics": [
     "Only the best materials", 

@@ -23,7 +23,10 @@ export default class Team {
       this.nameArea.appendChild(newTab);
       newTab.addEventListener("click", (e) => this.changeTab(e.target));
     });
-    this.photo.src = data[0].img;
+    const source = this.photo.getElementsByTagName("source")[0];
+    const image = this.photo.getElementsByTagName("img")[0];
+    source.srcset = data[0].img;
+    image.src = data[0].img2;
   }
 
   setName(data) {
@@ -41,8 +44,11 @@ export default class Team {
     const parent = target.parentElement;
     if (Number(this.active) === Number(parent.id)) return;
     setActive(this.nameArea.children, parent, false);
-    this.photo.src = data[parent.id - 1].img;
     this.active = parent.id;
+    const source = this.photo.getElementsByTagName("source")[0];
+    const image = this.photo.getElementsByTagName("img")[0];
+    source.srcset = data[this.active - 1].img;
+    image.src = data[this.active - 1].img2;
   }
 }
 

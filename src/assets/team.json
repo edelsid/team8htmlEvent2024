@@ -2,23 +2,27 @@
   "id": 1,
   "name": "Wade Warren",
   "role": "Architect",
-  "img": "img/member1.webp"
+  "img": "img/member1.webp",
+  "img2": "img/member1.jpg"
 }, 
 {
   "id": 2,
   "name": "Brooklyn Simmons",
   "role": "Architect Designer",
-  "img": "img/member2.webp"
+  "img": "img/member2.webp",
+  "img2": "img/member2.jpg"
 }, 
 {
   "id": 3,
   "name": "Jonson Duoing",
   "role": "Architect",
-  "img": "img/member3.webp"
+  "img": "img/member3.webp",
+  "img2": "img/member3.jpg"
 }, 
 {
   "id": 4,
   "name": "Esther Howard",
   "role": "Architect",
-  "img": "img/member4.webp"
+  "img": "img/member4.webp",
+  "img2": "img/member4.jpg"
 }]

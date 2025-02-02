@@ -62,7 +62,12 @@ export default class Services {
     newMsg.className = 'service__wrapper';
     const inner = `
     <div class="service__icon">
-      <img src="png/Icon.png" alt="icon of a tall building">
+      <picture>
+        <source srcSet="img/Icon.webp" type='image/webp'/>
+        <img 
+        src="img/Icon.png" 
+        alt="icon of a tall building"/>
+      </picture>
     </div>
     <div class="service__headers">
       <h4 class="title">Building Contraction</h4>

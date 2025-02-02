@@ -88,12 +88,12 @@
       @include animation(width, 0.5s);
       color: $white;
 
-      @include xl {
-        height: 100%;
-      }
-
       @include md {
         width: 100%;
+      }
+
+      @include xl {
+        height: 100%;
       }
 
       @include xxl {
@@ -144,14 +144,38 @@
 #services {
   &-1 {
     background-image: url('/img/latest1.webp');
+    background-image: image-set(
+      url("/img/latest1.webp") type("image/webp"), 
+      url("/img/latest1.jpg") type("image/jpeg")
+    );
+    background-image: -webkit-image-set(
+      url("/img/latest1.webp") type("image/webp"), 
+      url("/img/latest1.jpg") type("image/jpeg")
+    );
   }
 
   &-2 {
     background-image: url('/img/latest2.webp');
+    background-image: image-set(
+      url("/img/latest2.webp") type("image/webp"), 
+      url("/img/latest2.jpg") type("image/jpeg")
+    );
+    background-image: -webkit-image-set(
+      url("/img/latest2.webp") type("image/webp"), 
+      url("/img/latest2.jpg") type("image/jpeg")
+    );
   }
 
   &-3 {
     background-image: url('/img/latest3.webp');
+    background-image: image-set(
+      url("/img/latest3.webp") type("image/webp"), 
+      url("/img/latest3.jpg") type("image/jpeg")
+    );
+    background-image: -webkit-image-set(
+      url("/img/latest3.webp") type("image/webp"), 
+      url("/img/latest3.jpg") type("image/jpeg")
+    );
   }
 }
 
@@ -216,6 +240,8 @@
   }
 
   &__icon {
+    width: fit-content;
+
     @include lg {
       display: none;
     }

@@ -96,7 +96,7 @@ blockquote {
     }
   }
 
-  &__portrait {
+  &__portrait, &__portrait img {
     border-radius: $border-circle;
     width: 100%;
     @include flex-center;
