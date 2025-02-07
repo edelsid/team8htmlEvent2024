@@ -272,12 +272,15 @@
   position: absolute;
   user-select: none;
   aspect-ratio: 1 / 0.95;
+  @function get-padding($num) {
+    @return $num $num ($num * 1.57) $num;
+  }
 
   &_highlight {
     width: 129px;
     top: 10px;
     left: -72px;
-    padding: 14px 14px 22px 14px;
+    padding: get-padding(14px);
     @include font-header-small;
   }
 
@@ -285,7 +288,7 @@
     width: 73px;
     bottom: 28px;
     right: 12px;
-    padding: 4px 4px 12px 4px;
+    padding: get-padding(6.2px);
   }
 
   @include xl {

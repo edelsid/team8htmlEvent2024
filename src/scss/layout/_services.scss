@@ -240,7 +240,17 @@
   }
 
   &__icon {
-    width: fit-content;
+    width: 95px;
+    height: 74px;
+    background-color: $white;
+    clip-path: polygon(0 0, 85% 0, 100% 100%, 0 85%);
+    
+
+    & img {
+      width: 85%;
+      height: 85%;
+      padding: 8px 19px;
+    }
 
     @include lg {
       display: none;
