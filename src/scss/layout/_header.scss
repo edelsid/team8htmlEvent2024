@@ -87,7 +87,7 @@
       position: fixed;
       top: 0;
       right: -100vw;
-      height: 100vh;
+      height: 100svh;
       width: 100vw;
       @include flex-column;
       @include animation(right, 0.5s);

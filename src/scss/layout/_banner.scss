@@ -18,18 +18,18 @@
     gap: 50px;
 
     @media (max-height: 750px) {
-      min-height: calc(100vh - 100px);
+      min-height: calc(100svh - 100px);
     }
 
     @media (min-height: 751px) {
-      min-height: 70vh;
+      min-height: 70svh;
     }
   }
 
   @include lg {
     flex-direction: column;
     justify-content: center;
-    height: calc(100vh + 10px);
+    height: calc(100svh + 10px);
 
     @include land {
       padding-top: 100px;
