@@ -144,34 +144,6 @@
       width: 100%;
     }
   }
-
-  //переделать через полигон
-  &__date {
-    position: absolute;
-    user-select: none;
-  
-    @include xl {
-      display: none;
-    }
-
-    @include xxl {
-      top: 10px;
-      left: -72px;
-    }
-
-    & > p {
-      padding: 14px;
-      @include font-header-small;
-    } 
-  }
-}
-
-.date__label {
-  top: -10px;
-  text-align: center;
-  color: $white;
-  @include absolute-filler;
-  @include flex-center;
 }
 
 .tags {
@@ -293,6 +265,41 @@
       width: 100%;
       height: 300px;
     }
+  }
+}
+
+.date-badge {
+  position: absolute;
+  user-select: none;
+  aspect-ratio: 1 / 0.95;
+
+  &_highlight {
+    width: 129px;
+    top: 10px;
+    left: -72px;
+    padding: 14px 14px 22px 14px;
+    @include font-header-small;
+  }
+
+  &_news {
+    width: 73px;
+    bottom: 28px;
+    right: 12px;
+    padding: 4px 4px 12px 4px;
+  }
+
+  @include xl {
+    display: none;
+  }
+
+  @include xxl {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 86% 83%, 0% 100%);
+    font-family: $font-family-second;
+    background-color: $accent;
+    text-align: center;
+    color: $white;
+    z-index: 3;
+    @include flex-center;
   }
 }
 
